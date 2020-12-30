@@ -129,6 +129,11 @@ namespace AutomacaoMantis.Bases
             return text;
         }
 
+        protected void Clear(By locator)
+        {
+             WaitForElement(locator).Clear();
+        }
+
         protected bool ReturnIfElementIsDisplayed(By locator)
         {
             wait.Until(ExpectedConditions.ElementExists(locator));

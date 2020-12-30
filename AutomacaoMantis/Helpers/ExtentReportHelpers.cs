@@ -57,6 +57,14 @@ namespace AutomacaoMantis.Helpers
             }
         }
 
+        //Inserido, pois no caso dos parâmetros usados no banco não é necessário registrar print.
+        //Deixar até pensar em uma lógica que permitar usar somente o método acima nos dois casos.
+        public static void AddTestInfoDB(int methodLevel, string text)
+        {
+            TEST.Log(Status.Pass, GeneralHelpers.GetMethodNameByLevel(methodLevel) + " || " + text);
+
+        }
+
         public static MediaEntityModelProvider GetScreenShotMedia()
         {
             string screenshotPath = GetScreenshot(reportPath);

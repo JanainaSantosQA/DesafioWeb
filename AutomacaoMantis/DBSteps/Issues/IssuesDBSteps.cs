@@ -8,7 +8,7 @@ namespace AutomacaoMantis.DBSteps.Issues
 {
     public class IssuesDBSteps
     {
-        public IssuesDomain ConsultaBugDB(int projectId, string summary)
+        public IssuesDomain ConsultarBugDB(int projectId, string summary)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Issues/consultaBug.sql", Encoding.UTF8);
             query = query.Replace("$projectId", projectId.ToString()).Replace("$summary", summary);
@@ -17,7 +17,7 @@ namespace AutomacaoMantis.DBSteps.Issues
 
             return DataBaseHelpers.ObtemRegistroUnico<IssuesDomain>(query);
         }
-        public void DeletaBugDB(int bugId)
+        public void DeletarBugDB(int bugId)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Issues/deletaBug.sql", Encoding.UTF8);
             query = query.Replace("$bugId", bugId.ToString());
@@ -26,7 +26,7 @@ namespace AutomacaoMantis.DBSteps.Issues
 
             DataBaseHelpers.ExecuteQuery(query);
         }
-        public IssuesDomain InseriBugDB(int projectId, string summary)
+        public IssuesDomain InserirBugDB(int projectId, string summary)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Issues/inseriBug.sql", Encoding.UTF8);
             query = query.Replace("$projectId", projectId.ToString()).Replace("$summary", summary);
@@ -35,7 +35,7 @@ namespace AutomacaoMantis.DBSteps.Issues
 
             return DataBaseHelpers.ObtemRegistroUnico<IssuesDomain>(query);
         }
-        public void DeletaTextoBugDB(int bugId)
+        public void DeletarTextoBugDB(int bugId)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Issues/deletaBugText.sql", Encoding.UTF8);
             query = query.Replace("$bugId", bugId.ToString());
@@ -44,7 +44,7 @@ namespace AutomacaoMantis.DBSteps.Issues
 
             DataBaseHelpers.ExecuteQuery(query);
         }
-        public List<string> ConsultaNotaBugDB(int bugId, string note)
+        public List<string> ConsultarNotaBugDB(int bugId, string note)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Issues/consultaNotaBug.sql", Encoding.UTF8);
             query = query.Replace("$bugId", bugId.ToString()).Replace("$note", note);
@@ -62,7 +62,7 @@ namespace AutomacaoMantis.DBSteps.Issues
 
             return DataBaseHelpers.ObtemRegistroUnico<string>(query);
         }
-        public void DeletaTextoNotaBugDB(string bugNoteId, string note)
+        public void DeletarTextoNotaBugDB(string bugNoteId, string note)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Issues/deletaTextoNotaBug.sql", Encoding.UTF8);
             query = query.Replace("$bugNoteId", bugNoteId).Replace("$note", note);
@@ -71,7 +71,7 @@ namespace AutomacaoMantis.DBSteps.Issues
 
             DataBaseHelpers.ExecuteQuery(query);
         }
-        public void DeletaNotaBugDB(int bugId, string bugNoteId)
+        public void DeletarNotaBugDB(int bugId, string bugNoteId)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Issues/deletaNotaBug.sql", Encoding.UTF8);
             query = query.Replace("$bugId", bugId.ToString()).Replace("$bugNoteId", bugNoteId);
@@ -80,7 +80,7 @@ namespace AutomacaoMantis.DBSteps.Issues
 
             DataBaseHelpers.ExecuteQuery(query);
         }
-        public void DeletaHistoricoBugDB(int bugId)
+        public void DeletarHistoricoBugDB(int bugId)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Issues/deletaHistoricoBug.sql", Encoding.UTF8);
             query = query.Replace("$bugId", bugId.ToString());
@@ -89,7 +89,7 @@ namespace AutomacaoMantis.DBSteps.Issues
 
             DataBaseHelpers.ExecuteQuery(query);
         }
-        public void DeletaTagBugDB(int bugId)
+        public void DeletarTagBugDB(int bugId)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Issues/deletaBugTag.sql", Encoding.UTF8);
             query = query.Replace("$bugId", bugId.ToString());

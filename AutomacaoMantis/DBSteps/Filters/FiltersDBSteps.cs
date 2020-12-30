@@ -7,7 +7,7 @@ namespace AutomacaoMantis.DBSteps.Filters
 {
     public class FiltersDBSteps
     {
-        public FilterDomain InseriFiltroPublicoDB(string filterName)
+        public FilterDomain InserirFiltroPublicoDB(string filterName)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Filters/inseriFiltroPublico.sql", Encoding.UTF8);
             query = query.Replace("$filterName", filterName);
@@ -16,8 +16,7 @@ namespace AutomacaoMantis.DBSteps.Filters
 
             return DataBaseHelpers.ObtemRegistroUnico<FilterDomain>(query);
         }
-
-        public FilterDomain InseriFiltroPrivadoDB(string filterName)
+        public FilterDomain InserirFiltroPrivadoDB(string filterName)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Filters/inseriFiltroPrivado.sql", Encoding.UTF8);
             query = query.Replace("$filterName", filterName);
@@ -26,8 +25,7 @@ namespace AutomacaoMantis.DBSteps.Filters
 
             return DataBaseHelpers.ObtemRegistroUnico<FilterDomain>(query);
         }
-
-        public FilterDomain ConsultaFiltroDB(int filterId)
+        public FilterDomain ConsultarFiltroDB(int filterId)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Filters/consultaFiltro.sql", Encoding.UTF8);
             query = query.Replace("$filterId", filterId.ToString());
@@ -36,8 +34,7 @@ namespace AutomacaoMantis.DBSteps.Filters
 
             return DataBaseHelpers.ObtemRegistroUnico<FilterDomain>(query);
         }
-
-        public void DeletaFiltroDB(int filterId)
+        public void DeletarFiltroDB(int filterId)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Filters/deletaFiltro.sql", Encoding.UTF8);
             query = query.Replace("$filterId", filterId.ToString());

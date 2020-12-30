@@ -9,30 +9,26 @@ namespace AutomacaoMantis.Pages
         By usernameField = By.Id("username");
         By passwordField = By.Id("password");
         By loginButton = By.XPath("//input[@type='submit']");
-        //By mensagemErroTextArea = By.XPath("/html/body/div[2]/font"); //exemplo de mapping incorreto
+        By messageErroTextArea = By.XPath("//div[@class='alert alert-danger']/p");
         #endregion
 
         #region Actions
         public void PreencherUsuario(string usuario)
         {
-            SendKeys(usernameField, usuario);
-            Click(loginButton);
+            SendKeys(usernameField, usuario);  
         }
-
         public void PreencherSenha(string senha)
         {
             SendKeys(passwordField, senha);
         }
-
         public void ClicarEmLogin()
         {
             Click(loginButton);
         }
-
-        //public string RetornaMensagemDeErro()
-        //{
-        //    return GetText(mensagemErroTextArea);
-        //}
+        public string RetornarMensagemDeErro()
+        {
+            return GetText(messageErroTextArea);
+        }
         #endregion
     }
 }

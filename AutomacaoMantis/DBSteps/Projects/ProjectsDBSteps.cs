@@ -7,7 +7,7 @@ namespace AutomacaoMantis.DBSteps.Projects
 {
     public class ProjectsDBSteps
     {
-        public ProjectDomain ConsultaProjetoDB(int projectId)
+        public ProjectDomain ConsultarProjetoDB(int projectId)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/consultaProjeto.sql", Encoding.UTF8);
             query = query.Replace("$projectId", projectId.ToString());
@@ -16,7 +16,7 @@ namespace AutomacaoMantis.DBSteps.Projects
 
             return DataBaseHelpers.ObtemRegistroUnico<ProjectDomain>(query);
         }
-        public void DeletaProjetoDB(int projectId)
+        public void DeletarProjetoDB(int projectId)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/deletaProjeto.sql", Encoding.UTF8);
             query = query.Replace("$projectId", projectId.ToString());
@@ -25,7 +25,7 @@ namespace AutomacaoMantis.DBSteps.Projects
 
             DataBaseHelpers.ExecuteQuery(query);
         }
-        public ProjectDomain InseriProjetoDB(string projectName)
+        public ProjectDomain InserirProjetoDB(string projectName)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/inseriProjeto.sql", Encoding.UTF8);
             query = query.Replace("$projectName", projectName);
@@ -34,7 +34,7 @@ namespace AutomacaoMantis.DBSteps.Projects
 
             return DataBaseHelpers.ObtemRegistroUnico<ProjectDomain>(query);
         }
-        public ProjectDomain ConsultaVersaoProjetoDB(string versionId)
+        public ProjectDomain ConsultarVersaoProjetoDB(string versionId)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/consultaVersaoProjeto.sql", Encoding.UTF8);
             query = query.Replace("$versionId", versionId);
@@ -43,7 +43,7 @@ namespace AutomacaoMantis.DBSteps.Projects
 
             return DataBaseHelpers.ObtemRegistroUnico<ProjectDomain>(query);
         }
-        public ProjectDomain InseriVersaoProjetoDB(int projectId)
+        public ProjectDomain InserirVersaoProjetoDB(int projectId)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/inseriVersaoProjeto.sql", Encoding.UTF8);
             query = query.Replace("$projectId", projectId.ToString());
@@ -52,7 +52,7 @@ namespace AutomacaoMantis.DBSteps.Projects
 
             return DataBaseHelpers.ObtemRegistroUnico<ProjectDomain>(query);
         }
-        public void DeletaVersaoProjetoDB(int versionId)
+        public void DeletarVersaoProjetoDB(int versionId)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/deletaVersaoProjeto.sql", Encoding.UTF8);
             query = query.Replace("$versionId", versionId.ToString());
@@ -61,7 +61,7 @@ namespace AutomacaoMantis.DBSteps.Projects
 
             DataBaseHelpers.ExecuteQuery(query);
         }
-        public ProjectDomain ConsultaSubProjetoDB(int childId, int parentId)
+        public ProjectDomain ConsultarSubProjetoDB(int childId, int parentId)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/consultaSubProjeto.sql", Encoding.UTF8);
             query = query.Replace("$childId", childId.ToString())
@@ -71,7 +71,7 @@ namespace AutomacaoMantis.DBSteps.Projects
 
             return DataBaseHelpers.ObtemRegistroUnico<ProjectDomain>(query);
         }
-        public void DeletaSubProjetoDB(int childId, int parentId)
+        public void DeletarSubProjetoDB(int childId, int parentId)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/deletaSubProjeto.sql", Encoding.UTF8);
             query = query.Replace("$childId", childId.ToString())
@@ -81,7 +81,7 @@ namespace AutomacaoMantis.DBSteps.Projects
 
             DataBaseHelpers.ExecuteQuery(query);
         }
-        public void InseriSubProjetoDB(int childId, int parentId, string inheritParent)
+        public void InserirSubProjetoDB(int childId, int parentId, string inheritParent)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/inseriSubProjeto.sql", Encoding.UTF8);
             query = query.Replace("$childId", childId.ToString())

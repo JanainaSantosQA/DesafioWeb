@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Extent Framework</title>
+  <link rel="apple-touch-icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link rel="shortcut icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/cd00a5e/spark/css/style.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style> </style>
+</head>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+
+
+<body class="test-view  dark">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+            <div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">AutomacaoMantis</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">23/12/2020 22:23:59</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+            <div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="side-nav-controls">
+    <ul>
+      <li>
+        <a href="#" class="lightsout" style="color:#8a8a8a;">
+          <i class="fa fa-desktop"></i>"</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+            <div class="page-container">
+                <div class="main-content">
+                    <div class="test-wrapper row">
+                        <div class="test-list">
+                            <div class="test-list-tools">
+                                <ul class="tools pull-left">
+                                    <li>
+                                        <a href="">
+                                            <span class="font-size-14">Tests</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                                <ul class="tools text-right">
+									<li class="user-profile dropdown dropdown-animated scale-left">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<i class="fa fa-exclamation-circle"></i>
+										</a>
+										<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>																																																																		<div class="dropdown-divider"></div>
+											<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+										</ul>
+									</li>
+																		                                </ul>
+                            </div>
+                            <div class="test-list-wrapper scrollable">
+                                <ul class="test-list-item">
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">EditarUserSemSucessoUsernameJaExiste</p> 
+													<p class="duration text-sm">0h:0m:12s+692ms</p> 
+													<span class="datetime">22:23:59 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">EditarUserSemSucessoUsernameJaExiste</h5>
+															<span class='badge badge-success'>23/12/2020 22:23:59</span>
+															<span class='badge badge-danger'>23/12/2020 22:24:12</span>
+															<span class='badge badge-default'>0h:0m:12s+692ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:03</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_03.png' src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_03.png' data-src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_03.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:04</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_04.png' src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_04.png' data-src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_04.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:05</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_04.png' src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_04.png' data-src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_04.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:06</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_05.png' src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_05.png' data-src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_05.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:06</td>
+				<td>
+InserirUsuarioDB || PARAMETERS: Username = EditarUsernameSemSucesso1 | Enabled = 1									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:06</td>
+				<td>
+InserirUsuarioDB || PARAMETERS: Username = EditarUsernameSemSucesso2 | Enabled = 1									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:09</td>
+				<td>
+NavigateTo || PARAMETER: http://127.0.0.1:8989/manage_user_page.php					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_08.png' src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_08.png' data-src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_08.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:09</td>
+				<td>
+PesquisarUsuario || PARAMETER: EditarUsernameSemSucesso1					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_09.png' src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_09.png' data-src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_09.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:10</td>
+				<td>
+ClicarAplicarFiltro ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_09.png' src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_09.png' data-src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_09.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:10</td>
+				<td>
+ClicarNomeUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_10.png' src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_10.png' data-src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_10.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:11</td>
+				<td>
+PreencherUsername || PARAMETER: EditarUsernameSemSucesso2					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_11.png' src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_11.png' data-src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_11.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:12</td>
+				<td>
+ClicarAtualizarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_11.png' src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_11.png' data-src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_11.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:12</td>
+				<td>
+RetornarMensagemDeErro || RETURN: Este nome de usuário já está sendo usado. Por favor, volte e selecione um outro.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_12.png' src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_12.png' data-src='./EditarUserSemSucessoUsernameJaExiste_23_12_2020-22_24_12.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:12</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = EditarUsernameSemSucesso1									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:12</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = EditarUsernameSemSucesso2									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:12</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 78									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:12</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 79									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>22:24:12</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+                                </ul>    
+                            </div>
+                        </div>
+                        <div class="test-content scrollable">
+                            <div class="test-content-tools">
+                                <ul>
+                                    <li>
+                                        <a class="back-to-test" href="javascript:void(0)">
+                                            <i class="fa fa-arrow-left"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-content-detail">
+                                <div class="detail-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script type='text/javascript'>
+	
+</script>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/f97b667/spark/js/script.js"></script>
+
+</body>
+
+</html>
