@@ -12,11 +12,16 @@ namespace AutomacaoMantis.Tests
         MainPage mainPage;
         #endregion
 
-        [Test]
-        public void RealizarLoginComSucesso()
+        [SetUp]
+        public void Setup()
         {
             loginPage = new LoginPage();
             mainPage = new MainPage();
+        }
+
+        [Test]
+        public void RealizarLoginComSucesso()
+        {
 
             #region Parameters
             string username = "administrator";
@@ -32,13 +37,12 @@ namespace AutomacaoMantis.Tests
         }
 
         [Test]
-        public void RealizarLoginSemSucessoUsuarioInexistente()
+        public void RealizarLoginUsuarioInvalido()
         {
-            loginPage = new LoginPage();
 
             #region Parameters
-            string username = "usuarioInexistente";
-            string password = "usuarioInexistente";
+            string username = "usuarioInvalido";
+            string password = "usuarioInvalido";
 
             //Resultado Esperado
             string messageErroExpected = "Sua conta pode estar desativada ou bloqueada ou o nome de usuário e a senha que você digitou não estão corretos.";
@@ -53,10 +57,8 @@ namespace AutomacaoMantis.Tests
         }
 
         [Test]
-        public void RealizarLoginSemSucessoSemInformarUsuario()
+        public void RealizarLoginSemInformarUsuario()
         {
-            loginPage = new LoginPage();
-
             #region Parameters
 
             //Resultado Esperado
@@ -69,9 +71,8 @@ namespace AutomacaoMantis.Tests
         }
 
         [Test]
-        public void RealizarLoginSemSucessoSemInformarSenha()
+        public void RealizarLoginSemInformarSenha()
         {
-            loginPage = new LoginPage();
 
             #region Parameters
             string username = "administrator";

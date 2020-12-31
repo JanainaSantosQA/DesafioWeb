@@ -10,7 +10,7 @@ namespace AutomacaoMantis.Pages
         By usernameField = By.Id("edit-username");
         By realnameField = By.Id("edit-realname");
         By emailField = By.Id("email-field");
-        By atualizarUsuarioButton = By.XPath("//input[@value='Atualizar Usuário']");                     
+        By atualizarUsuarioButton = By.XPath("//input[@value='Atualizar Usuário']");        
         #endregion
 
         #region Actions

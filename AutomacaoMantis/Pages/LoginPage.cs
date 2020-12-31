@@ -8,7 +8,7 @@ namespace AutomacaoMantis.Pages
         #region Mapping
         By usernameField = By.Id("username");
         By passwordField = By.Id("password");
-        By loginButton = By.XPath("//input[@type='submit']");
+        By loginButton = By.XPath("//input[@value='Entrar']");
         By messageErroTextArea = By.XPath("//div[@class='alert alert-danger']/p");
         #endregion
 

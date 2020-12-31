@@ -9,9 +9,10 @@ namespace AutomacaoMantis.Pages
         By usernameField = By.Id("user-username");
         By realnameField = By.Id("user-realname");
         By emailField = By.Id("email-field");
-        By accessLevelDropDown = By.Id("user-access-level");
-        By criarUsuarioButton = By.XPath("//input[@class='btn btn-primary btn-white btn-round']");
+        By accessLevelDropDown = By.Id("user-access-level");       
+        By criarUsuarioButton = By.XPath("//input[@value='Criar Usuário']");        
         By messageErroTextArea = By.XPath("//*[@class='alert alert-danger']/p[2]");
+        By messageSucessTextArea = By.XPath("//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]");
         #endregion
 
         #region Actions
@@ -34,6 +35,10 @@ namespace AutomacaoMantis.Pages
         public void ClicarCriarUsuario()
         {
             Click(criarUsuarioButton);
+        }
+        public string RetornarMensagemDeSucesso()
+        {
+            return GetText(messageSucessTextArea);
         }
         public string RetornarMensagemDeErro()
         {

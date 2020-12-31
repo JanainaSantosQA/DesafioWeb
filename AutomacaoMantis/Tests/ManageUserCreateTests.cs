@@ -10,21 +10,28 @@ namespace AutomacaoMantis.Tests
 {
     public class ManageUserCreateTests : TestBase
     {
-        #region Pages and Flows Objects
+        #region Pages, DBSteps and Flows Objects
         LoginFlows loginFlows;
         ManageUserPage manageUserPage;
         ManageUserCreatePage manageUserCreatePage;
+        MainPage mainPage;
+        UsersDBSteps usersDBSteps;
         #endregion
 
-        UsersDBSteps usersDBSteps = new UsersDBSteps();
+        #region Parameters
+        string menu = "menuGerenciarUsuarios";
+        #endregion
 
         [SetUp]
         public void Setup()
-        {
+        {            
             loginFlows = new LoginFlows();
             manageUserPage = new ManageUserPage();
             manageUserCreatePage = new ManageUserCreatePage();
-            loginFlows.EfetuarLogin(BuilderJson.ReturnParameterAppSettings("USER_LOGIN_PADRAO"), BuilderJson.ReturnParameterAppSettings("PASSWORD_LOGIN_PADRAO"));
+            mainPage = new MainPage();
+            usersDBSteps = new UsersDBSteps();
+
+            loginFlows.EfetuarLogin(BuilderJson.ReturnParameterAppSettings("USER_LOGIN_PADRAO"), BuilderJson.ReturnParameterAppSettings("PASSWORD_LOGIN_PADRAO"));                      
         }
 
         [Test]
@@ -35,21 +42,25 @@ namespace AutomacaoMantis.Tests
             string username = coluna.Username;
             string realName = coluna.RealName;
             string email = coluna.Email;
-            string acessLevelName = coluna.AccessLevel;
+            string acessLevelName = coluna.AccessLevel; 
+
+            //Resultado esperado
+            string messageSucessExpected = "Usuário "+username+" criado com um nível de acesso de "+acessLevelName+"";
             #endregion                       
 
-            manageUserPage.AbrirManageUserPage();
+            mainPage.ClicarMenu(menu);
             manageUserPage.ClicarCriarNovaConta();
             manageUserCreatePage.PreencherUsername(username);
             manageUserCreatePage.PreencherRealname(realName);
             manageUserCreatePage.PreencherEmail(email);
             manageUserCreatePage.SelecionarNivelAcesso(acessLevelName);
-            manageUserCreatePage.ClicarCriarUsuario();
+            manageUserCreatePage.ClicarCriarUsuario();         
 
             var consultarUsuarioDB = usersDBSteps.ConsultarUsuarioDB(username);
 
             Assert.Multiple(() =>
             {
+                StringAssert.Contains(messageSucessExpected, manageUserCreatePage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada");
                 Assert.AreEqual(consultarUsuarioDB.Username, username, "O usuário não está correto.");
                 Assert.AreEqual(consultarUsuarioDB.RealName, realName, "O nome do usuário não está correto.");
                 Assert.AreEqual(consultarUsuarioDB.Email, email, "O e-mail não está correto.");
@@ -72,7 +83,7 @@ namespace AutomacaoMantis.Tests
             string messageErroExpected = "Não é permitida a utilização de endereços de e-mail descartáveis.";
             #endregion                      
 
-            manageUserPage.AbrirManageUserPage();
+            mainPage.ClicarMenu(menu);
             manageUserPage.ClicarCriarNovaConta();
             manageUserCreatePage.PreencherUsername(username);
             manageUserCreatePage.PreencherRealname(realName);
@@ -100,7 +111,7 @@ namespace AutomacaoMantis.Tests
             string messageErroExpected = "O nome de usuário não é inválido. Nomes de usuário podem conter apenas letras, números, espaços, hífens, pontos, sinais de mais e sublinhados.";
             #endregion                      
 
-            manageUserPage.AbrirManageUserPage();
+            mainPage.ClicarMenu(menu);
             manageUserPage.ClicarCriarNovaConta();
             manageUserCreatePage.PreencherRealname(realName);
             manageUserCreatePage.PreencherEmail(email);
@@ -129,9 +140,9 @@ namespace AutomacaoMantis.Tests
 
             //Resultado esperado
             string messageErroExpected = "Este nome de usuário já está sendo usado. Por favor, volte e selecione um outro.";
-            #endregion                      
+            #endregion
 
-            manageUserPage.AbrirManageUserPage();
+            mainPage.ClicarMenu(menu);
             manageUserPage.ClicarCriarNovaConta();
             manageUserCreatePage.PreencherUsername(usernameUserOne);
             manageUserCreatePage.PreencherRealname(realNameUserTwo);
@@ -167,7 +178,7 @@ namespace AutomacaoMantis.Tests
             string messageErroExpected = "Este e-mail já está sendo usado. Por favor, volte e selecione outro.";
             #endregion                      
 
-            manageUserPage.AbrirManageUserPage();
+            mainPage.ClicarMenu(menu);
             manageUserPage.ClicarCriarNovaConta();
             manageUserCreatePage.PreencherUsername(usernameUserTwo);
             manageUserCreatePage.PreencherRealname(realNameUserTwo);

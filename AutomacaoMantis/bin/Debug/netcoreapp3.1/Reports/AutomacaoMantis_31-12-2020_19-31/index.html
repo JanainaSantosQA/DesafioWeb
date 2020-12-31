@@ -1,0 +1,3509 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Extent Framework</title>
+  <link rel="apple-touch-icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link rel="shortcut icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/cd00a5e/spark/css/style.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style> </style>
+</head>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+
+
+<body class="test-view  dark">
+    <div class="app header-dark side-nav-folded">
+        <div class="layout">
+            <div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">AutomacaoMantis</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">31/12/2020 19:31:47</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+            <div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="side-nav-controls">
+    <ul>
+      <li>
+        <a href="#" class="lightsout" style="color:#8a8a8a;">
+          <i class="fa fa-desktop"></i>"</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+            <div class="page-container">
+                <div class="main-content">
+                    <div class="test-wrapper row">
+                        <div class="test-list">
+                            <div class="test-list-tools">
+                                <ul class="tools pull-left">
+                                    <li>
+                                        <a href="">
+                                            <span class="font-size-14">Tests</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                                <ul class="tools text-right">
+									<li class="user-profile dropdown dropdown-animated scale-left">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+											<i class="fa fa-exclamation-circle"></i>
+										</a>
+										<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a status="pass" class="dropdown-item" href="#"><span>Pass</span><span class="status success pull-right"></span></a>																																																																		<div class="dropdown-divider"></div>
+											<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+										</ul>
+									</li>
+																		                                </ul>
+                            </div>
+                            <div class="test-list-wrapper scrollable">
+                                <ul class="test-list-item">
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">RealizarLoginComSucesso</p> 
+													<p class="duration text-sm">0h:0m:9s+740ms</p> 
+													<span class="datetime">19:31:47 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">RealizarLoginComSucesso</h5>
+															<span class='badge badge-success'>31/12/2020 19:31:47</span>
+															<span class='badge badge-danger'>31/12/2020 19:31:56</span>
+															<span class='badge badge-default'>0h:0m:9s+740ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:51</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./RealizarLoginComSucesso_31_12_2020-19_31_51.png' src='./RealizarLoginComSucesso_31_12_2020-19_31_51.png' data-src='./RealizarLoginComSucesso_31_12_2020-19_31_51.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:52</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./RealizarLoginComSucesso_31_12_2020-19_31_51.png' src='./RealizarLoginComSucesso_31_12_2020-19_31_51.png' data-src='./RealizarLoginComSucesso_31_12_2020-19_31_51.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:52</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./RealizarLoginComSucesso_31_12_2020-19_31_52.png' src='./RealizarLoginComSucesso_31_12_2020-19_31_52.png' data-src='./RealizarLoginComSucesso_31_12_2020-19_31_52.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:56</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./RealizarLoginComSucesso_31_12_2020-19_31_56.png' src='./RealizarLoginComSucesso_31_12_2020-19_31_56.png' data-src='./RealizarLoginComSucesso_31_12_2020-19_31_56.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:56</td>
+				<td>
+RetornarUsernameDasInformacoesDeLogin || RETURN: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./RealizarLoginComSucesso_31_12_2020-19_31_56.png' src='./RealizarLoginComSucesso_31_12_2020-19_31_56.png' data-src='./RealizarLoginComSucesso_31_12_2020-19_31_56.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:31:56</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">RealizarLoginSemInformarSenha</p> 
+													<p class="duration text-sm">0h:0m:6s+269ms</p> 
+													<span class="datetime">19:32:01 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">RealizarLoginSemInformarSenha</h5>
+															<span class='badge badge-success'>31/12/2020 19:32:01</span>
+															<span class='badge badge-danger'>31/12/2020 19:32:07</span>
+															<span class='badge badge-default'>0h:0m:6s+269ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:05</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./RealizarLoginSemInformarSenha_31_12_2020-19_32_05.png' src='./RealizarLoginSemInformarSenha_31_12_2020-19_32_05.png' data-src='./RealizarLoginSemInformarSenha_31_12_2020-19_32_05.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:06</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./RealizarLoginSemInformarSenha_31_12_2020-19_32_05.png' src='./RealizarLoginSemInformarSenha_31_12_2020-19_32_05.png' data-src='./RealizarLoginSemInformarSenha_31_12_2020-19_32_05.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:07</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./RealizarLoginSemInformarSenha_31_12_2020-19_32_06.png' src='./RealizarLoginSemInformarSenha_31_12_2020-19_32_06.png' data-src='./RealizarLoginSemInformarSenha_31_12_2020-19_32_06.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:07</td>
+				<td>
+RetornarMensagemDeErro || RETURN: Sua conta pode estar desativada ou bloqueada ou o nome de usuário e a senha que você digitou não estão corretos.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./RealizarLoginSemInformarSenha_31_12_2020-19_32_07.png' src='./RealizarLoginSemInformarSenha_31_12_2020-19_32_07.png' data-src='./RealizarLoginSemInformarSenha_31_12_2020-19_32_07.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:07</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">RealizarLoginSemInformarUsuario</p> 
+													<p class="duration text-sm">0h:0m:5s+076ms</p> 
+													<span class="datetime">19:32:11 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">RealizarLoginSemInformarUsuario</h5>
+															<span class='badge badge-success'>31/12/2020 19:32:11</span>
+															<span class='badge badge-danger'>31/12/2020 19:32:16</span>
+															<span class='badge badge-default'>0h:0m:5s+076ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:16</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./RealizarLoginSemInformarUsuario_31_12_2020-19_32_16.png' src='./RealizarLoginSemInformarUsuario_31_12_2020-19_32_16.png' data-src='./RealizarLoginSemInformarUsuario_31_12_2020-19_32_16.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:16</td>
+				<td>
+RetornarMensagemDeErro || RETURN: Sua conta pode estar desativada ou bloqueada ou o nome de usuário e a senha que você digitou não estão corretos.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./RealizarLoginSemInformarUsuario_31_12_2020-19_32_16.png' src='./RealizarLoginSemInformarUsuario_31_12_2020-19_32_16.png' data-src='./RealizarLoginSemInformarUsuario_31_12_2020-19_32_16.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:16</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">RealizarLoginUsuarioInvalido</p> 
+													<p class="duration text-sm">0h:0m:6s+541ms</p> 
+													<span class="datetime">19:32:20 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">RealizarLoginUsuarioInvalido</h5>
+															<span class='badge badge-success'>31/12/2020 19:32:20</span>
+															<span class='badge badge-danger'>31/12/2020 19:32:27</span>
+															<span class='badge badge-default'>0h:0m:6s+541ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:25</td>
+				<td>
+PreencherUsuario || PARAMETER: usuarioInvalido					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./RealizarLoginUsuarioInvalido_31_12_2020-19_32_24.png' src='./RealizarLoginUsuarioInvalido_31_12_2020-19_32_24.png' data-src='./RealizarLoginUsuarioInvalido_31_12_2020-19_32_24.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:25</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./RealizarLoginUsuarioInvalido_31_12_2020-19_32_25.png' src='./RealizarLoginUsuarioInvalido_31_12_2020-19_32_25.png' data-src='./RealizarLoginUsuarioInvalido_31_12_2020-19_32_25.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:26</td>
+				<td>
+PreencherSenha || PARAMETER: usuarioInvalido					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./RealizarLoginUsuarioInvalido_31_12_2020-19_32_25.png' src='./RealizarLoginUsuarioInvalido_31_12_2020-19_32_25.png' data-src='./RealizarLoginUsuarioInvalido_31_12_2020-19_32_25.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:27</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./RealizarLoginUsuarioInvalido_31_12_2020-19_32_26.png' src='./RealizarLoginUsuarioInvalido_31_12_2020-19_32_26.png' data-src='./RealizarLoginUsuarioInvalido_31_12_2020-19_32_26.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:27</td>
+				<td>
+RetornarMensagemDeErro || RETURN: Sua conta pode estar desativada ou bloqueada ou o nome de usuário e a senha que você digitou não estão corretos.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./RealizarLoginUsuarioInvalido_31_12_2020-19_32_27.png' src='./RealizarLoginUsuarioInvalido_31_12_2020-19_32_27.png' data-src='./RealizarLoginUsuarioInvalido_31_12_2020-19_32_27.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:27</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioComSucesso</p> 
+													<p class="duration text-sm">0h:0m:13s+883ms</p> 
+													<span class="datetime">19:32:36 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioComSucesso</h5>
+															<span class='badge badge-success'>31/12/2020 19:32:36</span>
+															<span class='badge badge-danger'>31/12/2020 19:32:50</span>
+															<span class='badge badge-default'>0h:0m:13s+883ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:40</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_32_40.png' src='./CriarUsuarioComSucesso_31_12_2020-19_32_40.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_32_40.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:41</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_32_40.png' src='./CriarUsuarioComSucesso_31_12_2020-19_32_40.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_32_40.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:41</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_32_41.png' src='./CriarUsuarioComSucesso_31_12_2020-19_32_41.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_32_41.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:42</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_32_42.png' src='./CriarUsuarioComSucesso_31_12_2020-19_32_42.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_32_42.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:45</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_32_45.png' src='./CriarUsuarioComSucesso_31_12_2020-19_32_45.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_32_45.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:46</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_32_46.png' src='./CriarUsuarioComSucesso_31_12_2020-19_32_46.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_32_46.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:46</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_32_46.png' src='./CriarUsuarioComSucesso_31_12_2020-19_32_46.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_32_46.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:47</td>
+				<td>
+PreencherUsername || PARAMETER: janaina.santos					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_32_47.png' src='./CriarUsuarioComSucesso_31_12_2020-19_32_47.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_32_47.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:47</td>
+				<td>
+PreencherRealname || PARAMETER: Janaina Santos					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_32_47.png' src='./CriarUsuarioComSucesso_31_12_2020-19_32_47.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_32_47.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:48</td>
+				<td>
+PreencherEmail || PARAMETER: janainasantos@teste.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_32_47.png' src='./CriarUsuarioComSucesso_31_12_2020-19_32_47.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_32_47.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:48</td>
+				<td>
+SelecionarNivelAcesso || PARAMETER: atualizador					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_32_48.png' src='./CriarUsuarioComSucesso_31_12_2020-19_32_48.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_32_48.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:49</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_32_49.png' src='./CriarUsuarioComSucesso_31_12_2020-19_32_49.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_32_49.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:49</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = janaina.santos									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:49</td>
+				<td>
+RetornarMensagemDeSucesso || RETURN: Usuário janaina.santos criado com um nível de acesso de atualizador
+
+Clique aqui para prosseguir					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_32_49.png' src='./CriarUsuarioComSucesso_31_12_2020-19_32_49.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_32_49.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:49</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 138									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:50</td>
+				<td>
+DeletarEmailUsuarioDB || PARAMETERS: E-mail do usuário = janainasantos@teste.com									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:50</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioComSucesso</p> 
+													<p class="duration text-sm">0h:0m:13s+516ms</p> 
+													<span class="datetime">19:32:54 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioComSucesso</h5>
+															<span class='badge badge-success'>31/12/2020 19:32:54</span>
+															<span class='badge badge-danger'>31/12/2020 19:33:07</span>
+															<span class='badge badge-default'>0h:0m:13s+516ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:58</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_32_58.png' src='./CriarUsuarioComSucesso_31_12_2020-19_32_58.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_32_58.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:59</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_32_58.png' src='./CriarUsuarioComSucesso_31_12_2020-19_32_58.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_32_58.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:32:59</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_32_59.png' src='./CriarUsuarioComSucesso_31_12_2020-19_32_59.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_32_59.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:00</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_00.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_00.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_00.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:03</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_03.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_03.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_03.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:04</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_04.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_04.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_04.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:05</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_04.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_04.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_04.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:05</td>
+				<td>
+PreencherUsername || PARAMETER: daniela.batista					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_05.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_05.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_05.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:05</td>
+				<td>
+PreencherRealname || PARAMETER: Daniela Batista					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_05.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_05.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_05.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:06</td>
+				<td>
+PreencherEmail || PARAMETER: danielabatista@teste.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_06.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_06.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_06.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:06</td>
+				<td>
+SelecionarNivelAcesso || PARAMETER: atualizador					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_06.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_06.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_06.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:07</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_07.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_07.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_07.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:07</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = daniela.batista									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:07</td>
+				<td>
+RetornarMensagemDeSucesso || RETURN: Usuário daniela.batista criado com um nível de acesso de atualizador
+
+Clique aqui para prosseguir					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_07.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_07.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_07.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:07</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 139									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:07</td>
+				<td>
+DeletarEmailUsuarioDB || PARAMETERS: E-mail do usuário = danielabatista@teste.com									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:07</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioComSucesso</p> 
+													<p class="duration text-sm">0h:0m:13s+530ms</p> 
+													<span class="datetime">19:33:11 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioComSucesso</h5>
+															<span class='badge badge-success'>31/12/2020 19:33:11</span>
+															<span class='badge badge-danger'>31/12/2020 19:33:25</span>
+															<span class='badge badge-default'>0h:0m:13s+530ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:16</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_16.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_16.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_16.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:17</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_16.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_16.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_16.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:17</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_17.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_17.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_17.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:18</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_18.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_18.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_18.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:21</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_21.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_21.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_21.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:22</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_21.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_21.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_21.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:22</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_22.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_22.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_22.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:23</td>
+				<td>
+PreencherUsername || PARAMETER: fernando.alves					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_22.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_22.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_22.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:23</td>
+				<td>
+PreencherRealname || PARAMETER: Fernando Alves					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_23.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_23.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_23.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:24</td>
+				<td>
+PreencherEmail || PARAMETER: fernandoalves@teste.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_23.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_23.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_23.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:24</td>
+				<td>
+SelecionarNivelAcesso || PARAMETER: atualizador					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_24.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_24.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_24.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:25</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_24.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_24.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_24.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:25</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = fernando.alves									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:25</td>
+				<td>
+RetornarMensagemDeSucesso || RETURN: Usuário fernando.alves criado com um nível de acesso de atualizador
+
+Clique aqui para prosseguir					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_25.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_25.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_25.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:25</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 140									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:25</td>
+				<td>
+DeletarEmailUsuarioDB || PARAMETERS: E-mail do usuário = fernandoalves@teste.com									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:25</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioComSucesso</p> 
+													<p class="duration text-sm">0h:0m:14s+302ms</p> 
+													<span class="datetime">19:33:29 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioComSucesso</h5>
+															<span class='badge badge-success'>31/12/2020 19:33:29</span>
+															<span class='badge badge-danger'>31/12/2020 19:33:43</span>
+															<span class='badge badge-default'>0h:0m:14s+302ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:34</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_33.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_33.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_33.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:34</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_34.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_34.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_34.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:35</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_35.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_35.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_35.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:39</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_39.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_39.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_39.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:39</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_39.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_39.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_39.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:40</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_40.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_40.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_40.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:41</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_40.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_40.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_40.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:41</td>
+				<td>
+PreencherUsername || PARAMETER: ana.santos					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_41.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_41.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_41.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:42</td>
+				<td>
+PreencherRealname || PARAMETER: Ana Santos					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_41.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_41.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_41.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:42</td>
+				<td>
+PreencherEmail || PARAMETER: anasantos@teste.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_42.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_42.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_42.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:42</td>
+				<td>
+SelecionarNivelAcesso || PARAMETER: atualizador					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_42.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_42.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_42.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:43</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_43.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_43.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_43.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:43</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = ana.santos									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:43</td>
+				<td>
+RetornarMensagemDeSucesso || RETURN: Usuário ana.santos criado com um nível de acesso de atualizador
+
+Clique aqui para prosseguir					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_43.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_43.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_43.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:43</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 141									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:43</td>
+				<td>
+DeletarEmailUsuarioDB || PARAMETERS: E-mail do usuário = anasantos@teste.com									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:43</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioComSucesso</p> 
+													<p class="duration text-sm">0h:0m:13s+576ms</p> 
+													<span class="datetime">19:33:48 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioComSucesso</h5>
+															<span class='badge badge-success'>31/12/2020 19:33:48</span>
+															<span class='badge badge-danger'>31/12/2020 19:34:01</span>
+															<span class='badge badge-default'>0h:0m:13s+576ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:52</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_52.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_52.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_52.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:53</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_52.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_52.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_52.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:53</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_53.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_53.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_53.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:54</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_54.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_54.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_54.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:57</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_57.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_57.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_57.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:58</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_58.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_58.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_58.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:58</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_58.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_58.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_58.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:59</td>
+				<td>
+PreencherUsername || PARAMETER: bruna.lopes					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_59.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_59.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_59.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:33:59</td>
+				<td>
+PreencherRealname || PARAMETER: Bruna Lopes					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_59.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_59.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_59.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:00</td>
+				<td>
+PreencherEmail || PARAMETER: brunalopes@teste.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_33_59.png' src='./CriarUsuarioComSucesso_31_12_2020-19_33_59.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_33_59.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:00</td>
+				<td>
+SelecionarNivelAcesso || PARAMETER: visualizador					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_34_00.png' src='./CriarUsuarioComSucesso_31_12_2020-19_34_00.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_34_00.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:01</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_34_01.png' src='./CriarUsuarioComSucesso_31_12_2020-19_34_01.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_34_01.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:01</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = bruna.lopes									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:01</td>
+				<td>
+RetornarMensagemDeSucesso || RETURN: Usuário bruna.lopes criado com um nível de acesso de visualizador
+
+Clique aqui para prosseguir					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_34_01.png' src='./CriarUsuarioComSucesso_31_12_2020-19_34_01.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_34_01.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:01</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 142									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:01</td>
+				<td>
+DeletarEmailUsuarioDB || PARAMETERS: E-mail do usuário = brunalopes@teste.com									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:01</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioComSucesso</p> 
+													<p class="duration text-sm">0h:0m:13s+620ms</p> 
+													<span class="datetime">19:34:05 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioComSucesso</h5>
+															<span class='badge badge-success'>31/12/2020 19:34:05</span>
+															<span class='badge badge-danger'>31/12/2020 19:34:19</span>
+															<span class='badge badge-default'>0h:0m:13s+620ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:10</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_34_10.png' src='./CriarUsuarioComSucesso_31_12_2020-19_34_10.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_34_10.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:11</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_34_10.png' src='./CriarUsuarioComSucesso_31_12_2020-19_34_10.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_34_10.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:11</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_34_11.png' src='./CriarUsuarioComSucesso_31_12_2020-19_34_11.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_34_11.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:12</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_34_12.png' src='./CriarUsuarioComSucesso_31_12_2020-19_34_12.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_34_12.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:15</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_34_15.png' src='./CriarUsuarioComSucesso_31_12_2020-19_34_15.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_34_15.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:16</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_34_15.png' src='./CriarUsuarioComSucesso_31_12_2020-19_34_15.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_34_15.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:16</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_34_16.png' src='./CriarUsuarioComSucesso_31_12_2020-19_34_16.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_34_16.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:17</td>
+				<td>
+PreencherUsername || PARAMETER: vanessa.silva					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_34_16.png' src='./CriarUsuarioComSucesso_31_12_2020-19_34_16.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_34_16.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:17</td>
+				<td>
+PreencherRealname || PARAMETER: Vanessa Silva					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_34_17.png' src='./CriarUsuarioComSucesso_31_12_2020-19_34_17.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_34_17.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:18</td>
+				<td>
+PreencherEmail || PARAMETER: vanessasilva@teste.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_34_17.png' src='./CriarUsuarioComSucesso_31_12_2020-19_34_17.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_34_17.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:18</td>
+				<td>
+SelecionarNivelAcesso || PARAMETER: relator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_34_18.png' src='./CriarUsuarioComSucesso_31_12_2020-19_34_18.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_34_18.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:19</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_34_18.png' src='./CriarUsuarioComSucesso_31_12_2020-19_34_18.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_34_18.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:19</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = vanessa.silva									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:19</td>
+				<td>
+RetornarMensagemDeSucesso || RETURN: Usuário vanessa.silva criado com um nível de acesso de relator
+
+Clique aqui para prosseguir					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioComSucesso_31_12_2020-19_34_19.png' src='./CriarUsuarioComSucesso_31_12_2020-19_34_19.png' data-src='./CriarUsuarioComSucesso_31_12_2020-19_34_19.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:19</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 143									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:19</td>
+				<td>
+DeletarEmailUsuarioDB || PARAMETERS: E-mail do usuário = vanessasilva@teste.com									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:19</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioEmailInvalido</p> 
+													<p class="duration text-sm">0h:0m:13s+541ms</p> 
+													<span class="datetime">19:34:23 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioEmailInvalido</h5>
+															<span class='badge badge-success'>31/12/2020 19:34:23</span>
+															<span class='badge badge-danger'>31/12/2020 19:34:37</span>
+															<span class='badge badge-default'>0h:0m:13s+541ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:28</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_27.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_27.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_27.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:28</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_28.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_28.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_28.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:29</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_28.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_28.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_28.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:30</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_29.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_29.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_29.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:33</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_33.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_33.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_33.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:34</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_33.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_33.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_33.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:34</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_34.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_34.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_34.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:35</td>
+				<td>
+PreencherUsername || PARAMETER: janaina.santos					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_34.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_34.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_34.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:35</td>
+				<td>
+PreencherRealname || PARAMETER: Janaina Santos					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_35.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_35.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_35.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:36</td>
+				<td>
+PreencherEmail || PARAMETER: janainasantos@example.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_35.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_35.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_35.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:36</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_36.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_36.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_36.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:36</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = janaina.santos									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:37</td>
+				<td>
+RetornarMensagemDeErro || RETURN: Não é permitida a utilização de endereços de e-mail descartáveis.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_37.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_37.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_37.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:37</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioEmailInvalido</p> 
+													<p class="duration text-sm">0h:0m:13s+110ms</p> 
+													<span class="datetime">19:34:41 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioEmailInvalido</h5>
+															<span class='badge badge-success'>31/12/2020 19:34:41</span>
+															<span class='badge badge-danger'>31/12/2020 19:34:54</span>
+															<span class='badge badge-default'>0h:0m:13s+110ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:45</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_45.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_45.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_45.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:46</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_46.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_46.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_46.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:46</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_46.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_46.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_46.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:48</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_47.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_47.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_47.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:50</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_50.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_50.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_50.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:51</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_51.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_51.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_51.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:52</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_52.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_52.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_52.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:52</td>
+				<td>
+PreencherUsername || PARAMETER: daniela.batista					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_52.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_52.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_52.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:53</td>
+				<td>
+PreencherRealname || PARAMETER: Daniela Batista					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_52.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_52.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_52.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:53</td>
+				<td>
+PreencherEmail || PARAMETER: danielabatista@example.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_53.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_53.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_53.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:54</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_53.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_53.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_53.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:54</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = daniela.batista									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:54</td>
+				<td>
+RetornarMensagemDeErro || RETURN: Não é permitida a utilização de endereços de e-mail descartáveis.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_34_54.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_54.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_34_54.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:34:54</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioEmailInvalido</p> 
+													<p class="duration text-sm">0h:0m:13s+362ms</p> 
+													<span class="datetime">19:34:58 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioEmailInvalido</h5>
+															<span class='badge badge-success'>31/12/2020 19:34:58</span>
+															<span class='badge badge-danger'>31/12/2020 19:35:12</span>
+															<span class='badge badge-default'>0h:0m:13s+362ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:03</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_02.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_02.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_02.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:03</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_03.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_03.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_03.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:04</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_04.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_04.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_04.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:05</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_05.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_05.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_05.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:08</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_08.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_08.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_08.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:09</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_08.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_08.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_08.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:09</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_09.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_09.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_09.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:10</td>
+				<td>
+PreencherUsername || PARAMETER: fernando.alves					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_09.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_09.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_09.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:10</td>
+				<td>
+PreencherRealname || PARAMETER: Fernando Alves					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_10.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_10.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_10.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:11</td>
+				<td>
+PreencherEmail || PARAMETER: fernandoalves@example.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_10.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_10.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_10.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:11</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_11.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_11.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_11.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:11</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = fernando.alves									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:12</td>
+				<td>
+RetornarMensagemDeErro || RETURN: Não é permitida a utilização de endereços de e-mail descartáveis.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_11.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_11.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_11.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:12</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioEmailInvalido</p> 
+													<p class="duration text-sm">0h:0m:13s+323ms</p> 
+													<span class="datetime">19:35:16 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioEmailInvalido</h5>
+															<span class='badge badge-success'>31/12/2020 19:35:16</span>
+															<span class='badge badge-danger'>31/12/2020 19:35:29</span>
+															<span class='badge badge-default'>0h:0m:13s+323ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:20</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_20.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_20.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_20.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:21</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_21.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_21.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_21.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:21</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_21.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_21.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_21.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:23</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_22.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_22.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_22.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:26</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_25.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_25.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_25.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:26</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_26.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_26.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_26.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:27</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_27.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_27.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_27.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:27</td>
+				<td>
+PreencherUsername || PARAMETER: ana.santos					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_27.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_27.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_27.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:28</td>
+				<td>
+PreencherRealname || PARAMETER: Ana Santos					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_28.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_28.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_28.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:28</td>
+				<td>
+PreencherEmail || PARAMETER: anasantos@example.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_28.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_28.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_28.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:29</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_29.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_29.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_29.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:29</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = ana.santos									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:29</td>
+				<td>
+RetornarMensagemDeErro || RETURN: Não é permitida a utilização de endereços de e-mail descartáveis.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_29.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_29.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_29.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:29</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioEmailInvalido</p> 
+													<p class="duration text-sm">0h:0m:14s+227ms</p> 
+													<span class="datetime">19:35:34 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioEmailInvalido</h5>
+															<span class='badge badge-success'>31/12/2020 19:35:34</span>
+															<span class='badge badge-danger'>31/12/2020 19:35:48</span>
+															<span class='badge badge-default'>0h:0m:14s+227ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:38</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_38.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_38.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_38.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:39</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_38.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_38.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_38.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:39</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_39.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_39.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_39.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:43</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_43.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_43.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_43.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:44</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_43.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_43.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_43.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:45</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_44.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_44.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_44.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:45</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_45.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_45.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_45.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:46</td>
+				<td>
+PreencherUsername || PARAMETER: bruna.lopes					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_45.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_45.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_45.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:46</td>
+				<td>
+PreencherRealname || PARAMETER: Bruna Lopes					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_46.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_46.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_46.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:47</td>
+				<td>
+PreencherEmail || PARAMETER: brunalopes@example.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_46.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_46.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_46.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:47</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_47.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_47.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_47.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:47</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = bruna.lopes									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:48</td>
+				<td>
+RetornarMensagemDeErro || RETURN: Não é permitida a utilização de endereços de e-mail descartáveis.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_47.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_47.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_47.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:48</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioEmailInvalido</p> 
+													<p class="duration text-sm">0h:0m:13s+309ms</p> 
+													<span class="datetime">19:35:52 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioEmailInvalido</h5>
+															<span class='badge badge-success'>31/12/2020 19:35:52</span>
+															<span class='badge badge-danger'>31/12/2020 19:36:05</span>
+															<span class='badge badge-default'>0h:0m:13s+309ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:56</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_56.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_56.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_56.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:57</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_57.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_57.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_57.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:57</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_57.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_57.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_57.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:35:58</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_35_58.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_58.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_35_58.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:01</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_36_01.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_36_01.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_36_01.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:02</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_36_02.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_36_02.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_36_02.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:03</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_36_03.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_36_03.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_36_03.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:03</td>
+				<td>
+PreencherUsername || PARAMETER: vanessa.silva					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_36_03.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_36_03.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_36_03.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:04</td>
+				<td>
+PreencherRealname || PARAMETER: Vanessa Silva					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_36_03.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_36_03.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_36_03.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:04</td>
+				<td>
+PreencherEmail || PARAMETER: vanessasilva@example.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_36_04.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_36_04.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_36_04.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:05</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_36_05.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_36_05.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_36_05.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:05</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = vanessa.silva									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:05</td>
+				<td>
+RetornarMensagemDeErro || RETURN: Não é permitida a utilização de endereços de e-mail descartáveis.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailInvalido_31_12_2020-19_36_05.png' src='./CriarUsuarioEmailInvalido_31_12_2020-19_36_05.png' data-src='./CriarUsuarioEmailInvalido_31_12_2020-19_36_05.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:05</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioEmailJaExiste</p> 
+													<p class="duration text-sm">0h:0m:13s+779ms</p> 
+													<span class="datetime">19:36:10 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioEmailJaExiste</h5>
+															<span class='badge badge-success'>31/12/2020 19:36:10</span>
+															<span class='badge badge-danger'>31/12/2020 19:36:23</span>
+															<span class='badge badge-default'>0h:0m:13s+779ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:14</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_13.png' src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_13.png' data-src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_13.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:14</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_14.png' src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_14.png' data-src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_14.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:15</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_15.png' src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_15.png' data-src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_15.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:16</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_16.png' src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_16.png' data-src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_16.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:16</td>
+				<td>
+InserirUsuarioDB || PARAMETERS: Username = UDHRMJ | Realname = DASGFY | Enabled = 1 | E-mail = UHXGCKGQKI@teste.com									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:19</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_19.png' src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_19.png' data-src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_19.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:20</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_19.png' src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_19.png' data-src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_19.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:20</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_20.png' src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_20.png' data-src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_20.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:21</td>
+				<td>
+PreencherUsername || PARAMETER: HSONAD					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_21.png' src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_21.png' data-src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_21.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:21</td>
+				<td>
+PreencherRealname || PARAMETER: WMHVNU					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_21.png' src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_21.png' data-src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_21.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:22</td>
+				<td>
+PreencherEmail || PARAMETER: UHXGCKGQKI@teste.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_21.png' src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_21.png' data-src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_21.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:22</td>
+				<td>
+SelecionarNivelAcesso || PARAMETER: gerente					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_22.png' src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_22.png' data-src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_22.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:23</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_23.png' src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_23.png' data-src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_23.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:23</td>
+				<td>
+RetornarMensagemDeErro || RETURN: Este e-mail já está sendo usado. Por favor, volte e selecione outro.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_23.png' src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_23.png' data-src='./CriarUsuarioEmailJaExiste_31_12_2020-19_36_23.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:23</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = UDHRMJ									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:23</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 144									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:23</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioSemInformarUsername</p> 
+													<p class="duration text-sm">0h:0m:12s+903ms</p> 
+													<span class="datetime">19:36:27 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioSemInformarUsername</h5>
+															<span class='badge badge-success'>31/12/2020 19:36:27</span>
+															<span class='badge badge-danger'>31/12/2020 19:36:40</span>
+															<span class='badge badge-default'>0h:0m:12s+903ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:32</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_32.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_32.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_32.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:33</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_32.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_32.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_32.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:33</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_33.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_33.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_33.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:34</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_34.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_34.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_34.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:37</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_37.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_37.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_37.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:38</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_37.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_37.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_37.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:38</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_38.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_38.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_38.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:39</td>
+				<td>
+PreencherRealname || PARAMETER: Janaina Santos					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_39.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_39.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_39.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:39</td>
+				<td>
+PreencherEmail || PARAMETER: janainasantos@example.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_39.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_39.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_39.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:40</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_40.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_40.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_40.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:40</td>
+				<td>
+RetornarMensagemDeErro || RETURN: O nome de usuário não é inválido. Nomes de usuário podem conter apenas letras, números, espaços, hífens, pontos, sinais de mais e sublinhados.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_40.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_40.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_40.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:40</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioSemInformarUsername</p> 
+													<p class="duration text-sm">0h:0m:13s+508ms</p> 
+													<span class="datetime">19:36:45 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioSemInformarUsername</h5>
+															<span class='badge badge-success'>31/12/2020 19:36:45</span>
+															<span class='badge badge-danger'>31/12/2020 19:36:58</span>
+															<span class='badge badge-default'>0h:0m:13s+508ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:49</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_49.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_49.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_49.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:50</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_49.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_49.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_49.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:50</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_50.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_50.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_50.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:54</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_54.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_54.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_54.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:55</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_55.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_55.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_55.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:56</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_55.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_55.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_55.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:56</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_56.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_56.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_56.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:57</td>
+				<td>
+PreencherRealname || PARAMETER: Daniela Batista					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_56.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_56.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_56.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:57</td>
+				<td>
+PreencherEmail || PARAMETER: danielabatista@example.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_57.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_57.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_57.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:58</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_57.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_57.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_57.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:58</td>
+				<td>
+RetornarMensagemDeErro || RETURN: O nome de usuário não é inválido. Nomes de usuário podem conter apenas letras, números, espaços, hífens, pontos, sinais de mais e sublinhados.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_58.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_58.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_36_58.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:36:58</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioSemInformarUsername</p> 
+													<p class="duration text-sm">0h:0m:13s+126ms</p> 
+													<span class="datetime">19:37:02 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioSemInformarUsername</h5>
+															<span class='badge badge-success'>31/12/2020 19:37:02</span>
+															<span class='badge badge-danger'>31/12/2020 19:37:15</span>
+															<span class='badge badge-default'>0h:0m:13s+126ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:07</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_06.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_06.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_06.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:08</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_07.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_07.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_07.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:08</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_08.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_08.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_08.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:09</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_09.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_09.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_09.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:12</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_12.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_12.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_12.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:13</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_12.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_12.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_12.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:13</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_13.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_13.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_13.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:14</td>
+				<td>
+PreencherRealname || PARAMETER: Fernando Alves					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_14.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_14.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_14.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:14</td>
+				<td>
+PreencherEmail || PARAMETER: fernandoalves@example.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_14.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_14.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_14.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:15</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_15.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_15.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_15.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:15</td>
+				<td>
+RetornarMensagemDeErro || RETURN: O nome de usuário não é inválido. Nomes de usuário podem conter apenas letras, números, espaços, hífens, pontos, sinais de mais e sublinhados.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_15.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_15.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_15.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:15</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioSemInformarUsername</p> 
+													<p class="duration text-sm">0h:0m:13s+423ms</p> 
+													<span class="datetime">19:37:20 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioSemInformarUsername</h5>
+															<span class='badge badge-success'>31/12/2020 19:37:20</span>
+															<span class='badge badge-danger'>31/12/2020 19:37:33</span>
+															<span class='badge badge-default'>0h:0m:13s+423ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:24</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_24.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_24.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_24.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:25</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_25.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_25.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_25.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:25</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_25.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_25.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_25.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:29</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_29.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_29.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_29.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:30</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_30.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_30.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_30.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:31</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_30.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_30.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_30.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:31</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_31.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_31.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_31.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:32</td>
+				<td>
+PreencherRealname || PARAMETER: Ana Santos					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_31.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_31.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_31.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:32</td>
+				<td>
+PreencherEmail || PARAMETER: anasantos@example.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_32.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_32.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_32.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:33</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_32.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_32.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_32.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:33</td>
+				<td>
+RetornarMensagemDeErro || RETURN: O nome de usuário não é inválido. Nomes de usuário podem conter apenas letras, números, espaços, hífens, pontos, sinais de mais e sublinhados.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_33.png' src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_33.png' data-src='./CriarUsuarioSemInformarUsername_31_12_2020-19_37_33.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:33</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">CriarUsuarioUsernameJaExiste</p> 
+													<p class="duration text-sm">0h:0m:14s+023ms</p> 
+													<span class="datetime">19:37:37 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">CriarUsuarioUsernameJaExiste</h5>
+															<span class='badge badge-success'>31/12/2020 19:37:37</span>
+															<span class='badge badge-danger'>31/12/2020 19:37:51</span>
+															<span class='badge badge-default'>0h:0m:14s+023ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:42</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_41.png' src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_41.png' data-src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_41.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:42</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_42.png' src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_42.png' data-src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_42.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:43</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_42.png' src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_42.png' data-src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_42.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:44</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_43.png' src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_43.png' data-src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_43.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:44</td>
+				<td>
+InserirUsuarioDB || PARAMETERS: Username = UMUJXM | Realname = YYIKWS | Enabled = 1 | E-mail = NTSDJYPDSP@teste.com									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:47</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_47.png' src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_47.png' data-src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_47.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:48</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_47.png' src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_47.png' data-src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_47.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:48</td>
+				<td>
+ClicarCriarNovaConta ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_48.png' src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_48.png' data-src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_48.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:49</td>
+				<td>
+PreencherUsername || PARAMETER: UMUJXM					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_48.png' src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_48.png' data-src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_48.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:49</td>
+				<td>
+PreencherRealname || PARAMETER: LWBRWB					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_49.png' src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_49.png' data-src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_49.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:50</td>
+				<td>
+PreencherEmail || PARAMETER: GUHKVMDGIC@teste.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_49.png' src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_49.png' data-src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_49.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:50</td>
+				<td>
+SelecionarNivelAcesso || PARAMETER: gerente					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_50.png' src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_50.png' data-src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_50.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:51</td>
+				<td>
+ClicarCriarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_51.png' src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_51.png' data-src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_51.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:51</td>
+				<td>
+RetornarMensagemDeErro || RETURN: Este nome de usuário já está sendo usado. Por favor, volte e selecione um outro.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_51.png' src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_51.png' data-src='./CriarUsuarioUsernameJaExiste_31_12_2020-19_37_51.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:51</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = UMUJXM									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:51</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 145									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:37:51</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">EditarEmailJaExiste</p> 
+													<p class="duration text-sm">0h:0m:15s+069ms</p> 
+													<span class="datetime">19:37:56 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">EditarEmailJaExiste</h5>
+															<span class='badge badge-success'>31/12/2020 19:37:56</span>
+															<span class='badge badge-danger'>31/12/2020 19:38:11</span>
+															<span class='badge badge-default'>0h:0m:15s+069ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:00</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarEmailJaExiste_31_12_2020-19_38_00.png' src='./EditarEmailJaExiste_31_12_2020-19_38_00.png' data-src='./EditarEmailJaExiste_31_12_2020-19_38_00.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:01</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarEmailJaExiste_31_12_2020-19_38_01.png' src='./EditarEmailJaExiste_31_12_2020-19_38_01.png' data-src='./EditarEmailJaExiste_31_12_2020-19_38_01.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:02</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarEmailJaExiste_31_12_2020-19_38_01.png' src='./EditarEmailJaExiste_31_12_2020-19_38_01.png' data-src='./EditarEmailJaExiste_31_12_2020-19_38_01.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:05</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarEmailJaExiste_31_12_2020-19_38_05.png' src='./EditarEmailJaExiste_31_12_2020-19_38_05.png' data-src='./EditarEmailJaExiste_31_12_2020-19_38_05.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:05</td>
+				<td>
+InserirUsuarioDB || PARAMETERS: Username = GTWVES | Realname = HEBETR | Enabled = 1 | E-mail = GYICJQEHQG@teste.com									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:06</td>
+				<td>
+InserirUsuarioDB || PARAMETERS: Username = FVDKEO | Realname = FVDKEO | Enabled = 1 | E-mail = HVLLWGEGFX@teste.com									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:06</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarEmailJaExiste_31_12_2020-19_38_06.png' src='./EditarEmailJaExiste_31_12_2020-19_38_06.png' data-src='./EditarEmailJaExiste_31_12_2020-19_38_06.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:07</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarEmailJaExiste_31_12_2020-19_38_07.png' src='./EditarEmailJaExiste_31_12_2020-19_38_07.png' data-src='./EditarEmailJaExiste_31_12_2020-19_38_07.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:07</td>
+				<td>
+PesquisarUsuario || PARAMETER: GTWVES					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarEmailJaExiste_31_12_2020-19_38_07.png' src='./EditarEmailJaExiste_31_12_2020-19_38_07.png' data-src='./EditarEmailJaExiste_31_12_2020-19_38_07.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:08</td>
+				<td>
+ClicarAplicarFiltro ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarEmailJaExiste_31_12_2020-19_38_08.png' src='./EditarEmailJaExiste_31_12_2020-19_38_08.png' data-src='./EditarEmailJaExiste_31_12_2020-19_38_08.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:09</td>
+				<td>
+ClicarNomeUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarEmailJaExiste_31_12_2020-19_38_09.png' src='./EditarEmailJaExiste_31_12_2020-19_38_09.png' data-src='./EditarEmailJaExiste_31_12_2020-19_38_09.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:10</td>
+				<td>
+PreencherEmail || PARAMETER: HVLLWGEGFX@teste.com					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarEmailJaExiste_31_12_2020-19_38_09.png' src='./EditarEmailJaExiste_31_12_2020-19_38_09.png' data-src='./EditarEmailJaExiste_31_12_2020-19_38_09.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:10</td>
+				<td>
+ClicarAtualizarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarEmailJaExiste_31_12_2020-19_38_10.png' src='./EditarEmailJaExiste_31_12_2020-19_38_10.png' data-src='./EditarEmailJaExiste_31_12_2020-19_38_10.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:11</td>
+				<td>
+RetornarMensagemDeErro || RETURN: Este e-mail já está sendo usado. Por favor, volte e selecione outro.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarEmailJaExiste_31_12_2020-19_38_10.png' src='./EditarEmailJaExiste_31_12_2020-19_38_10.png' data-src='./EditarEmailJaExiste_31_12_2020-19_38_10.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:11</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = GTWVES									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:11</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = FVDKEO									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:11</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 146									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:11</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 147									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:11</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">EditarRealnameComSucesso</p> 
+													<p class="duration text-sm">0h:0m:14s+812ms</p> 
+													<span class="datetime">19:38:15 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">EditarRealnameComSucesso</h5>
+															<span class='badge badge-success'>31/12/2020 19:38:15</span>
+															<span class='badge badge-danger'>31/12/2020 19:38:30</span>
+															<span class='badge badge-default'>0h:0m:14s+812ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:20</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarRealnameComSucesso_31_12_2020-19_38_19.png' src='./EditarRealnameComSucesso_31_12_2020-19_38_19.png' data-src='./EditarRealnameComSucesso_31_12_2020-19_38_19.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:20</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarRealnameComSucesso_31_12_2020-19_38_20.png' src='./EditarRealnameComSucesso_31_12_2020-19_38_20.png' data-src='./EditarRealnameComSucesso_31_12_2020-19_38_20.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:21</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarRealnameComSucesso_31_12_2020-19_38_20.png' src='./EditarRealnameComSucesso_31_12_2020-19_38_20.png' data-src='./EditarRealnameComSucesso_31_12_2020-19_38_20.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:25</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarRealnameComSucesso_31_12_2020-19_38_24.png' src='./EditarRealnameComSucesso_31_12_2020-19_38_24.png' data-src='./EditarRealnameComSucesso_31_12_2020-19_38_24.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:25</td>
+				<td>
+InserirUsuarioDB || PARAMETERS: Username = YPCGJW | Realname = WOJIPA | Enabled = 1 | E-mail = RFAZBUYDYW@teste.com									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:25</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarRealnameComSucesso_31_12_2020-19_38_25.png' src='./EditarRealnameComSucesso_31_12_2020-19_38_25.png' data-src='./EditarRealnameComSucesso_31_12_2020-19_38_25.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:26</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarRealnameComSucesso_31_12_2020-19_38_26.png' src='./EditarRealnameComSucesso_31_12_2020-19_38_26.png' data-src='./EditarRealnameComSucesso_31_12_2020-19_38_26.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:27</td>
+				<td>
+PesquisarUsuario || PARAMETER: YPCGJW					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarRealnameComSucesso_31_12_2020-19_38_26.png' src='./EditarRealnameComSucesso_31_12_2020-19_38_26.png' data-src='./EditarRealnameComSucesso_31_12_2020-19_38_26.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:27</td>
+				<td>
+ClicarAplicarFiltro ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarRealnameComSucesso_31_12_2020-19_38_27.png' src='./EditarRealnameComSucesso_31_12_2020-19_38_27.png' data-src='./EditarRealnameComSucesso_31_12_2020-19_38_27.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:28</td>
+				<td>
+ClicarNomeUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarRealnameComSucesso_31_12_2020-19_38_28.png' src='./EditarRealnameComSucesso_31_12_2020-19_38_28.png' data-src='./EditarRealnameComSucesso_31_12_2020-19_38_28.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:29</td>
+				<td>
+PreencherRealname || PARAMETER: Editado					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarRealnameComSucesso_31_12_2020-19_38_28.png' src='./EditarRealnameComSucesso_31_12_2020-19_38_28.png' data-src='./EditarRealnameComSucesso_31_12_2020-19_38_28.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:29</td>
+				<td>
+ClicarAtualizarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarRealnameComSucesso_31_12_2020-19_38_29.png' src='./EditarRealnameComSucesso_31_12_2020-19_38_29.png' data-src='./EditarRealnameComSucesso_31_12_2020-19_38_29.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:29</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = YPCGJW									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:30</td>
+				<td>
+RetornarMensagemDeSucesso || RETURN: Operação realizada com sucesso.
+
+Clique aqui para prosseguir					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarRealnameComSucesso_31_12_2020-19_38_29.png' src='./EditarRealnameComSucesso_31_12_2020-19_38_29.png' data-src='./EditarRealnameComSucesso_31_12_2020-19_38_29.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:30</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 148									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:30</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">EditarUsernameComSucesso</p> 
+													<p class="duration text-sm">0h:0m:14s+913ms</p> 
+													<span class="datetime">19:38:34 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">EditarUsernameComSucesso</h5>
+															<span class='badge badge-success'>31/12/2020 19:38:34</span>
+															<span class='badge badge-danger'>31/12/2020 19:38:49</span>
+															<span class='badge badge-default'>0h:0m:14s+913ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:38</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameComSucesso_31_12_2020-19_38_38.png' src='./EditarUsernameComSucesso_31_12_2020-19_38_38.png' data-src='./EditarUsernameComSucesso_31_12_2020-19_38_38.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:39</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameComSucesso_31_12_2020-19_38_39.png' src='./EditarUsernameComSucesso_31_12_2020-19_38_39.png' data-src='./EditarUsernameComSucesso_31_12_2020-19_38_39.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:40</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameComSucesso_31_12_2020-19_38_39.png' src='./EditarUsernameComSucesso_31_12_2020-19_38_39.png' data-src='./EditarUsernameComSucesso_31_12_2020-19_38_39.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:44</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameComSucesso_31_12_2020-19_38_43.png' src='./EditarUsernameComSucesso_31_12_2020-19_38_43.png' data-src='./EditarUsernameComSucesso_31_12_2020-19_38_43.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:44</td>
+				<td>
+InserirUsuarioDB || PARAMETERS: Username = YLRUVM | Realname = HOGHIO | Enabled = 1 | E-mail = QJQFYYYPVN@teste.com									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:44</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameComSucesso_31_12_2020-19_38_44.png' src='./EditarUsernameComSucesso_31_12_2020-19_38_44.png' data-src='./EditarUsernameComSucesso_31_12_2020-19_38_44.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:45</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameComSucesso_31_12_2020-19_38_45.png' src='./EditarUsernameComSucesso_31_12_2020-19_38_45.png' data-src='./EditarUsernameComSucesso_31_12_2020-19_38_45.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:46</td>
+				<td>
+PesquisarUsuario || PARAMETER: YLRUVM					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameComSucesso_31_12_2020-19_38_45.png' src='./EditarUsernameComSucesso_31_12_2020-19_38_45.png' data-src='./EditarUsernameComSucesso_31_12_2020-19_38_45.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:46</td>
+				<td>
+ClicarAplicarFiltro ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameComSucesso_31_12_2020-19_38_46.png' src='./EditarUsernameComSucesso_31_12_2020-19_38_46.png' data-src='./EditarUsernameComSucesso_31_12_2020-19_38_46.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:47</td>
+				<td>
+ClicarNomeUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameComSucesso_31_12_2020-19_38_47.png' src='./EditarUsernameComSucesso_31_12_2020-19_38_47.png' data-src='./EditarUsernameComSucesso_31_12_2020-19_38_47.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:48</td>
+				<td>
+PreencherUsername || PARAMETER: Editado					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameComSucesso_31_12_2020-19_38_47.png' src='./EditarUsernameComSucesso_31_12_2020-19_38_47.png' data-src='./EditarUsernameComSucesso_31_12_2020-19_38_47.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:48</td>
+				<td>
+ClicarAtualizarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameComSucesso_31_12_2020-19_38_48.png' src='./EditarUsernameComSucesso_31_12_2020-19_38_48.png' data-src='./EditarUsernameComSucesso_31_12_2020-19_38_48.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:48</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = Editado									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:49</td>
+				<td>
+RetornarMensagemDeSucesso || RETURN: Operação realizada com sucesso.
+
+Clique aqui para prosseguir					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameComSucesso_31_12_2020-19_38_49.png' src='./EditarUsernameComSucesso_31_12_2020-19_38_49.png' data-src='./EditarUsernameComSucesso_31_12_2020-19_38_49.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:49</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 149									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:49</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">EditarUsernameJaExiste</p> 
+													<p class="duration text-sm">0h:0m:14s+756ms</p> 
+													<span class="datetime">19:38:53 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">EditarUsernameJaExiste</h5>
+															<span class='badge badge-success'>31/12/2020 19:38:53</span>
+															<span class='badge badge-danger'>31/12/2020 19:39:08</span>
+															<span class='badge badge-default'>0h:0m:14s+756ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:57</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameJaExiste_31_12_2020-19_38_57.png' src='./EditarUsernameJaExiste_31_12_2020-19_38_57.png' data-src='./EditarUsernameJaExiste_31_12_2020-19_38_57.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:58</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameJaExiste_31_12_2020-19_38_58.png' src='./EditarUsernameJaExiste_31_12_2020-19_38_58.png' data-src='./EditarUsernameJaExiste_31_12_2020-19_38_58.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:38:59</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameJaExiste_31_12_2020-19_38_58.png' src='./EditarUsernameJaExiste_31_12_2020-19_38_58.png' data-src='./EditarUsernameJaExiste_31_12_2020-19_38_58.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:03</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameJaExiste_31_12_2020-19_39_02.png' src='./EditarUsernameJaExiste_31_12_2020-19_39_02.png' data-src='./EditarUsernameJaExiste_31_12_2020-19_39_02.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:03</td>
+				<td>
+InserirUsuarioDB || PARAMETERS: Username = ERTIYN | Realname = YAZWIC | Enabled = 1 | E-mail = EKNPDYUOYW@teste.com									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:03</td>
+				<td>
+InserirUsuarioDB || PARAMETERS: Username = QITKUF | Realname = QITKUF | Enabled = 1 | E-mail = MBCAZXLFPI@teste.com									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:03</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameJaExiste_31_12_2020-19_39_03.png' src='./EditarUsernameJaExiste_31_12_2020-19_39_03.png' data-src='./EditarUsernameJaExiste_31_12_2020-19_39_03.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:04</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameJaExiste_31_12_2020-19_39_04.png' src='./EditarUsernameJaExiste_31_12_2020-19_39_04.png' data-src='./EditarUsernameJaExiste_31_12_2020-19_39_04.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:05</td>
+				<td>
+PesquisarUsuario || PARAMETER: ERTIYN					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameJaExiste_31_12_2020-19_39_04.png' src='./EditarUsernameJaExiste_31_12_2020-19_39_04.png' data-src='./EditarUsernameJaExiste_31_12_2020-19_39_04.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:05</td>
+				<td>
+ClicarAplicarFiltro ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameJaExiste_31_12_2020-19_39_05.png' src='./EditarUsernameJaExiste_31_12_2020-19_39_05.png' data-src='./EditarUsernameJaExiste_31_12_2020-19_39_05.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:06</td>
+				<td>
+ClicarNomeUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameJaExiste_31_12_2020-19_39_06.png' src='./EditarUsernameJaExiste_31_12_2020-19_39_06.png' data-src='./EditarUsernameJaExiste_31_12_2020-19_39_06.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:07</td>
+				<td>
+PreencherUsername || PARAMETER: QITKUF					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameJaExiste_31_12_2020-19_39_06.png' src='./EditarUsernameJaExiste_31_12_2020-19_39_06.png' data-src='./EditarUsernameJaExiste_31_12_2020-19_39_06.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:07</td>
+				<td>
+ClicarAtualizarUsuario ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameJaExiste_31_12_2020-19_39_07.png' src='./EditarUsernameJaExiste_31_12_2020-19_39_07.png' data-src='./EditarUsernameJaExiste_31_12_2020-19_39_07.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:08</td>
+				<td>
+RetornarMensagemDeErro || RETURN: Este nome de usuário já está sendo usado. Por favor, volte e selecione um outro.					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./EditarUsernameJaExiste_31_12_2020-19_39_07.png' src='./EditarUsernameJaExiste_31_12_2020-19_39_07.png' data-src='./EditarUsernameJaExiste_31_12_2020-19_39_07.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:08</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = ERTIYN									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:08</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = QITKUF									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:08</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 150									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:08</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 151									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:08</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">PesquisarUsuarioAtivado</p> 
+													<p class="duration text-sm">0h:0m:12s+895ms</p> 
+													<span class="datetime">19:39:12 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">PesquisarUsuarioAtivado</h5>
+															<span class='badge badge-success'>31/12/2020 19:39:12</span>
+															<span class='badge badge-danger'>31/12/2020 19:39:25</span>
+															<span class='badge badge-default'>0h:0m:12s+895ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:17</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioAtivado_31_12_2020-19_39_16.png' src='./PesquisarUsuarioAtivado_31_12_2020-19_39_16.png' data-src='./PesquisarUsuarioAtivado_31_12_2020-19_39_16.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:18</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioAtivado_31_12_2020-19_39_17.png' src='./PesquisarUsuarioAtivado_31_12_2020-19_39_17.png' data-src='./PesquisarUsuarioAtivado_31_12_2020-19_39_17.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:18</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioAtivado_31_12_2020-19_39_18.png' src='./PesquisarUsuarioAtivado_31_12_2020-19_39_18.png' data-src='./PesquisarUsuarioAtivado_31_12_2020-19_39_18.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:22</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioAtivado_31_12_2020-19_39_22.png' src='./PesquisarUsuarioAtivado_31_12_2020-19_39_22.png' data-src='./PesquisarUsuarioAtivado_31_12_2020-19_39_22.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:22</td>
+				<td>
+InserirUsuarioDB || PARAMETERS: Username = TSWQJK | Realname = OTRQVB | Enabled = 1 | E-mail = WZWJBMRORO@teste.com									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:22</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = TSWQJK									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:23</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioAtivado_31_12_2020-19_39_22.png' src='./PesquisarUsuarioAtivado_31_12_2020-19_39_22.png' data-src='./PesquisarUsuarioAtivado_31_12_2020-19_39_22.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:23</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioAtivado_31_12_2020-19_39_23.png' src='./PesquisarUsuarioAtivado_31_12_2020-19_39_23.png' data-src='./PesquisarUsuarioAtivado_31_12_2020-19_39_23.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:24</td>
+				<td>
+PesquisarUsuario || PARAMETER: TSWQJK					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioAtivado_31_12_2020-19_39_24.png' src='./PesquisarUsuarioAtivado_31_12_2020-19_39_24.png' data-src='./PesquisarUsuarioAtivado_31_12_2020-19_39_24.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:25</td>
+				<td>
+ClicarAplicarFiltro ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioAtivado_31_12_2020-19_39_24.png' src='./PesquisarUsuarioAtivado_31_12_2020-19_39_24.png' data-src='./PesquisarUsuarioAtivado_31_12_2020-19_39_24.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:25</td>
+				<td>
+RetornarUsuarioExibidoResultadoPesquisa || RETURN: TSWQJK					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioAtivado_31_12_2020-19_39_25.png' src='./PesquisarUsuarioAtivado_31_12_2020-19_39_25.png' data-src='./PesquisarUsuarioAtivado_31_12_2020-19_39_25.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:25</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 152									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:25</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+										<li class="test-item" status="pass" author="" device="" tag=""> 
+											<div class="status-avatar pass-bg">
+												<i class="fa fa-check text-white"></i>
+											</div>
+											<div class="open-test">
+												<div class="test-detail"> 
+													<p class="name">PesquisarUsuarioDesativado</p> 
+													<p class="duration text-sm">0h:0m:13s+410ms</p> 
+													<span class="datetime">19:39:29 </span>
+												</div>
+											</div>
+											<div class="test-contents d-none">
+												<div class="detail-head">
+													<div class="p-v-10 d-inline-block">	
+														<div class="info">
+															<h5 class="test-status text-pass">PesquisarUsuarioDesativado</h5>
+															<span class='badge badge-success'>31/12/2020 19:39:29</span>
+															<span class='badge badge-danger'>31/12/2020 19:39:43</span>
+															<span class='badge badge-default'>0h:0m:13s+410ms</span>
+														</div>
+																											</div>
+												</div>
+<div class="detail-body mt-4">												
+	
+<table class="table table-sm">
+	<thead><tr>
+		<th class="status-col">Status</th>
+		<th class="timestamp-col">Timestamp</th>
+		<th class="details-col">Details</th>
+	</tr></thead>
+	<tbody>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:34</td>
+				<td>
+PreencherUsuario || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioDesativado_31_12_2020-19_39_33.png' src='./PesquisarUsuarioDesativado_31_12_2020-19_39_33.png' data-src='./PesquisarUsuarioDesativado_31_12_2020-19_39_33.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:35</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioDesativado_31_12_2020-19_39_34.png' src='./PesquisarUsuarioDesativado_31_12_2020-19_39_34.png' data-src='./PesquisarUsuarioDesativado_31_12_2020-19_39_34.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:35</td>
+				<td>
+PreencherSenha || PARAMETER: administrator					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioDesativado_31_12_2020-19_39_35.png' src='./PesquisarUsuarioDesativado_31_12_2020-19_39_35.png' data-src='./PesquisarUsuarioDesativado_31_12_2020-19_39_35.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:39</td>
+				<td>
+ClicarEmLogin ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioDesativado_31_12_2020-19_39_39.png' src='./PesquisarUsuarioDesativado_31_12_2020-19_39_39.png' data-src='./PesquisarUsuarioDesativado_31_12_2020-19_39_39.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:39</td>
+				<td>
+InserirUsuarioDB || PARAMETERS: Username = JADJZN | Realname = SHNWFG | Enabled = 0 | E-mail = KMZHSLMVHA@teste.com									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:39</td>
+				<td>
+ConsultarUsuarioDB || PARAMETERS: Username = JADJZN									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:40</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioDesativado_31_12_2020-19_39_39.png' src='./PesquisarUsuarioDesativado_31_12_2020-19_39_39.png' data-src='./PesquisarUsuarioDesativado_31_12_2020-19_39_39.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:41</td>
+				<td>
+ClicarMenu ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioDesativado_31_12_2020-19_39_40.png' src='./PesquisarUsuarioDesativado_31_12_2020-19_39_40.png' data-src='./PesquisarUsuarioDesativado_31_12_2020-19_39_40.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:41</td>
+				<td>
+ClicarMostrarDesativados ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioDesativado_31_12_2020-19_39_41.png' src='./PesquisarUsuarioDesativado_31_12_2020-19_39_41.png' data-src='./PesquisarUsuarioDesativado_31_12_2020-19_39_41.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:42</td>
+				<td>
+PesquisarUsuario || PARAMETER: JADJZN					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioDesativado_31_12_2020-19_39_41.png' src='./PesquisarUsuarioDesativado_31_12_2020-19_39_41.png' data-src='./PesquisarUsuarioDesativado_31_12_2020-19_39_41.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:42</td>
+				<td>
+ClicarAplicarFiltro ||					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioDesativado_31_12_2020-19_39_42.png' src='./PesquisarUsuarioDesativado_31_12_2020-19_39_42.png' data-src='./PesquisarUsuarioDesativado_31_12_2020-19_39_42.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:43</td>
+				<td>
+RetornarUsuarioExibidoResultadoPesquisa || RETURN: JADJZN					<img class='r-img' title='' onerror='this.style.display="none"' data-featherlight='./PesquisarUsuarioDesativado_31_12_2020-19_39_42.png' src='./PesquisarUsuarioDesativado_31_12_2020-19_39_42.png' data-src='./PesquisarUsuarioDesativado_31_12_2020-19_39_42.png'>				</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:43</td>
+				<td>
+DeletarUsuarioDB || PARAMETERS: ID do usuário = 153									</td>
+			</tr>
+			<tr class="event-row">
+				<td><i class="fa fa-check text-pass"></i></td>
+				<td>19:39:43</td>
+				<td>
+Test Result: Pass									</td>
+			</tr>
+	</tbody>
+</table>
+
+</div>    
+											</div>
+										</li>
+                                </ul>    
+                            </div>
+                        </div>
+                        <div class="test-content scrollable">
+                            <div class="test-content-tools">
+                                <ul>
+                                    <li>
+                                        <a class="back-to-test" href="javascript:void(0)">
+                                            <i class="fa fa-arrow-left"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="test-content-detail">
+                                <div class="detail-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script type='text/javascript'>
+	
+</script>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/f97b667/spark/js/script.js"></script>
+
+</body>
+
+</html>

@@ -11,35 +11,42 @@ namespace AutomacaoMantis.Tests
     {
         UsersDBSteps usersDBSteps = new UsersDBSteps();
 
-        #region Pages and Flows Objects
+        #region Pages, DBSteps and Flows Objects
         LoginFlows loginFlows;
         ManageUserPage manageUserPage;
+        MainPage mainPage;
+        #endregion
+
+        #region Parameters
+        string menu = "menuGerenciarUsuarios";
         #endregion
 
         [SetUp]
         public void Setup()
         {
             loginFlows = new LoginFlows();
+            manageUserPage = new ManageUserPage();
+            mainPage = new MainPage();
+
             loginFlows.EfetuarLogin(BuilderJson.ReturnParameterAppSettings("USER_LOGIN_PADRAO"), BuilderJson.ReturnParameterAppSettings("PASSWORD_LOGIN_PADRAO"));
         }
 
         [Test]
         public void PesquisarUsuarioAtivado()
-        {
-            manageUserPage = new ManageUserPage();
-
-            #region Parameters / Inserindo um novo usuário
-            string username = "ConsultaUsuarioAtivado";
+        {          
+            #region Inserindo um novo usuário
+            string username = GeneralHelpers.ReturnStringWithRandomCharacters(6);
             string realname = GeneralHelpers.ReturnStringWithRandomCharacters(6);
             string enabled = "1";
-            string cookie = "ConsultaUsuarioAtivado";
+            string cookie = GeneralHelpers.ReturnStringWithRandomCharacters(12);
             string email = GeneralHelpers.ReturnStringWithRandomCharacters(10) + "@teste.com";
+
             usersDBSteps.InserirUsuarioDB(username,realname, enabled, cookie, email);
 
             var consultarUsuarioDB = usersDBSteps.ConsultarUsuarioDB(username);
             #endregion
 
-            manageUserPage.AbrirManageUserPage();
+            mainPage.ClicarMenu(menu);
             manageUserPage.PesquisarUsuario(username);
             manageUserPage.ClicarAplicarFiltro();
 
@@ -51,20 +58,19 @@ namespace AutomacaoMantis.Tests
         [Test]
         public void PesquisarUsuarioDesativado()
         {
-            manageUserPage = new ManageUserPage();
-
-            #region Parameters / Inserindo um novo usuário
-            string username = "ConsultaUsuarioDesativado";
+            #region Inserindo um novo usuário
+            string username = GeneralHelpers.ReturnStringWithRandomCharacters(6);
             string realname = GeneralHelpers.ReturnStringWithRandomCharacters(6);
             string enabled = "0";
-            string cookie = "ConsultaUsuarioDesativado";
+            string cookie = GeneralHelpers.ReturnStringWithRandomCharacters(12);
             string email = GeneralHelpers.ReturnStringWithRandomCharacters(10) + "@teste.com";
+
             usersDBSteps.InserirUsuarioDB(username, realname, enabled, cookie, email);
 
             var consultarUsuarioDB = usersDBSteps.ConsultarUsuarioDB(username);
             #endregion
 
-            manageUserPage.AbrirManageUserPage();
+            mainPage.ClicarMenu(menu);
             manageUserPage.ClicarMostrarDesativados();
             manageUserPage.PesquisarUsuario(username);
             manageUserPage.ClicarAplicarFiltro();
