@@ -10,15 +10,12 @@ namespace AutomacaoMantis.Pages
         By usernameField = By.Id("edit-username");
         By realnameField = By.Id("edit-realname");
         By emailField = By.Id("email-field");
-        By atualizarUsuarioButton = By.XPath("//input[@value='Atualizar Usuário']");        
+        By atualizarUsuarioButton = By.XPath("//input[@value='Atualizar Usuário']");
+        By redefinirSenhaButton = By.XPath("//input[@value='Redefinir Senha']");
+        By apagarUsuarioButton = By.XPath("//input[@value='Apagar Usuário']");
         #endregion
 
         #region Actions
-        public void ClicarNomeUsuario()
-        {
-            Click(nomeUsuarioLink);
-        }
-
         public void PreencherUsername(string username)
         {
             SendKeys(usernameField, username);
@@ -39,6 +36,22 @@ namespace AutomacaoMantis.Pages
             Click(atualizarUsuarioButton);
         }
 
+        public void ClicarNomeUsuario(string username)
+        {
+            VerifyTextElement(nomeUsuarioLink, username);
+            Click(nomeUsuarioLink);
+        }
+
+        public void ClicarRedefinirSenha()
+        {
+            Click(redefinirSenhaButton);
+        }
+
+        public void ClicarApagarUsuario()
+        {
+            Click(apagarUsuarioButton);
+        }        
+
         public void LimparUsername()
         {
             Clear(usernameField);
@@ -52,7 +65,7 @@ namespace AutomacaoMantis.Pages
         public void LimparEmail()
         {
             Clear(emailField);
-        }
+        }        
         #endregion
     }
 }

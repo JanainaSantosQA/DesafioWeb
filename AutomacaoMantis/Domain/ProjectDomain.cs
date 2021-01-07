@@ -11,6 +11,7 @@
         public string FilePath { get; set; }
         public string Description { get; set; }
         public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
         public int InheritGlobal { get; set; }
         public int ChildId { get; set; }
         public int ParentId { get; set; }

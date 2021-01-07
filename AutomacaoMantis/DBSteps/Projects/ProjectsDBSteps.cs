@@ -7,12 +7,12 @@ namespace AutomacaoMantis.DBSteps.Projects
 {
     public class ProjectsDBSteps
     {
-        public ProjectDomain ConsultarProjetoDB(int projectId)
+        public ProjectDomain ConsultarProjetoDB(string projectName)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/consultaProjeto.sql", Encoding.UTF8);
-            query = query.Replace("$projectId", projectId.ToString());
+            query = query.Replace("$projectName", projectName);
 
-            ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: ID do projeto = " + projectId);
+            ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Nome do projeto = " + projectName);
 
             return DataBaseHelpers.ObtemRegistroUnico<ProjectDomain>(query);
         }
@@ -89,6 +89,33 @@ namespace AutomacaoMantis.DBSteps.Projects
                          .Replace("$inheritParent", inheritParent);
 
             ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: ID do projeto pai = " + parentId + " ID do projeto filho = " + childId);
+
+            DataBaseHelpers.ExecuteQuery(query);
+        }
+        public ProjectDomain InserirCategoriaDB(string categoryName)
+        {
+            string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/inseriCategoria.sql", Encoding.UTF8);
+            query = query.Replace("$categoryName", categoryName);
+
+            ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: Nome da categoria = " + categoryName);
+
+            return DataBaseHelpers.ObtemRegistroUnico<ProjectDomain>(query);
+        }
+        public ProjectDomain ConsultarCategoriaDB(string categoryName)
+        {
+            string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/consultaCategoria.sql", Encoding.UTF8);
+            query = query.Replace("$categoryName", categoryName);
+
+            ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Nome da categoria = " + categoryName);
+
+            return DataBaseHelpers.ObtemRegistroUnico<ProjectDomain>(query);
+        }
+        public void DeletarCategoriaDB(string categoryName)
+        {
+            string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/deletaCategoria.sql", Encoding.UTF8);
+            query = query.Replace("$categoryName", categoryName);
+
+            ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: Nome da categoria = " + categoryName);
 
             DataBaseHelpers.ExecuteQuery(query);
         }

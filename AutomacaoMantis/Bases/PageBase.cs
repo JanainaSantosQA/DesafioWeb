@@ -130,7 +130,7 @@ namespace AutomacaoMantis.Bases
         }
 
         protected void Clear(By locator)
-        {
+        {           
              WaitForElement(locator).Clear();
         }
 
@@ -261,6 +261,12 @@ namespace AutomacaoMantis.Bases
                 }
             }
             return exist;
+        }
+
+        public void VerifyTextElement(By locator, string text)
+        {
+            string element = WaitForElement(locator).Text;    
+            Assert.IsTrue(element.Contains(text));
         }
 
         public bool VerifyContains(By locator, string looking4)

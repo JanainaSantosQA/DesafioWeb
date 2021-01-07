@@ -11,9 +11,11 @@ namespace AutomacaoMantis.Tests
     {
         #region Pages, DBSteps and Flows Objects
         ManageUserEditPage manageUserEditPage;
-        ManageUserUpdatePage manageUserUpdate;
-        LoginFlows loginFlows;
+        ManageUserUpdatePage manageUserUpdatePage;
+        ManageUserResetPage manageUserResetPage;
+        ManageUserDeletePage manageUserDeletePage;
         ManageUserFlows manageUserFlows;
+        LoginFlows loginFlows; 
         UsersDBSteps usersDBSteps;
         #endregion
 
@@ -27,7 +29,9 @@ namespace AutomacaoMantis.Tests
             loginFlows = new LoginFlows();
             manageUserEditPage = new ManageUserEditPage();
             manageUserFlows = new ManageUserFlows();
-            manageUserUpdate = new ManageUserUpdatePage();
+            manageUserUpdatePage = new ManageUserUpdatePage();
+            manageUserResetPage = new ManageUserResetPage();
+            manageUserDeletePage = new ManageUserDeletePage();
             usersDBSteps = new UsersDBSteps();
 
             loginFlows.EfetuarLogin(BuilderJson.ReturnParameterAppSettings("USER_LOGIN_PADRAO"), BuilderJson.ReturnParameterAppSettings("PASSWORD_LOGIN_PADRAO"));
@@ -53,7 +57,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             manageUserFlows.PesquisarUsuarioAtivado(menu, username);
-            manageUserEditPage.ClicarNomeUsuario();
+            manageUserEditPage.ClicarNomeUsuario(username);
             manageUserEditPage.LimparUsername();
             manageUserEditPage.PreencherUsername(newUsername);
             manageUserEditPage.ClicarAtualizarUsuario();
@@ -62,11 +66,12 @@ namespace AutomacaoMantis.Tests
 
             Assert.Multiple(() =>
             {
-                StringAssert.Contains(messageSucessExpected, manageUserUpdate.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada");
+                StringAssert.Contains(messageSucessExpected, manageUserUpdatePage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada");
                 Assert.IsNotNull(consultarUsuarioDB, "O username não foi atualizado.");
             });
 
             usersDBSteps.DeletarUsuarioDB(consultarUsuarioDB.UserId);
+            usersDBSteps.DeletarEmailUsuarioDB(email);
         }
 
         [Test]
@@ -89,7 +94,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             manageUserFlows.PesquisarUsuarioAtivado(menu, username);
-            manageUserEditPage.ClicarNomeUsuario();
+            manageUserEditPage.ClicarNomeUsuario(username);
             manageUserEditPage.LimparRealname();
             manageUserEditPage.PreencherRealname(newRealname);
             manageUserEditPage.ClicarAtualizarUsuario();
@@ -98,11 +103,12 @@ namespace AutomacaoMantis.Tests
 
             Assert.Multiple(() =>
             {
-                StringAssert.Contains(messageSucessExpected, manageUserUpdate.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada");
+                StringAssert.Contains(messageSucessExpected, manageUserUpdatePage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada");
                 Assert.AreEqual(consultarUsuarioDB.RealName, newRealname, "O realname não foi atualizado.");
             });
 
             usersDBSteps.DeletarUsuarioDB(consultarUsuarioDB.UserId);
+            usersDBSteps.DeletarEmailUsuarioDB(email);
         }
 
         [Test]
@@ -132,12 +138,12 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             manageUserFlows.PesquisarUsuarioAtivado(menu, usernameUserOne);
-            manageUserEditPage.ClicarNomeUsuario();
+            manageUserEditPage.ClicarNomeUsuario(usernameUserOne);
             manageUserEditPage.LimparUsername();
             manageUserEditPage.PreencherUsername(usernameUserTwo);
             manageUserEditPage.ClicarAtualizarUsuario();
 
-            Assert.AreEqual(messageErrorExpected, manageUserUpdate.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            Assert.AreEqual(messageErrorExpected, manageUserUpdatePage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
 
             var consultarUserOneDB = usersDBSteps.ConsultarUsuarioDB(usernameUserOne);
             var consultarUserTwoDB = usersDBSteps.ConsultarUsuarioDB(usernameUserTwo);
@@ -173,12 +179,12 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             manageUserFlows.PesquisarUsuarioAtivado(menu, usernameUserOne);
-            manageUserEditPage.ClicarNomeUsuario();
+            manageUserEditPage.ClicarNomeUsuario(usernameUserOne);
             manageUserEditPage.LimparEmail();
             manageUserEditPage.PreencherEmail(emailUserTwo);
             manageUserEditPage.ClicarAtualizarUsuario();
 
-            Assert.AreEqual(messageErrorExpected, manageUserUpdate.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            Assert.AreEqual(messageErrorExpected, manageUserUpdatePage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
 
             var consultarUserOneDB = usersDBSteps.ConsultarUsuarioDB(usernameUserOne);
             var consultarUserTwoDB = usersDBSteps.ConsultarUsuarioDB(usernameUserTwo);
@@ -187,5 +193,60 @@ namespace AutomacaoMantis.Tests
             usersDBSteps.DeletarUsuarioDB(consultarUserTwoDB.UserId);
         }
 
+        [Test]
+        public void RedefinirSenha()
+        {
+            #region Inserindo novo usuário
+            string username = GeneralHelpers.ReturnStringWithRandomCharacters(6);
+            string realname = GeneralHelpers.ReturnStringWithRandomCharacters(6);
+            string enabled = "1";
+            string cookie = GeneralHelpers.ReturnStringWithRandomCharacters(12);
+            string email = GeneralHelpers.ReturnStringWithRandomCharacters(10) + "@teste.com";
+
+            usersDBSteps.InserirUsuarioDB(username, realname, enabled, cookie, email);
+            var consultarUserDB = usersDBSteps.ConsultarUsuarioDB(username);
+            #endregion
+
+            #region Parameters
+            //Resultado esperado
+            string messageSucessExpected = "Uma solicitação de confirmação foi enviada ao endereço de e-mail do usuário selecionado. Através deste, o usuário será capaz de alterar sua senha";
+            #endregion
+
+            manageUserFlows.PesquisarUsuarioAtivado(menu, username); 
+            manageUserEditPage.ClicarNomeUsuario(username);
+            manageUserEditPage.ClicarRedefinirSenha();   
+
+            StringAssert.Contains(messageSucessExpected, manageUserResetPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é o esperada.");
+           
+            usersDBSteps.DeletarUsuarioDB(consultarUserDB.UserId);
+            usersDBSteps.DeletarEmailUsuarioDB(email);            
+        }
+
+        [Test]
+        public void ApagarUsuario()
+        {
+            #region Inserindo novo usuário
+            string username = GeneralHelpers.ReturnStringWithRandomCharacters(6);
+            string realname = GeneralHelpers.ReturnStringWithRandomCharacters(6);
+            string enabled = "1";
+            string cookie = GeneralHelpers.ReturnStringWithRandomCharacters(12);
+            string email = GeneralHelpers.ReturnStringWithRandomCharacters(10) + "@teste.com";
+
+            usersDBSteps.InserirUsuarioDB(username, realname, enabled, cookie, email);
+            #endregion
+
+            #region Parameters
+            //Resultado esperado
+            string messageSucessExpected = "Operação realizada com sucesso";
+            #endregion
+
+            manageUserFlows.PesquisarUsuarioAtivado(menu, username);
+            manageUserEditPage.ClicarNomeUsuario(username);
+            manageUserEditPage.ClicarApagarUsuario();
+            manageUserDeletePage.ClicarApagarConta(username);
+
+            StringAssert.Contains(messageSucessExpected, manageUserDeletePage.RetornarMensagemDeSucesso(), "A mensagem retornada não é o esperada.");
+                    
+        }
     }
 }
