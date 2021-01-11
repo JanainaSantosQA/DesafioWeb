@@ -11,6 +11,7 @@ namespace AutomacaoMantis.Pages
         By gerenciarUsuariosLink = By.LinkText("Gerenciar Usuários");
         By gerenciarProjetosLink = By.LinkText("Gerenciar Projetos");
         By gerenciarMarcadoresLink = By.LinkText("Gerenciar Marcadores");
+        By gerenciarCamposPersonalizadosLink = By.LinkText("Gerenciar Campos Personalizados");
         #endregion
 
         #region Actions
@@ -31,6 +32,11 @@ namespace AutomacaoMantis.Pages
                 case "menuGerenciarMarcadores":
                     Click(gerenciarMenu);
                     Click(gerenciarMarcadoresLink);
+                    break;
+
+                case "menuGerenciarCamposPersonalizados":
+                    Click(gerenciarMenu);
+                    Click(gerenciarCamposPersonalizadosLink);
                     break;
             }
         }

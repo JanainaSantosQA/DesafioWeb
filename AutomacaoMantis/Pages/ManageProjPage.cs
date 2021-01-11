@@ -9,7 +9,7 @@ namespace AutomacaoMantis.Pages
         By categoryNameField = By.Name("name");
 
         By criarNovoProjetoButton = By.XPath("//button[@type='submit']");
-        By adicionarCategoriaButton = By.XPath("//input[@value='Adicionar Categoria']");
+        By adicionarCategoriaButton = By.XPath("//input[@value='Adicionar Categoria']");        
         #endregion
 
         #region Actions
@@ -36,6 +36,11 @@ namespace AutomacaoMantis.Pages
         public void ClicarEditarCategoria(string categoryName)
         {
             Click(By.XPath("//*[text()='" + categoryName + "']//..//button[text()='Alterar']"));
+        }
+
+        public void ClicarProjectName(string projectName)
+        {
+            Click(By.LinkText(projectName));
         }
         #endregion
     }
