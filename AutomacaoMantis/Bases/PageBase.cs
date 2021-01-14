@@ -129,6 +129,13 @@ namespace AutomacaoMantis.Bases
             return text;
         }
 
+        protected string GetSRC(By locator)
+        {
+            string text = WaitForElement(locator).GetAttribute("src");
+            ExtentReportHelpers.AddTestInfo(3, "RETURN: " + text);
+            return text;
+        }
+
         protected void Clear(By locator)
         {           
              WaitForElement(locator).Clear();

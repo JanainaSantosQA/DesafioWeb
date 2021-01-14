@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Text;
 using AutomacaoMantis.Helpers;
+using System.Collections.Generic;
 
 namespace AutomacaoMantis.DBSteps.CustomField
 {

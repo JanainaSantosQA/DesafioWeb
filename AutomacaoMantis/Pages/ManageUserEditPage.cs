@@ -10,9 +10,14 @@ namespace AutomacaoMantis.Pages
         By usernameField = By.Id("edit-username");
         By realnameField = By.Id("edit-realname");
         By emailField = By.Id("email-field");
+        By adicionarUsuarioButton = By.XPath("//input[@value='Adicionar Usuário']");
         By atualizarUsuarioButton = By.XPath("//input[@value='Atualizar Usuário']");
         By redefinirSenhaButton = By.XPath("//input[@value='Redefinir Senha']");
         By apagarUsuarioButton = By.XPath("//input[@value='Apagar Usuário']");
+        public By ProjectSelect(string projectName)
+        {
+            return By.XPath("//select[@id='add-user-project-id']/option[text()='" + projectName + "']");
+        }
         #endregion
 
         #region Actions
@@ -31,6 +36,11 @@ namespace AutomacaoMantis.Pages
             SendKeys(realnameField, realname);
         }
 
+        public void ClicarAdicionarUsuario()
+        {
+            Click(adicionarUsuarioButton);
+        }
+
         public void ClicarAtualizarUsuario()
         {
             Click(atualizarUsuarioButton);
@@ -42,6 +52,11 @@ namespace AutomacaoMantis.Pages
             Click(nomeUsuarioLink);
         }
 
+        public void ClicarProjectSelect(string projectName)
+        {
+            Click(ProjectSelect(projectName));
+        }
+
         public void ClicarRedefinirSenha()
         {
             Click(redefinirSenhaButton);
@@ -50,7 +65,7 @@ namespace AutomacaoMantis.Pages
         public void ClicarApagarUsuario()
         {
             Click(apagarUsuarioButton);
-        }        
+        }
 
         public void LimparUsername()
         {
@@ -65,7 +80,7 @@ namespace AutomacaoMantis.Pages
         public void LimparEmail()
         {
             Clear(emailField);
-        }        
+        }
         #endregion
     }
 }

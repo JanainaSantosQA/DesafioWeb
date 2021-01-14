@@ -4,6 +4,7 @@ using AutomacaoMantis.Pages;
 using AutomacaoMantis.Flows;
 using AutomacaoMantis.Helpers;
 using AutomacaoMantis.DBSteps.Users;
+using AutomacaoMantis.DBSteps.Projects;
 
 namespace AutomacaoMantis.Tests
 {
@@ -17,6 +18,7 @@ namespace AutomacaoMantis.Tests
         ManageUserFlows manageUserFlows;
         LoginFlows loginFlows; 
         UsersDBSteps usersDBSteps;
+        ProjectsDBSteps projectsDBSteps;
         #endregion
 
         #region Parameters
@@ -33,6 +35,7 @@ namespace AutomacaoMantis.Tests
             manageUserResetPage = new ManageUserResetPage();
             manageUserDeletePage = new ManageUserDeletePage();
             usersDBSteps = new UsersDBSteps();
+            projectsDBSteps = new ProjectsDBSteps();
 
             loginFlows.EfetuarLogin(BuilderJson.ReturnParameterAppSettings("USER_LOGIN_PADRAO"), BuilderJson.ReturnParameterAppSettings("PASSWORD_LOGIN_PADRAO"));
         }
@@ -247,6 +250,43 @@ namespace AutomacaoMantis.Tests
 
             StringAssert.Contains(messageSucessExpected, manageUserDeletePage.RetornarMensagemDeSucesso(), "A mensagem retornada não é o esperada.");
                     
+        }
+
+        [Test]
+        public void AdicionarUsuarioAoProjeto()
+        {
+            #region Inserindo novo usuário
+            string username = "User_" + GeneralHelpers.ReturnStringWithRandomCharacters(4);
+            string realname = GeneralHelpers.ReturnStringWithRandomCharacters(6);
+            string enabled = "1";
+            string cookie = GeneralHelpers.ReturnStringWithRandomCharacters(12);
+            string email = GeneralHelpers.ReturnStringWithRandomCharacters(10) + "@teste.com";
+
+            var usuarioCriadoDB = usersDBSteps.InserirUsuarioDB(username, realname, enabled, cookie, email);
+            #endregion
+
+            #region Inserindo um novo projeto
+            string projectName = "Project_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
+            var projetoCriadoDB = projectsDBSteps.InserirProjetoDB(projectName);
+            #endregion
+
+            #region Parameters
+            //Resultado esperado
+            string messageSucessExpected = "Operação realizada com sucesso";
+            #endregion
+
+            manageUserFlows.PesquisarUsuarioAtivado(menu, username);
+            manageUserEditPage.ClicarNomeUsuario(username);
+            manageUserEditPage.ClicarProjectSelect(projetoCriadoDB.ProjectName);
+            manageUserEditPage.ClicarAdicionarUsuario();
+
+            var projetoAtribuidoUsuarioDB = projectsDBSteps.ConsultarProjetoAtribuidoAoUsuarioDB(projetoCriadoDB.ProjectId, usuarioCriadoDB.UserId);
+            Assert.IsNotNull(projetoAtribuidoUsuarioDB, "O projeto não foi atribuído ao usuário.");
+
+            usersDBSteps.DeletarUsuarioDB(usuarioCriadoDB.UserId);
+            projectsDBSteps.DeletarProjetoDB(projetoCriadoDB.ProjectId);
+            projectsDBSteps.DeletarProjetoAtribuidoAoUsuarioDB(projetoCriadoDB.ProjectId, usuarioCriadoDB.UserId);
+
         }
     }
 }

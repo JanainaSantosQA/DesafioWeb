@@ -9,6 +9,7 @@ namespace AutomacaoMantis.Pages
         By usernameField = By.Id("username");
         By passwordField = By.Id("password");
         By loginButton = By.XPath("//input[@value='Entrar']");
+        By criarNovaContaButton = By.LinkText("criar uma nova conta");
         By messageErroTextArea = By.XPath("//div[@class='alert alert-danger']/p");
         #endregion
 
@@ -25,9 +26,17 @@ namespace AutomacaoMantis.Pages
         {
             Click(loginButton);
         }
+        public void ClicarCriarNovaConta()
+        {
+            Click(criarNovaContaButton);
+        }
         public string RetornarMensagemDeErro()
         {
             return GetText(messageErroTextArea);
+        }
+        public string RetornarURLAtual()
+        {
+           return GetURL();
         }
         #endregion
     }

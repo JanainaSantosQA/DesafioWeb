@@ -2,6 +2,7 @@
 using System.Text;
 using AutomacaoMantis.Domain;
 using AutomacaoMantis.Helpers;
+using System.Collections.Generic;
 
 namespace AutomacaoMantis.DBSteps.Projects
 {
@@ -34,30 +35,32 @@ namespace AutomacaoMantis.DBSteps.Projects
 
             return DataBaseHelpers.ObtemRegistroUnico<ProjectDomain>(query);
         }
-        public ProjectDomain ConsultarVersaoProjetoDB(string versionId)
+        public ProjectDomain ConsultarVersaoProjetoDB(string versionName)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/consultaVersaoProjeto.sql", Encoding.UTF8);
-            query = query.Replace("$versionId", versionId);
+            query = query.Replace("$versionName", versionName);
 
-            ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: ID da versão criada = " + versionId);
+            ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Nome da versão criada = " + versionName);
 
             return DataBaseHelpers.ObtemRegistroUnico<ProjectDomain>(query);
         }
-        public ProjectDomain InserirVersaoProjetoDB(int projectId)
+        public ProjectDomain InserirVersaoProjetoDB(int projectId, string versionName)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/inseriVersaoProjeto.sql", Encoding.UTF8);
-            query = query.Replace("$projectId", projectId.ToString());
+            query = query.Replace("$projectId", projectId.ToString())
+                         .Replace("$versionName", versionName);
 
-            ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: ID do projeto = " + projectId);
+
+            ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: ID do projeto = " + projectId + " | Nome da versão criada = " + versionName);
 
             return DataBaseHelpers.ObtemRegistroUnico<ProjectDomain>(query);
         }
-        public void DeletarVersaoProjetoDB(int versionId)
+        public void DeletarVersaoProjetoDB(string versionName)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/deletaVersaoProjeto.sql", Encoding.UTF8);
-            query = query.Replace("$versionId", versionId.ToString());
+            query = query.Replace("$versionName", versionName);
 
-            ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: ID da versão do projeto = " + versionId);
+            ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Nome da versão criada = " + versionName);
 
             DataBaseHelpers.ExecuteQuery(query);
         }
@@ -88,7 +91,7 @@ namespace AutomacaoMantis.DBSteps.Projects
                          .Replace("$parentId", parentId.ToString())
                          .Replace("$inheritParent", inheritParent);
 
-            ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: ID do projeto pai = " + parentId + " ID do projeto filho = " + childId);
+            ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: ID do projeto pai = " + parentId + " ID do projeto filho = " + childId);
 
             DataBaseHelpers.ExecuteQuery(query);
         }
@@ -116,6 +119,26 @@ namespace AutomacaoMantis.DBSteps.Projects
             query = query.Replace("$categoryName", categoryName);
 
             ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: Nome da categoria = " + categoryName);
+
+            DataBaseHelpers.ExecuteQuery(query);
+        }
+        public List<string> ConsultarProjetoAtribuidoAoUsuarioDB(int projectId, string userId)
+        {
+            string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/consultaProjetoAtribUser.sql", Encoding.UTF8);
+            query = query.Replace("$projectId", projectId.ToString())
+                         .Replace("$userId", userId);
+
+            ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Nome do projeto = " + projectId + "Nome do usuário = " + userId);
+
+            return DataBaseHelpers.ObtemDados(query);
+        }
+        public void DeletarProjetoAtribuidoAoUsuarioDB(int projectId, string userId)
+        {
+            string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/deletaProjetoAtribUser.sql", Encoding.UTF8);
+            query = query.Replace("$projectId", projectId.ToString())
+                         .Replace("$userId", userId);
+
+            ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Nome do projeto = " + projectId + "Nome do usuário = " + userId);
 
             DataBaseHelpers.ExecuteQuery(query);
         }

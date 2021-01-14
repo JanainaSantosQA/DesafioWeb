@@ -25,14 +25,23 @@ namespace AutomacaoMantis.DBSteps.Users
 
             DataBaseHelpers.ExecuteQuery(query);
         }
-        public void InserirUsuarioDB(string username, string realname, string enabled, string cookie, string email)
+        //public void InserirUsuarioDB(string username, string realname, string enabled, string cookie, string email)
+        //{
+        //    string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Users/inseriUsuario.sql", Encoding.UTF8);
+        //    query = query.Replace("$username", username).Replace("$realname", realname).Replace("$enabled", enabled).Replace("$cookie", cookie).Replace("$email", email);
+
+        //    ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Username = " + username + " | Realname = " + realname + " | Enabled = " + enabled + " | E-mail = " + email);
+
+        //    DataBaseHelpers.ExecuteQuery(query);
+        //}
+        public UserDomain InserirUsuarioDB(string username, string realname, string enabled, string cookie, string email)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Users/inseriUsuario.sql", Encoding.UTF8);
             query = query.Replace("$username", username).Replace("$realname", realname).Replace("$enabled", enabled).Replace("$cookie", cookie).Replace("$email", email);
 
             ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Username = " + username + " | Realname = " + realname + " | Enabled = " + enabled + " | E-mail = " + email);
 
-            DataBaseHelpers.ExecuteQuery(query);
+            return DataBaseHelpers.ObtemRegistroUnico<UserDomain>(query);
         }
         public void DeletarEmailUsuarioDB(string userEmail)
         {

@@ -12,6 +12,7 @@ namespace AutomacaoMantis.Pages
         By gerenciarProjetosLink = By.LinkText("Gerenciar Projetos");
         By gerenciarMarcadoresLink = By.LinkText("Gerenciar Marcadores");
         By gerenciarCamposPersonalizadosLink = By.LinkText("Gerenciar Campos Personalizados");
+        By sairLink = By.XPath("//a[contains(.,'Sair')]");
         #endregion
 
         #region Actions
@@ -40,6 +41,17 @@ namespace AutomacaoMantis.Pages
                     break;
             }
         }
+
+        public void ClicarUserInfo()
+        {
+            Click(usernameLoginInfoTextArea);
+        }
+
+        public void ClicarSair()
+        {
+            Click(sairLink);
+        }
+
         public string RetornarUsernameDasInformacoesDeLogin()
         {
             return GetText(usernameLoginInfoTextArea);
