@@ -6,10 +6,11 @@ namespace AutomacaoMantis.Pages
     public class ManageTagsPage : PageBase
     {
         #region Mapping
-        By criarMarcadorButton = By.Name("config_set");
-
-        By marcadoresExistentesTable = By.XPath("//table[@class='table table-striped table-bordered table-condensed table-hover']/tbody");
-
+        By createTagButton = By.Name("config_set");
+        private By RetornarLocalizadorNomeMarcadorLink(string tagName)
+        {
+            return By.XPath("//table[@class='table table-striped table-bordered table-condensed table-hover']//a[contains(., '" + tagName + "')]");
+        }
         By tagNameField = By.Id("tag-name");
         By tagDescriptionField = By.Id("tag-description");
         #endregion
@@ -17,7 +18,7 @@ namespace AutomacaoMantis.Pages
         #region Actions
         public void ClicarCriarMarcador()
         {
-            Click(criarMarcadorButton);
+            Click(createTagButton);
         }
 
         public void PreencherNomeMarcador(string tagName)
@@ -30,14 +31,14 @@ namespace AutomacaoMantis.Pages
             SendKeys(tagDescriptionField, tagDescription);
         }
 
-        public void VerificarSeATagCriadaEstaSendoExibidaNaTela(string tagName)
+        public bool RetornarSeATagCriadaEstaSendoExibidaNaTela(string tagName)
         {
-            VerifyTextElement(marcadoresExistentesTable, tagName);
+            return IsElementExists(RetornarLocalizadorNomeMarcadorLink(tagName));
         }
 
-        public void ClicarMarcador(string tagName)
+        public void ClicarNomeMarcador(string tagName)
         {
-            Click(By.XPath("//a[text()='" + tagName + "']"));
+            Click(RetornarLocalizadorNomeMarcadorLink(tagName));
         }
         #endregion
     }

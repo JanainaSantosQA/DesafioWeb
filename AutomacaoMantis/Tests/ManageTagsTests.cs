@@ -10,14 +10,15 @@ namespace AutomacaoMantis.Tests
     public class ManageTagsTests : TestBase
     {
         #region Pages, DBSteps and Flows Objects
-        LoginFlows loginFlows;
-        MainPage mainPage;
+        MyViewPage mainPage;
         ManageTagsPage manageTagsPage;
-        TagViewPage tagViewPage;
-        TagDeletePage tagDeletePage;
         TagUpdatePage tagUpdatePage;
+        TagViewPage tagViewPage;
 
         TagsDBSteps tagsDBSteps;
+
+        LoginFlows loginFlows;
+        ManageTagsFlows manageTagsFlows;
         #endregion
 
         #region Parameters
@@ -27,14 +28,15 @@ namespace AutomacaoMantis.Tests
         [SetUp]
         public void Setup()
         {
-            loginFlows = new LoginFlows();
-            mainPage = new MainPage();
+            mainPage = new MyViewPage();
             manageTagsPage = new ManageTagsPage();
-            tagDeletePage = new TagDeletePage();
-            tagViewPage = new TagViewPage();
             tagUpdatePage = new TagUpdatePage();
+            tagViewPage = new TagViewPage();
 
             tagsDBSteps = new TagsDBSteps();
+
+            loginFlows = new LoginFlows();
+            manageTagsFlows = new ManageTagsFlows();
 
             loginFlows.EfetuarLogin(BuilderJson.ReturnParameterAppSettings("USER_LOGIN_PADRAO"), BuilderJson.ReturnParameterAppSettings("PASSWORD_LOGIN_PADRAO"));
         }
@@ -47,16 +49,24 @@ namespace AutomacaoMantis.Tests
             string tagDescription = GeneralHelpers.ReturnStringWithRandomCharacters(5);
             #endregion
 
+            #region Actions
             mainPage.ClicarMenu(menu);
             manageTagsPage.PreencherNomeMarcador(tagName);
             manageTagsPage.PreencherDescricaoMarcador(tagDescription);
             manageTagsPage.ClicarCriarMarcador();
-            manageTagsPage.VerificarSeATagCriadaEstaSendoExibidaNaTela(tagName); 
+            #endregion
 
-            var consultarTagDB = tagsDBSteps.ConsultarTagDB(tagName);
-            Assert.AreEqual(tagDescription, consultarTagDB.TagDescription, "A descrição da tag não está correta.");
+            #region Validations
+            var consultarTagCriadaDB = tagsDBSteps.ConsultarTagDB(tagName);
 
-            tagsDBSteps.DeletarTagDB(tagName);            
+            Assert.Multiple(() =>
+            {
+                Assert.IsTrue(manageTagsPage.RetornarSeATagCriadaEstaSendoExibidaNaTela(tagName), "A tag criada não está sendo exibida na tela.");
+                Assert.AreEqual(tagDescription, consultarTagCriadaDB.TagDescription, "A descrição da tag não está correta.");
+            });
+            #endregion
+
+            tagsDBSteps.DeletarTagDB(tagName);
         }
 
         [Test]
@@ -69,13 +79,16 @@ namespace AutomacaoMantis.Tests
             tagsDBSteps.InserirTagDB(tagName, tagDescription);
             #endregion
 
-            mainPage.ClicarMenu(menu);
-            manageTagsPage.ClicarMarcador(tagName);
+            #region Actions
+            manageTagsFlows.AcessarMarcadorCriado(menu, tagName);
             tagViewPage.ClicarApagarMarcador();
-            tagDeletePage.ClicarApagarMarcador();
+            tagViewPage.ClicarApagarMarcadorConfirmacao();
+            #endregion
 
-            var consultarTagDB = tagsDBSteps.ConsultarTagDB(tagName);
-            Assert.IsNull(consultarTagDB, "A tag não foi excluída.");
+            #region Validations
+            var consultarTagCriadaDB = tagsDBSteps.ConsultarTagDB(tagName);
+            Assert.IsNull(consultarTagCriadaDB, "A tag não foi excluída.");
+            #endregion
         }
 
         [Test]
@@ -92,15 +105,17 @@ namespace AutomacaoMantis.Tests
             string newTagName = "Tag_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
             #endregion
 
-            mainPage.ClicarMenu(menu);
-            manageTagsPage.ClicarMarcador(tagName);
+            #region Actions
+            manageTagsFlows.AcessarMarcadorCriado(menu, tagName);
             tagViewPage.ClicarAtualizarMarcador();
-            tagUpdatePage.LimparTagName();
             tagUpdatePage.PreencherNomeMarcador(newTagName);
             tagUpdatePage.ClicarAtualizarMarcador();
+            #endregion
 
-            var consultarTagDB = tagsDBSteps.ConsultarTagDB(newTagName);
-            Assert.IsNotNull(consultarTagDB, "O nome da tag não foi alterado.");
+            #region Validations
+            var consultarTagCriadaDB = tagsDBSteps.ConsultarTagDB(newTagName);
+            Assert.IsNotNull(consultarTagCriadaDB, "O nome da tag não foi alterado.");
+            #endregion
 
             tagsDBSteps.DeletarTagDB(newTagName);
         }
@@ -111,28 +126,28 @@ namespace AutomacaoMantis.Tests
             #region Inserindo uma nova tag
             string tagNameOne = "Tag_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
             string tagDescriptionOne = GeneralHelpers.ReturnStringWithRandomCharacters(5);
-
             tagsDBSteps.InserirTagDB(tagNameOne, tagDescriptionOne);
 
             string tagNameTwo = "Tag_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
             string tagDescriptionTwo = GeneralHelpers.ReturnStringWithRandomCharacters(5);
-
             tagsDBSteps.InserirTagDB(tagNameTwo, tagDescriptionTwo);
             #endregion
 
             #region Parameters            
             //Resultado esperado
-            string messageErroExpected = "Um marcador com esse nome já existe.";
+            string messageErrorExpected = "Um marcador com esse nome já existe.";
             #endregion
 
-            mainPage.ClicarMenu(menu);
-            manageTagsPage.ClicarMarcador(tagNameOne);
+            #region Actions
+            manageTagsFlows.AcessarMarcadorCriado(menu, tagNameOne);
             tagViewPage.ClicarAtualizarMarcador();
-            tagUpdatePage.LimparTagName();
             tagUpdatePage.PreencherNomeMarcador(tagNameTwo);
             tagUpdatePage.ClicarAtualizarMarcador();
+            #endregion
 
-            StringAssert.Contains(messageErroExpected, tagUpdatePage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            #region Validations
+            StringAssert.Contains(messageErrorExpected, tagUpdatePage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            #endregion
 
             tagsDBSteps.DeletarTagDB(tagNameOne);
             tagsDBSteps.DeletarTagDB(tagNameTwo);
@@ -148,18 +163,23 @@ namespace AutomacaoMantis.Tests
             tagsDBSteps.InserirTagDB(tagName, tagDescription);
             #endregion
 
-            #region Parameters            
+            #region Parameters    
+            string newTagName = string.Empty;
+
             //Resultado esperado
-            string messageErroExpected = "Nome de marcador não é válido.";
+            string messageErrorExpected = "Nome de marcador não é válido.";
             #endregion
 
-            mainPage.ClicarMenu(menu);
-            manageTagsPage.ClicarMarcador(tagName);
+            #region Actions
+            manageTagsFlows.AcessarMarcadorCriado(menu, tagName);
             tagViewPage.ClicarAtualizarMarcador();
-            tagUpdatePage.LimparTagName();
+            tagUpdatePage.PreencherNomeMarcador(newTagName);
             tagUpdatePage.ClicarAtualizarMarcador();
+            #endregion
 
-            StringAssert.Contains(messageErroExpected, tagUpdatePage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            #region Validations
+            StringAssert.Contains(messageErrorExpected, tagUpdatePage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            #endregion
 
             tagsDBSteps.DeletarTagDB(tagName);
         }

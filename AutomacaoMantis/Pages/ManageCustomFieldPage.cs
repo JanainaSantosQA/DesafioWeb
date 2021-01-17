@@ -7,26 +7,35 @@ namespace AutomacaoMantis.Pages
     {
         #region Mapping
         By nameCustomField = By.Name("name");
-
         By newCustomFieldButton = By.XPath("//input[@value='Novo Campo Personalizado']");
+        private By RetornarLocalizadorNomeCampoPersonalizadoLink(string customFieldName)
+        {
+            return By.XPath("//a[text()='" + customFieldName + "']");
 
-        By messageSucessTextArea = By.XPath("//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]");
+        }
+        By messageErrorTextArea = By.XPath("//*[@class='alert alert-danger']/p[2]");
+        By messageSucessTextArea = By.CssSelector("p.bold.bigger-110");
         #endregion
 
         #region Actions
-        public void PreencherCustomField(string customFieldName)
+        public void PreencherNomeCampoPersonalizado(string customFieldName)
         {
             SendKeys(nameCustomField, customFieldName);
         }
 
-        public void ClicarNewCustomField()
+        public void ClicarNovoCampoPersonalizado()
         {
             Click(newCustomFieldButton);
         }
 
-        public void ClicarCustomFieldLink(string customFieldName)
+        public void ClicarCampoPersonalizadoLink(string customFieldName)
         {
-            Click(By.XPath("//a[text()='" + customFieldName + "']"));
+            Click(RetornarLocalizadorNomeCampoPersonalizadoLink(customFieldName));
+        }
+
+        public string RetornarMensagemDeErro()
+        {
+            return GetText(messageErrorTextArea);
         }
 
         public string RetornarMensagemDeSucesso()

@@ -1,39 +1,42 @@
 ﻿using OpenQA.Selenium;
 using AutomacaoMantis.Bases;
-using AutomacaoMantis.Helpers;
 
 namespace AutomacaoMantis.Pages
 {
     public class ManageUserPage : PageBase
     {
         #region Mapping
-        By criarNovaContaButton = By.XPath("//*[@id='manage-user-div']/div[1]/a");
-        By aplicarFiltroButton = By.XPath("//input[@value='Aplicar Filtro']");
-        By mostrarDesativadosCheckbox = By.XPath("//*[@id='manage-user-filter']/fieldset/label[2]/span");       
-        By pesquisarUsuarioField = By.Id("search");
-        By nomeUsuarioInfoTextArea = By.XPath("//*[@class='table-responsive']/table/tbody/tr/td[1]/a");
-        #endregion
+        By searchUserField = By.Id("search");
+        By createNewAccountButton = By.XPath("//*[@id='manage-user-div']/div[1]/a");
+        By ApplyFilterButton = By.XPath("//input[@value='Aplicar Filtro']");
+        By showDisabledCheckbox = By.XPath("//*[@id='manage-user-filter']/fieldset/label[2]/span");     
+        By nameUserInfoTextArea = By.XPath("//*[@class='table-responsive']/table/tbody/tr/td[1]/a");
+       #endregion
 
         #region Actions
         public void ClicarCriarNovaConta()
         {
-            Click(criarNovaContaButton);
+            Click(createNewAccountButton);
         }
-        public void ClicarMostrarDesativados()
+
+        public void ClicarMostrarUsuariosDesativados()
         {
-            Click(mostrarDesativadosCheckbox);
+            Click(showDisabledCheckbox);
         }
+
         public void ClicarAplicarFiltro()
         {
-            Click(aplicarFiltroButton);
+            Click(ApplyFilterButton);
         }
+
         public void PesquisarUsuario(string username)
         {
-            SendKeys(pesquisarUsuarioField, username);
+            SendKeys(searchUserField, username);
         }        
+
         public string RetornarUsuarioExibidoResultadoPesquisa()
         {
-            return GetText(nomeUsuarioInfoTextArea);
+            return GetText(nameUserInfoTextArea);
         }
         #endregion
     }

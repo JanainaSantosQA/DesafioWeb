@@ -6,80 +6,104 @@ namespace AutomacaoMantis.Pages
     public class ManageUserEditPage : PageBase
     {
         #region Mapping
-        By nomeUsuarioLink = By.XPath("//*[@id='main-container']//tbody/tr/td[1]/a");
+        By userNameLink = By.XPath("//*[@id='main-container']//tbody/tr/td[1]/a");
         By usernameField = By.Id("edit-username");
         By realnameField = By.Id("edit-realname");
         By emailField = By.Id("email-field");
-        By adicionarUsuarioButton = By.XPath("//input[@value='Adicionar Usuário']");
-        By atualizarUsuarioButton = By.XPath("//input[@value='Atualizar Usuário']");
-        By redefinirSenhaButton = By.XPath("//input[@value='Redefinir Senha']");
-        By apagarUsuarioButton = By.XPath("//input[@value='Apagar Usuário']");
-        public By ProjectSelect(string projectName)
+        private By RetornarLocalizadorNomeProjetoSelect(string projectName)
         {
             return By.XPath("//select[@id='add-user-project-id']/option[text()='" + projectName + "']");
         }
+        By addUserButton = By.XPath("//input[@value='Adicionar Usuário']");
+        By updateUserButton = By.XPath("//input[@value='Atualizar Usuário']");
+        By redefinePasswordButton = By.XPath("//input[@value='Redefinir Senha']");
+        By deleteUserButton = By.XPath("//input[@value='Apagar Usuário']");
+        By deleteAccountButton = By.XPath("//input[@value='Apagar Conta']");
+        By removeUserButton = By.XPath("//input[@value='Remover Usuário']");
+        private By RetornarLocalizadorRemoverProjetoAtribuidoButton(int projectId)
+        {
+            return By.XPath("//input[@name='project_id' and @value='" + projectId + "']/..//input[@value='Remover']");
+        }
+        By deleteUserInfoTextArea = By.CssSelector("p.bigger-110");
+        By messageSucessTextArea = By.CssSelector("p.bold.bigger-110");
+        By messageErrorTextArea = By.XPath("//div[@class='alert alert-danger']/p[2]");
         #endregion
 
         #region Actions
         public void PreencherUsername(string username)
         {
-            SendKeys(usernameField, username);
+            ClearAndSendKeys(usernameField, username);
+            //SendKeys(usernameField, username);
+        }
+
+        public void PreencherNomeUsuario(string realname)
+        {
+            ClearAndSendKeys(realnameField, realname);
+            //SendKeys(realnameField, realname);
         }
 
         public void PreencherEmail(string email)
         {
-            SendKeys(emailField, email);
-        }
-
-        public void PreencherRealname(string realname)
-        {
-            SendKeys(realnameField, realname);
+            ClearAndSendKeys(emailField, email);
+            //SendKeys(emailField, email);
         }
 
         public void ClicarAdicionarUsuario()
         {
-            Click(adicionarUsuarioButton);
+            Click(addUserButton);
         }
 
         public void ClicarAtualizarUsuario()
         {
-            Click(atualizarUsuarioButton);
+            Click(updateUserButton);
         }
 
         public void ClicarNomeUsuario(string username)
         {
-            VerifyTextElement(nomeUsuarioLink, username);
-            Click(nomeUsuarioLink);
+            VerifyTextElement(userNameLink, username);
+            Click(userNameLink);
         }
 
-        public void ClicarProjectSelect(string projectName)
+        public void ClicarNomeProjeto(string projectName)
         {
-            Click(ProjectSelect(projectName));
+            Click(RetornarLocalizadorNomeProjetoSelect(projectName));
+        }
+
+        public void ClicarRemoverProjetoAtribuido(int projectId)
+        {
+            Click(RetornarLocalizadorRemoverProjetoAtribuidoButton(projectId));
         }
 
         public void ClicarRedefinirSenha()
         {
-            Click(redefinirSenhaButton);
+            Click(redefinePasswordButton);
         }
 
         public void ClicarApagarUsuario()
         {
-            Click(apagarUsuarioButton);
+            Click(deleteUserButton);
         }
 
-        public void LimparUsername()
+        public void ClicarApagarConta(string username)
         {
-            Clear(usernameField);
+            VerifyTextElement(deleteUserInfoTextArea, username);
+            Click(deleteAccountButton);
         }
 
-        public void LimparRealname()
+        public void ClicarRemoverUsuario(string projectName)
         {
-            Clear(realnameField);
+            VerifyTextElement(deleteUserInfoTextArea, projectName);
+            Click(removeUserButton);
         }
 
-        public void LimparEmail()
+        public string RetornarMensagemDeSucesso()
         {
-            Clear(emailField);
+            return GetText(messageSucessTextArea);
+        }
+
+        public string RetornarMensagemDeErro()
+        {
+            return GetText(messageErrorTextArea);
         }
         #endregion
     }

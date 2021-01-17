@@ -22,7 +22,7 @@ namespace AutomacaoMantis.DBSteps.Projects
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/deletaProjeto.sql", Encoding.UTF8);
             query = query.Replace("$projectId", projectId.ToString());
 
-            ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: ID do projeto = " + projectId);
+            ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: ID do projeto = " + projectId);
 
             DataBaseHelpers.ExecuteQuery(query);
         }
@@ -31,7 +31,7 @@ namespace AutomacaoMantis.DBSteps.Projects
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/inseriProjeto.sql", Encoding.UTF8);
             query = query.Replace("$projectName", projectName);
 
-            ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: Nome do projeto = " + projectName);
+            ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Nome do projeto = " + projectName);
 
             return DataBaseHelpers.ObtemRegistroUnico<ProjectDomain>(query);
         }
@@ -70,7 +70,7 @@ namespace AutomacaoMantis.DBSteps.Projects
             query = query.Replace("$childId", childId.ToString())
                          .Replace("$parentId", parentId.ToString());
 
-            ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: Child ID = " + childId + " Parent ID = " + parentId);
+            ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Child ID = " + childId + " Parent ID = " + parentId);
 
             return DataBaseHelpers.ObtemRegistroUnico<ProjectDomain>(query);
         }
@@ -80,7 +80,7 @@ namespace AutomacaoMantis.DBSteps.Projects
             query = query.Replace("$childId", childId.ToString())
                          .Replace("$parentId", parentId.ToString());
 
-            ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: Child ID = " + childId + " Parent ID = " + parentId);
+            ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Child ID = " + childId + " Parent ID = " + parentId);
 
             DataBaseHelpers.ExecuteQuery(query);
         }
@@ -100,7 +100,7 @@ namespace AutomacaoMantis.DBSteps.Projects
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/inseriCategoria.sql", Encoding.UTF8);
             query = query.Replace("$categoryName", categoryName);
 
-            ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: Nome da categoria = " + categoryName);
+            ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Nome da categoria = " + categoryName);
 
             return DataBaseHelpers.ObtemRegistroUnico<ProjectDomain>(query);
         }
@@ -118,7 +118,7 @@ namespace AutomacaoMantis.DBSteps.Projects
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/deletaCategoria.sql", Encoding.UTF8);
             query = query.Replace("$categoryName", categoryName);
 
-            ExtentReportHelpers.AddTestInfo(2, "PARAMETERS: Nome da categoria = " + categoryName);
+            ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Nome da categoria = " + categoryName);
 
             DataBaseHelpers.ExecuteQuery(query);
         }
@@ -137,6 +137,17 @@ namespace AutomacaoMantis.DBSteps.Projects
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/deletaProjetoAtribUser.sql", Encoding.UTF8);
             query = query.Replace("$projectId", projectId.ToString())
                          .Replace("$userId", userId);
+
+            ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Nome do projeto = " + projectId + "Nome do usuário = " + userId);
+
+            DataBaseHelpers.ExecuteQuery(query);
+        }
+        public void InserirProjetoAtribuidoAoUsuarioDB(int projectId, string userId, string accessLevel)
+        {
+            string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/inseriProjetoAtribUser.sql", Encoding.UTF8);
+            query = query.Replace("$projectId", projectId.ToString())
+                         .Replace("$userId", userId)
+                         .Replace("$accessLevel", accessLevel);
 
             ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Nome do projeto = " + projectId + "Nome do usuário = " + userId);
 

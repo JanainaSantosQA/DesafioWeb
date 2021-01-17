@@ -10,12 +10,13 @@ namespace AutomacaoMantis.Tests
     public class ManageProjCatEditTests : TestBase
     {
         #region Pages, DBSteps and Flows Objects
-        LoginFlows loginFlows;
-        MainPage mainPage;
+        MyViewPage myViewPage;
         ManageProjPage manageProjPage;
         ManageProjCatEditPage manageProjCatEditPage;
-        ManageProjCatUpdatePage manageProjCatUpdatePage;
+
         ProjectsDBSteps projectsDBSteps;
+
+        LoginFlows loginFlows;
         #endregion
 
         #region Parameters
@@ -25,12 +26,13 @@ namespace AutomacaoMantis.Tests
         [SetUp]
         public void Setup()
         {
-            loginFlows = new LoginFlows();
-            mainPage = new MainPage();
+            myViewPage = new MyViewPage();
             manageProjPage = new ManageProjPage();
             manageProjCatEditPage = new ManageProjCatEditPage();
-            manageProjCatUpdatePage = new ManageProjCatUpdatePage();
+
             projectsDBSteps = new ProjectsDBSteps();
+
+            loginFlows = new LoginFlows();
 
             loginFlows.EfetuarLogin(BuilderJson.ReturnParameterAppSettings("USER_LOGIN_PADRAO"), BuilderJson.ReturnParameterAppSettings("PASSWORD_LOGIN_PADRAO"));
         }
@@ -38,28 +40,31 @@ namespace AutomacaoMantis.Tests
         [Test]
         public void EditarCategoriaGlobalComSucesso()
         {
-            #region Inserindo uma nova categoria      
-            string categoryName = "Categoria_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
+           #region Inserindo uma nova categoria      
+            string categoryName = "Category_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
             projectsDBSteps.InserirCategoriaDB(categoryName);
             #endregion
 
             #region Parameters
-            string newCategoryName = "Categoria_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
+            string newCategoryName = "Category_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
 
             //Resultado esperado
-            string messageSucessExpected = "Operação realizada com sucesso";
+            string messageSucessExpected = "Operação realizada com sucesso.";
             #endregion
 
-            mainPage.ClicarMenu(menu);
-            manageProjPage.ClicarEditarCategoria(categoryName);
-            manageProjCatEditPage.LimparCategoryName();
-            manageProjCatEditPage.PreencherCategoryName(newCategoryName);
+            #region Actions
+            myViewPage.ClicarMenu(menu);
+            manageProjPage.ClicarAlterarCategoria(categoryName);
+            manageProjCatEditPage.PreencherNomeCategoria(newCategoryName);
             manageProjCatEditPage.ClicarAtualizarCategoria();
+            #endregion
 
-            StringAssert.Contains(messageSucessExpected, manageProjCatEditPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é o esperada.");
+            #region Validations
+            Assert.AreEqual(messageSucessExpected, manageProjCatEditPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
 
-            var consultarCategoriaDB = projectsDBSteps.ConsultarCategoriaDB(newCategoryName);
-            Assert.IsNotNull(consultarCategoriaDB, "O nome da categoria não foi alterado.");
+            var categoriaCriadaDB = projectsDBSteps.ConsultarCategoriaDB(newCategoryName);
+            Assert.IsNotNull(categoriaCriadaDB, "O nome da categoria não foi alterado.");
+            #endregion
 
             projectsDBSteps.DeletarCategoriaDB(newCategoryName);
         }
@@ -68,25 +73,28 @@ namespace AutomacaoMantis.Tests
         public void EditarCategoriaNomeJaExiste()
         {
             #region Inserindo uma nova categoria      
-            string categoryNameOne = "Categoria_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
+            string categoryNameOne = "Category_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
             projectsDBSteps.InserirCategoriaDB(categoryNameOne);
 
-            string categoryNameTwo = "Categoria_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
+            string categoryNameTwo = "Category_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
             projectsDBSteps.InserirCategoriaDB(categoryNameTwo);
             #endregion
 
             #region Parameters            
             //Resultado esperado
-            string messageErroExpected = "Uma categoria com este nome já existe";
+            string messageErrorExpected = "Uma categoria com este nome já existe";
             #endregion
 
-            mainPage.ClicarMenu(menu);
-            manageProjPage.ClicarEditarCategoria(categoryNameOne);
-            manageProjCatEditPage.LimparCategoryName();
-            manageProjCatEditPage.PreencherCategoryName(categoryNameTwo);
+            #region Actions
+            myViewPage.ClicarMenu(menu);
+            manageProjPage.ClicarAlterarCategoria(categoryNameOne);
+            manageProjCatEditPage.PreencherNomeCategoria(categoryNameTwo);
             manageProjCatEditPage.ClicarAtualizarCategoria();
+            #endregion
 
-            StringAssert.Contains(messageErroExpected, manageProjCatUpdatePage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            #region Validations
+            StringAssert.Contains(messageErrorExpected, manageProjCatEditPage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            #endregion
 
             projectsDBSteps.DeletarCategoriaDB(categoryNameOne);
             projectsDBSteps.DeletarCategoriaDB(categoryNameTwo);
@@ -96,21 +104,25 @@ namespace AutomacaoMantis.Tests
         public void EditarCategoriaNomeEmBranco()
         {
             #region Inserindo uma nova categoria      
-            string categoryName = "Categoria_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
+            string categoryName = "Category_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
             projectsDBSteps.InserirCategoriaDB(categoryName);
             #endregion
 
             #region Parameters            
             //Resultado esperado
-            string messageErroExpected = "Um campo necessário '' estava vazio. Por favor, verifique novamente suas entradas.";
+            string messageErrorExpected = "Um campo necessário '' estava vazio. Por favor, verifique novamente suas entradas.";
             #endregion
 
-            mainPage.ClicarMenu(menu);
-            manageProjPage.ClicarEditarCategoria(categoryName);
-            manageProjCatEditPage.LimparCategoryName();
+            #region Actions
+            myViewPage.ClicarMenu(menu);
+            manageProjPage.ClicarAlterarCategoria(categoryName);
+            manageProjCatEditPage.LimparNomeCategoria();
             manageProjCatEditPage.ClicarAtualizarCategoria();
+            #endregion
 
-            StringAssert.Contains(messageErroExpected, manageProjCatUpdatePage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            #region Validations
+            StringAssert.Contains(messageErrorExpected, manageProjCatEditPage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            #endregion
 
             projectsDBSteps.DeletarCategoriaDB(categoryName);
         }

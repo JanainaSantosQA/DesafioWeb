@@ -7,27 +7,32 @@ namespace AutomacaoMantis.Pages
     {
         #region Mapping
         By nameCustomField = By.Id("custom-field-name");
-
-        By atualizarCustomFieldButton = By.XPath("//input[@value='Atualizar Campo Personalizado']");
-        By apagarCustomFieldButton = By.XPath("//input[@value='Apagar Campo Personalizado']");
+        By updateCustomFieldButton = By.XPath("//input[@value='Atualizar Campo Personalizado']");
+        By deleteCustomFieldButton = By.XPath("//input[@value='Apagar Campo Personalizado']");
+        By deleteFieldButton = By.XPath("//input[@value='Apagar Campo']");
+        By deleteFieldInfoTextArea = By.CssSelector("p.bigger-110");
         #endregion
 
         #region Actions
-        public void PreencherCustomFieldName(string customFieldName)
+        public void PreencherNomeCampoPersonalizado(string customFieldName)
         {
-            SendKeys(nameCustomField, customFieldName);
+            ClearAndSendKeys(nameCustomField, customFieldName);
         }
-        public void LimparCustomFieldName()
+
+        public void ClicarAtualizarCampoPersonalizado()
         {
-            Clear(nameCustomField);
+            Click(updateCustomFieldButton);
         }
-        public void ClicarAtualizarCustomField()
+
+        public void ClicarApagarCampoPersonalizado()
         {
-            Click(atualizarCustomFieldButton);
+            Click(deleteCustomFieldButton);
         }
-        public void ClicarApagarCustomField()
+
+        public void ClicarConfirmacaoApagarCampo(string customFieldName)
         {
-            Click(apagarCustomFieldButton);
+            VerifyTextElement(deleteFieldInfoTextArea, customFieldName);
+            Click(deleteFieldButton);
         }
         #endregion
     }

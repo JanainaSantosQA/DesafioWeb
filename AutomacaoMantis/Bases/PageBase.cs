@@ -137,8 +137,15 @@ namespace AutomacaoMantis.Bases
         }
 
         protected void Clear(By locator)
-        {           
-             WaitForElement(locator).Clear();
+        {
+            WaitForElement(locator).Clear();
+        }
+
+        protected void ClearAndSendKeys(By locator, string text)
+        {
+            WaitForElement(locator).Clear();
+            WaitForElement(locator).SendKeys(text);
+            ExtentReportHelpers.AddTestInfo(3, "PARAMETER: " + text);
         }
 
         protected bool ReturnIfElementIsDisplayed(By locator)
@@ -163,6 +170,24 @@ namespace AutomacaoMantis.Bases
             bool result = driver.FindElement(locator).Selected;
             ExtentReportHelpers.AddTestInfo(3, "RETURN: " + result);
             return result;
+        }
+
+        protected bool IsElementExists(By locator)
+        {
+            bool elementExists;
+
+            try
+            {
+                wait.Until(ExpectedConditions.ElementExists(locator));
+                elementExists = true;
+            }
+
+            catch
+            {
+                elementExists = false;
+            }
+
+            return elementExists;
         }
         #endregion
 
@@ -272,7 +297,7 @@ namespace AutomacaoMantis.Bases
 
         public void VerifyTextElement(By locator, string text)
         {
-            string element = WaitForElement(locator).Text;    
+            string element = WaitForElement(locator).Text;
             Assert.IsTrue(element.Contains(text));
         }
 
@@ -323,7 +348,6 @@ namespace AutomacaoMantis.Bases
                 }
             }
         }
-
         #endregion
     }
 }

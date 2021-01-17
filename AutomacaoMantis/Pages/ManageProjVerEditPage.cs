@@ -7,15 +7,13 @@ namespace AutomacaoMantis.Pages
     {
         #region Mapping
         By versionNameField = By.Id("proj-version-new-version");
-
-        By atualizarVersaoButton = By.XPath("//input[@value='Atualizar Versão']");
-
+        By updateVersionButton = By.XPath("//input[@value='Atualizar Versão']");
         By messageSucessTextArea = By.CssSelector("p.bold.bigger-110");
-        By messageErroTextArea = By.XPath("//*[@class='alert alert-danger']/p[2]");
+        By messageErrorTextArea = By.XPath("//*[@class='alert alert-danger']/p[2]");
         #endregion
 
         #region Actions
-        public void PreencherVersionName(string versionName)
+        public void PreencherNomeVersao(string versionName)
         {
             Clear(versionNameField);
             SendKeys(versionNameField, versionName);
@@ -23,7 +21,7 @@ namespace AutomacaoMantis.Pages
 
         public void ClicarAtualizarVersao()
         {
-            Click(atualizarVersaoButton);
+            Click(updateVersionButton);
         }
 
         public string RetornarMensagemDeSucesso()
@@ -33,7 +31,7 @@ namespace AutomacaoMantis.Pages
 
         public string RetornarMensagemDeErro()
         {
-            return GetText(messageErroTextArea);
+            return GetText(messageErrorTextArea);
         }
         #endregion
     }

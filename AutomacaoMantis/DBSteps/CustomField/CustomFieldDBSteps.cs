@@ -27,7 +27,7 @@ namespace AutomacaoMantis.DBSteps.CustomField
             DataBaseHelpers.ExecuteQuery(query);
         }
 
-        public string InserirTagDB(string customFieldName)
+        public string InserirCampoDB(string customFieldName)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/CustomField/inseriCampo.sql", Encoding.UTF8);
             query = query.Replace("$customFieldName", customFieldName);

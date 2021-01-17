@@ -9,9 +9,9 @@ namespace AutomacaoMantis.Pages
         By usernameField = By.Id("username");
         By emailField = By.Id("email-field");
         By captchaField = By.Id("captcha-field");
-        By criarContaButton = By.XPath("//input[@value='Criar Conta']");
-        By gerarNovoCodigoLink = By.XPath("//ul[@id='captcha-refresh']/li/a");
-        By messageErroTextArea = By.XPath("//div[@class='alert alert-danger']/p[2]");
+        By createAccountButton = By.XPath("//input[@value='Criar Conta']");
+        By generateNewCodeLink = By.XPath("//ul[@id='captcha-refresh']/li/a");
+        By messageErrorTextArea = By.XPath("//div[@class='alert alert-danger']/p[2]");
         By captchaImg = By.XPath("//span/img");
         #endregion
 
@@ -20,29 +20,35 @@ namespace AutomacaoMantis.Pages
         {
             SendKeys(usernameField, username);
         }
+
         public void PreencherEmail(string email)
         {
             SendKeys(emailField, email);
         }
+
         public void PreencherCaptcha(string captcha)
         {
             SendKeys(captchaField, captcha);
         }
+
         public string RetornarSRCImagem()
         {
             return GetSRC(captchaImg);
         }
+
         public void GerarNovoCaptcha()
         {
-            Click(gerarNovoCodigoLink);
+            Click(generateNewCodeLink);
         }
+
         public void ClicarCriarConta()
         {
-            Click(criarContaButton);
+            Click(createAccountButton);
         }
+
         public string RetornarMensagemDeErro()
         {
-            return GetText(messageErroTextArea);
+            return GetText(messageErrorTextArea);
         }
         #endregion
     }

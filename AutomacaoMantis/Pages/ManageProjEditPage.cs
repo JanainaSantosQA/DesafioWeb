@@ -6,65 +6,70 @@ namespace AutomacaoMantis.Pages
     public class ManageProjEditPage : PageBase
     {
         #region Mapping
-        By subprojetoDropDown = By.Name("subproject_id");
-
+        By subProjetoDropDown = By.Name("subproject_id");
+        By projectNameField = By.Id("project-name");
         By versionNameField = By.Name("version");
-
-        By adicionarVersaoButton = By.Name("add_version");
-        public By AlterarVersaoButton(string versionName)
+        By updateProjectButton = By.XPath("//input[@value='Atualizar Projeto']");
+        By addVersionButton = By.Name("add_version");
+        private By RetornarLocalicadorAlterarVersaoButton(string versionName)
         {
             return By.XPath($"//*[text()='{versionName}']//..//button[text()='Alterar']");
-        }        
-        public By ApagarVersaoButton(string versionName)
-        {
-            return By.XPath($"//*[text()='{versionName}']//..//button[text()='Apagar']");
         }
-        By apagarVersaoConfirmacaoButton = By.XPath("//input[@value='Apagar Versão']");
-
-        By adicionarComoSubprojetoButton = By.XPath("//input[@value='Adicionar como Subprojeto']");
-
-        By subprojetosExistentesTable = By.XPath("//*[@id='manage-project-update-subprojects-form']//table/tbody");
-
-        By apagarVersaoInfoTextArea = By.CssSelector("p.bigger-110");
+        private By RetornarLocalizadorApagarVersaoButton(string versionName)
+        {
+            return By.XPath("//*[text()='" + versionName + "']//..//button[text()='Apagar']");
+        }
+        By deleteVersionConfirmationButton = By.XPath("//input[@value='Apagar Versão']");
+        By addSubProjectButton = By.XPath("//input[@value='Adicionar como Subprojeto']");
+        private By RetornarLocalizadorSubProjetoLink(string projectName)
+        {
+            return By.XPath("//*[@id='manage-project-update-subprojects-form']//a[contains(., '" + projectName + "')]");
+        }
+        By deleteVersionInfoTextArea = By.CssSelector("p.bigger-110");
         By messageSucessTextArea = By.CssSelector("p.bold.bigger-110");
-        By messageErroTextArea = By.XPath("//*[@class='alert alert-danger']/p[2]");
+        By messageErrorTextArea = By.XPath("//*[@class='alert alert-danger']/p[2]");
         #endregion
 
         #region Actions
-        public void SelecionarProjectName(string projectName)
+        public void SelecionarNomeProjeto(string projectName)
         {
-            ComboBoxSelectByVisibleText(subprojetoDropDown, projectName);
+            ComboBoxSelectByVisibleText(subProjetoDropDown, projectName);
         }
 
-        public void ClicarAdicionarComoSubprojeto()
+        public void ClicarAtualizarProjeto()
         {
-            Click(adicionarComoSubprojetoButton);
+            Click(updateProjectButton);
+        }
+
+        public void ClicarAdicionarComoSubProjeto()
+        {
+            Click(addSubProjectButton);
         }
 
         public void ClicarAdicionarVersao()
         {
-            Click(adicionarVersaoButton);
+            Click(addVersionButton);
         }
 
         public void ClicarAlterarVersao(string versionName)
         {
-            Click(AlterarVersaoButton(versionName));
+            Click(RetornarLocalicadorAlterarVersaoButton(versionName));
         }
 
         public void ClicarApagarVersao(string versionName)
         {
-            Click(ApagarVersaoButton(versionName));
+            Click(RetornarLocalizadorApagarVersaoButton(versionName));
         }
 
         public void ClicarApagarVersaoConfirmacao(string versionName)
         {
-            VerifyTextElement(apagarVersaoInfoTextArea, versionName);
-            Click(apagarVersaoConfirmacaoButton);
+            VerifyTextElement(deleteVersionInfoTextArea, versionName);
+            Click(deleteVersionConfirmationButton);
         }
 
-        public void VerificarSeOSubprojetoEstaSendoExibidoNaTela(string projectName)
+        public bool RetornarSeOSubProjetoEstaSendoExibidoNaTela(string projectName)
         {
-            VerifyTextElement(subprojetosExistentesTable, projectName);
+            return IsElementExists(RetornarLocalizadorSubProjetoLink(projectName));
         }
 
         public void ClicarDesvincular(int childId, int parentId)
@@ -72,8 +77,13 @@ namespace AutomacaoMantis.Pages
             Click(By.XPath("//a[@href[contains(.,'manage_proj_subproj_delete.php?project_id=" + parentId + "&subproject_id=" + childId + "')] and text()='Desvincular']"));
         }
 
-        public void PreencherVersionName(string versionName)
-        {            
+        public void PreencherNomeProjeto(string projectName)
+        {
+            ClearAndSendKeys(projectNameField, projectName);
+        }
+
+        public void PreencherNomeVersao(string versionName)
+        {
             SendKeys(versionNameField, versionName);
         }
 
@@ -84,7 +94,7 @@ namespace AutomacaoMantis.Pages
 
         public string RetornarMensagemDeErro()
         {
-            return GetText(messageErroTextArea);
+            return GetText(messageErrorTextArea);
         }
         #endregion
     }

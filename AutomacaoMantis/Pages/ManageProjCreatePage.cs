@@ -8,40 +8,37 @@ namespace AutomacaoMantis.Pages
         #region Mapping
         By projectNameField = By.Id("project-name");
         By descriptionField = By.Id("project-description");
-
         By statusDropDown = By.Id("project-status");
-        By viewStateDropDown = By.Id("project-view-state");        
-
-        By adicionarProjetoButton = By.XPath("//input[@value='Adicionar projeto']");
-
+        By viewStateDropDown = By.Id("project-view-state");
+        By addProjectButton = By.XPath("//input[@value='Adicionar projeto']");
         By messageSucessTextArea = By.CssSelector("p.bold.bigger-110");
-        By messageErroTextArea = By.XPath("//*[@class='alert alert-danger']/p[2]");
+        By messageErrorTextArea = By.XPath("//*[@class='alert alert-danger']/p[2]");
         #endregion
 
         #region Actions
-        public void PreencherProjectName(string projectName)
+        public void PreencherNomeProjeto(string projectName)
         {
             SendKeys(projectNameField, projectName);
         }
 
-        public void SelecionarStatus(string status)
+        public void SelecionarEstadoProjeto(string status)
         {
             ComboBoxSelectByVisibleText(statusDropDown, status);
         }
 
-        public void SelecionarViewState(string viewState)
+        public void SelecionarVisibilidade(string viewState)
         {
             ComboBoxSelectByVisibleText(viewStateDropDown, viewState);
         }
 
-        public void PreencherDescription(string description)
+        public void PreencherDescricao(string description)
         {
             SendKeys(descriptionField, description);
         }
 
         public void ClicarAdicionarProjeto()
         {
-            Click(adicionarProjetoButton);
+            Click(addProjectButton);
         }
 
         public string RetornarMensagemDeSucesso()
@@ -51,7 +48,7 @@ namespace AutomacaoMantis.Pages
 
         public string RetornarMensagemDeErro()
         {
-            return GetText(messageErroTextArea);
+            return GetText(messageErrorTextArea);
         }
         #endregion
     }

@@ -7,31 +7,35 @@ namespace AutomacaoMantis.Pages
     {
         #region Mapping
         By categoryNameField = By.Id("proj-category-name");
-
-        By atualizarCategoriaButton = By.XPath("//input[@value='Atualizar Categoria']");
-
-        By messageSucessTextArea = By.XPath("//div[@id='main-container']/div[2]/div[2]/div/div/div/div[2]");
+        By updateCategoryButton = By.XPath("//input[@value='Atualizar Categoria']");
+        By messageSucessTextArea = By.CssSelector("p.bold.bigger-110");
+        By messageErrorTextArea = By.XPath("//*[@class='alert alert-danger']/p[2]");
         #endregion
 
         #region Actions
-        public void PreencherCategoryName(string categoryName)
+        public void PreencherNomeCategoria(string categoryName)
         {
-            SendKeys(categoryNameField, categoryName);
+            ClearAndSendKeys(categoryNameField, categoryName);
         }
 
-        public void LimparCategoryName()
+        public void LimparNomeCategoria()
         {
             Clear(categoryNameField);
         }
 
         public void ClicarAtualizarCategoria()
         {
-            Click(atualizarCategoriaButton);
+            Click(updateCategoryButton);
         }
 
         public string RetornarMensagemDeSucesso()
         {
             return GetText(messageSucessTextArea);
+        }
+
+        public string RetornarMensagemDeErro()
+        {
+            return GetText(messageErrorTextArea);
         }
         #endregion
 

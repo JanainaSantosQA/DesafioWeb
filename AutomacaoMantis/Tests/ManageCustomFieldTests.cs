@@ -10,15 +10,13 @@ namespace AutomacaoMantis.Tests
     public class ManageCustomFieldTests : TestBase
     {
         #region Pages, DBSteps and Flows Objects
-        LoginFlows loginFlows;
-        MainPage mainPage;
+        MyViewPage myViewPage;
         ManageCustomFieldPage manageCustomFieldPage;
-        ManageCustomFieldCreatePage manageCustomFieldCreatePage;
-        ManageCustomFieldEditPage manageCustomFieldEditPage;
-        ManageCustomFieldDeletePage manageCustomFieldDeletePage;
-        ManageCustomFieldUpdatePage manageCustomFieldUpdatePage;
+        ManageCustomFieldEditPage manageCustomFieldEditPage;           
 
         CustomFieldDBSteps customFieldDBSteps;
+
+        LoginFlows loginFlows;
         #endregion
 
         #region Parameters
@@ -28,15 +26,13 @@ namespace AutomacaoMantis.Tests
         [SetUp]
         public void Setup()
         {
-            loginFlows = new LoginFlows();
-            mainPage = new MainPage();
-            manageCustomFieldPage = new ManageCustomFieldPage();
-            manageCustomFieldCreatePage = new ManageCustomFieldCreatePage();
-            manageCustomFieldEditPage = new ManageCustomFieldEditPage();
-            manageCustomFieldDeletePage = new ManageCustomFieldDeletePage();
-            manageCustomFieldUpdatePage = new ManageCustomFieldUpdatePage();
+            myViewPage = new MyViewPage();
+            manageCustomFieldPage = new ManageCustomFieldPage();  
+            manageCustomFieldEditPage = new ManageCustomFieldEditPage();            
 
             customFieldDBSteps = new CustomFieldDBSteps();
+
+            loginFlows = new LoginFlows();
 
             loginFlows.EfetuarLogin(BuilderJson.ReturnParameterAppSettings("USER_LOGIN_PADRAO"), BuilderJson.ReturnParameterAppSettings("PASSWORD_LOGIN_PADRAO"));
         }
@@ -48,17 +44,21 @@ namespace AutomacaoMantis.Tests
             string customFieldName = "Custom_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
 
             //Resultado esperado
-            string messageSucessExpected = "Operação realizada com sucesso";
+            string messageSucessExpected = "Operação realizada com sucesso.";
             #endregion
 
-            mainPage.ClicarMenu(menu);
-            manageCustomFieldPage.PreencherCustomField(customFieldName);
-            manageCustomFieldPage.ClicarNewCustomField();
+            #region Actions
+            myViewPage.ClicarMenu(menu);
+            manageCustomFieldPage.PreencherNomeCampoPersonalizado(customFieldName);
+            manageCustomFieldPage.ClicarNovoCampoPersonalizado();
+            #endregion
 
-            StringAssert.Contains(messageSucessExpected, manageCustomFieldCreatePage.RetornarMensagemDeSucesso(), "A mensagem retornada não é o esperada.");
-
-            var consultarCampoDB = customFieldDBSteps.ConsultarCampoDB(customFieldName);
-            Assert.IsNotNull(consultarCampoDB, "O campo não foi criado.");
+            #region Validations
+            Assert.AreEqual(messageSucessExpected, manageCustomFieldPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
+           
+            var campoCriadoDB = customFieldDBSteps.ConsultarCampoDB(customFieldName);
+            Assert.IsNotNull(campoCriadoDB, "O campo não foi criado.");
+            #endregion
 
             customFieldDBSteps.DeletarCampoDB(customFieldName);
         }
@@ -71,10 +71,14 @@ namespace AutomacaoMantis.Tests
             string messageErrorExpected = "Um campo necessário 'name' estava vazio.";
             #endregion
 
-            mainPage.ClicarMenu(menu); 
-            manageCustomFieldPage.ClicarNewCustomField();
+            #region Actions
+            myViewPage.ClicarMenu(menu); 
+            manageCustomFieldPage.ClicarNovoCampoPersonalizado();
+            #endregion
 
-            StringAssert.Contains(messageErrorExpected, manageCustomFieldCreatePage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            #region Validations
+            StringAssert.Contains(messageErrorExpected, manageCustomFieldPage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            #endregion
         }
 
         [Test]
@@ -82,52 +86,57 @@ namespace AutomacaoMantis.Tests
         {
             #region Inserindo um novo campo personalizado
             string customFieldName = "Custom_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
-
-            customFieldDBSteps.InserirTagDB(customFieldName);
+            customFieldDBSteps.InserirCampoDB(customFieldName);
             #endregion
 
             #region Parameters          
             //Resultado esperado
-            string messageSucessExpected = "Operação realizada com sucesso";
+            string messageSucessExpected = "Operação realizada com sucesso.";
             #endregion
 
-            mainPage.ClicarMenu(menu);
-            manageCustomFieldPage.ClicarCustomFieldLink(customFieldName);
-            manageCustomFieldEditPage.ClicarApagarCustomField();
-            manageCustomFieldDeletePage.ClicarApagarCustomField(customFieldName);
-     
-            StringAssert.Contains(messageSucessExpected, manageCustomFieldDeletePage.RetornarMensagemDeSucesso(), "A mensagem retornada não é o esperada.");
+            #region Actions
+            myViewPage.ClicarMenu(menu);
+            manageCustomFieldPage.ClicarCampoPersonalizadoLink(customFieldName);
+            manageCustomFieldEditPage.ClicarApagarCampoPersonalizado();
+            manageCustomFieldEditPage.ClicarConfirmacaoApagarCampo(customFieldName);
+            #endregion
 
-            var consultarCampoDB = customFieldDBSteps.ConsultarCampoDB(customFieldName);
-            Assert.IsNull(consultarCampoDB, "O campo não foi excluído.");
+            #region Validations
+            Assert.AreEqual(messageSucessExpected, manageCustomFieldPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
+            
+            var campoCriadoDB = customFieldDBSteps.ConsultarCampoDB(customFieldName);
+            Assert.IsNull(campoCriadoDB, "O campo não foi excluído.");
+            #endregion
         }
 
         [Test]
-        public void EditarCampoPersonalizadoComSucesso()
+        public void EditarNomeCampoPersonalizadoComSucesso()
         {
             #region Inserindo um novo campo personalizado
             string customFieldName = "Custom_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
-
-            customFieldDBSteps.InserirTagDB(customFieldName);
+            customFieldDBSteps.InserirCampoDB(customFieldName);
             #endregion
 
             #region Parameters
             string newCustomFieldName = "Custom_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
 
             //Resultado esperado
-            string messageSucessExpected = "Operação realizada com sucesso";
+            string messageSucessExpected = "Operação realizada com sucesso.";
             #endregion
 
-            mainPage.ClicarMenu(menu);
-            manageCustomFieldPage.ClicarCustomFieldLink(customFieldName);
-            manageCustomFieldEditPage.LimparCustomFieldName();
-            manageCustomFieldEditPage.PreencherCustomFieldName(newCustomFieldName);
-            manageCustomFieldEditPage.ClicarAtualizarCustomField();
+            #region Actions
+            myViewPage.ClicarMenu(menu);
+            manageCustomFieldPage.ClicarCampoPersonalizadoLink(customFieldName);
+            manageCustomFieldEditPage.PreencherNomeCampoPersonalizado(newCustomFieldName);
+            manageCustomFieldEditPage.ClicarAtualizarCampoPersonalizado();
+            #endregion
 
-            StringAssert.Contains(messageSucessExpected, manageCustomFieldPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é o esperada.");
+            #region Validations
+            Assert.AreEqual(messageSucessExpected, manageCustomFieldPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
 
-            var consultarCampoDB = customFieldDBSteps.ConsultarCampoDB(newCustomFieldName);
-            Assert.IsNotNull(consultarCampoDB, "O nome do campo não foi alterado.");
+            var campoCriadoDB = customFieldDBSteps.ConsultarCampoDB(newCustomFieldName);
+            Assert.IsNotNull(campoCriadoDB, "O nome do campo não foi alterado.");
+            #endregion
 
             customFieldDBSteps.DeletarCampoDB(newCustomFieldName);
         }
@@ -137,12 +146,10 @@ namespace AutomacaoMantis.Tests
         {
             #region Inserindo um novo campo personalizado
             string customFieldNameOne = "Custom_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
-
-            customFieldDBSteps.InserirTagDB(customFieldNameOne);
+            customFieldDBSteps.InserirCampoDB(customFieldNameOne);
 
             string customFieldNameTwo = "Custom_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
-
-            customFieldDBSteps.InserirTagDB(customFieldNameTwo);
+            customFieldDBSteps.InserirCampoDB(customFieldNameTwo);
             #endregion
 
             #region Parameters
@@ -150,13 +157,16 @@ namespace AutomacaoMantis.Tests
             string messageErrorExpected = "Este é um nome duplicado.";
             #endregion
 
-            mainPage.ClicarMenu(menu);
-            manageCustomFieldPage.ClicarCustomFieldLink(customFieldNameOne);
-            manageCustomFieldEditPage.LimparCustomFieldName();
-            manageCustomFieldEditPage.PreencherCustomFieldName(customFieldNameTwo);
-            manageCustomFieldEditPage.ClicarAtualizarCustomField();
+            #region Actions
+            myViewPage.ClicarMenu(menu);
+            manageCustomFieldPage.ClicarCampoPersonalizadoLink(customFieldNameOne);
+            manageCustomFieldEditPage.PreencherNomeCampoPersonalizado(customFieldNameTwo);
+            manageCustomFieldEditPage.ClicarAtualizarCampoPersonalizado();
+            #endregion
 
-            StringAssert.Contains(messageErrorExpected, manageCustomFieldUpdatePage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            #region Validations
+            StringAssert.Contains(messageErrorExpected, manageCustomFieldPage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            #endregion
 
             customFieldDBSteps.DeletarCampoDB(customFieldNameOne);
             customFieldDBSteps.DeletarCampoDB(customFieldNameTwo);
@@ -167,21 +177,25 @@ namespace AutomacaoMantis.Tests
         {
             #region Inserindo um novo campo personalizado
             string customFieldName= "Custom_" + GeneralHelpers.ReturnStringWithRandomCharacters(5);
-
-            customFieldDBSteps.InserirTagDB(customFieldName);
+            customFieldDBSteps.InserirCampoDB(customFieldName);
             #endregion
 
             #region Parameters
+            string newCustomFieldName = string.Empty;
             //Resultado esperado
             string messageErrorExpected = "Um campo necessário 'name' estava vazio.";
             #endregion
 
-            mainPage.ClicarMenu(menu);
-            manageCustomFieldPage.ClicarCustomFieldLink(customFieldName);
-            manageCustomFieldEditPage.LimparCustomFieldName();
-            manageCustomFieldEditPage.ClicarAtualizarCustomField();
+            #region Actions
+            myViewPage.ClicarMenu(menu);
+            manageCustomFieldPage.ClicarCampoPersonalizadoLink(customFieldName);
+            manageCustomFieldEditPage.PreencherNomeCampoPersonalizado(newCustomFieldName);
+            manageCustomFieldEditPage.ClicarAtualizarCampoPersonalizado();
+            #endregion
 
-            StringAssert.Contains(messageErrorExpected, manageCustomFieldUpdatePage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            #region Validations
+            StringAssert.Contains(messageErrorExpected, manageCustomFieldPage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            #endregion
 
             customFieldDBSteps.DeletarCampoDB(customFieldName);
         }

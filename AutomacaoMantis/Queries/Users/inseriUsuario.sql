@@ -3,6 +3,6 @@ username, realname, email, password, enabled, protected, access_level, login_cou
 VALUES (
 '$username', '$realname', '$email', 'janaina@santos', '$enabled', 0, 25, 0, 0, 0, '$cookie', 1, 1);
 
-SELECT username Username, realname RealName, email Email, id UserId
+SELECT username Username, realname RealName, email Email, id UserId, access_level AccessLevel
 FROM bugtracker.mantis_user_table
 WHERE ID = (SELECT MAX(id) FROM mantis_user_table);
