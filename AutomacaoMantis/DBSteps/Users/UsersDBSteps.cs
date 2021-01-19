@@ -31,12 +31,17 @@ namespace AutomacaoMantis.DBSteps.Users
         public UserDomain InserirUsuarioDB(string username, string realname, string enabled, string cookie, string email)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Users/inseriUsuario.sql", Encoding.UTF8);
-            query = query.Replace("$username", username).Replace("$realname", realname).Replace("$enabled", enabled).Replace("$cookie", cookie).Replace("$email", email);
+            query = query.Replace("$username", username)
+                         .Replace("$realname", realname)
+                         .Replace("$enabled", enabled)
+                         .Replace("$cookie", cookie)
+                         .Replace("$email", email);
 
             ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Username = " + username + " | Realname = " + realname + " | Enabled = " + enabled + " | E-mail = " + email);
 
             return DataBaseHelpers.ObtemRegistroUnico<UserDomain>(query);
         }
+        
         public void DeletarEmailUsuarioDB(string userEmail)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Users/deletaEmailUsuario.sql", Encoding.UTF8);
@@ -46,6 +51,7 @@ namespace AutomacaoMantis.DBSteps.Users
 
             DataBaseHelpers.ExecuteQuery(query);
         }
+
         public List<string> ConsultarPerfilUsuarioDB(string platform, string os, string osVersion)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Users/consultaPerfilUsuario.sql", Encoding.UTF8);
@@ -57,6 +63,7 @@ namespace AutomacaoMantis.DBSteps.Users
 
             return DataBaseHelpers.ObtemDados(query);
         }
+
         public void DeletarPerfilUsuarioDB(string platform, string os, string osVersion)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Users/deletaPerfilUsuario.sql", Encoding.UTF8);
@@ -68,6 +75,7 @@ namespace AutomacaoMantis.DBSteps.Users
 
             DataBaseHelpers.ExecuteQuery(query);
         }
+
         public string InserirPerfilUsuarioDB(string platform, string os, string osVersion, string description)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Users/inseriPerfilUsuario.sql", Encoding.UTF8);

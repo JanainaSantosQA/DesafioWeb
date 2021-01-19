@@ -16,6 +16,7 @@ namespace AutomacaoMantis.DBSteps.Tags
 
             return DataBaseHelpers.ObtemRegistroUnico<TagDomain>(query);
         }
+
         public void DeletarTagDB(string tagName)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Tags/deletaTag.sql", Encoding.UTF8);
@@ -25,10 +26,12 @@ namespace AutomacaoMantis.DBSteps.Tags
 
             DataBaseHelpers.ExecuteQuery(query);
         }
+
         public TagDomain InserirTagDB(string tagName, string tagDescription)
         {
             string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Tags/inseriTag.sql", Encoding.UTF8);
-            query = query.Replace("$tagName", tagName).Replace("$tagDescription", tagDescription);
+            query = query.Replace("$tagName", tagName)
+                         .Replace("$tagDescription", tagDescription);
 
             ExtentReportHelpers.AddTestInfoDB(2, "PARAMETERS: Nome da tag = " + tagName + " | Descrição da tag = " + tagDescription);
 

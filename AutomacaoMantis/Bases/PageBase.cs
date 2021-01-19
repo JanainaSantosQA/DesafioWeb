@@ -171,24 +171,6 @@ namespace AutomacaoMantis.Bases
             ExtentReportHelpers.AddTestInfo(3, "RETURN: " + result);
             return result;
         }
-
-        protected bool IsElementExists(By locator)
-        {
-            bool elementExists;
-
-            try
-            {
-                wait.Until(ExpectedConditions.ElementExists(locator));
-                elementExists = true;
-            }
-
-            catch
-            {
-                elementExists = false;
-            }
-
-            return elementExists;
-        }
         #endregion
 
         #region JavaScript Actions
@@ -272,6 +254,24 @@ namespace AutomacaoMantis.Bases
         #endregion
 
         #region OtherMethods
+        protected bool IsElementExists(By locator)
+        {
+            bool elementExists;
+
+            try
+            {
+                wait.Until(ExpectedConditions.ElementExists(locator));
+                elementExists = true;
+            }
+
+            catch
+            {
+                elementExists = false;
+            }
+
+            return elementExists;
+        }
+
         public bool VerifyDownloadFile(string filename)
         {
             bool exist = false;
