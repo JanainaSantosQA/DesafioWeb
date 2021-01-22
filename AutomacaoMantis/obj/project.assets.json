@@ -8954,24 +8954,23 @@
   },
   "packageFolders": {
     "C:\\Users\\Janaina\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\DesafioWeb\\AutomacaoMantis\\AutomacaoMantis\\AutomacaoMantis.csproj",
+      "projectUniqueName": "D:\\Projetos\\VS2019\\DesafioWeb\\DesafioWeb\\AutomacaoMantis\\AutomacaoMantis.csproj",
       "projectName": "AutomacaoMantis",
-      "projectPath": "C:\\Git\\DesafioWeb\\AutomacaoMantis\\AutomacaoMantis\\AutomacaoMantis.csproj",
+      "projectPath": "D:\\Projetos\\VS2019\\DesafioWeb\\DesafioWeb\\AutomacaoMantis\\AutomacaoMantis.csproj",
       "packagesPath": "C:\\Users\\Janaina\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\DesafioWeb\\AutomacaoMantis\\AutomacaoMantis\\obj\\",
+      "outputPath": "D:\\Projetos\\VS2019\\DesafioWeb\\DesafioWeb\\AutomacaoMantis\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\Janaina\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
