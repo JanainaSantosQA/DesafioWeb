@@ -19,14 +19,29 @@ namespace AutomacaoMantis.Pages
             SendKeys(usernameField, usuario);  
         }
 
+        public void PreencherUsuarioComJavaScript(string usuario)
+        {
+            SendKeysJavaScript(usernameField, usuario);
+        }
+
         public void PreencherSenha(string senha)
         {
             SendKeys(passwordField, senha);
         }
 
+        public void PreencherSenhaComJavaScript(string senha)
+        {
+            SendKeysJavaScript(passwordField, senha);
+        }
+
         public void ClicarEmLogin()
         {
             Click(loginButton);
+        }
+
+        public void ClicarEmLoginComJavaScript()
+        {
+            ClickJavaScript(loginButton);
         }
 
         public void ClicarCriarNovaConta()

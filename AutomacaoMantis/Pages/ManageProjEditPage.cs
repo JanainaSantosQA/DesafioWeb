@@ -13,7 +13,7 @@ namespace AutomacaoMantis.Pages
         By addVersionButton = By.Name("add_version");
         private By RetornarLocalicadorAlterarVersaoButton(string versionName)
         {
-            return By.XPath($"//*[text()='{versionName}']//..//button[text()='Alterar']");
+            return By.XPath("//*[text()='" + versionName + "']//..//button[text()='Alterar']");
         }
         private By RetornarLocalizadorApagarVersaoButton(string versionName)
         {

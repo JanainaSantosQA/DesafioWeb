@@ -1055,6 +1055,12 @@
           }
         }
       },
+      "Selenium.Firefox.WebDriver/0.27.0": {
+        "type": "package",
+        "build": {
+          "build/Selenium.Firefox.WebDriver.targets": {}
+        }
+      },
       "Selenium.Support/3.141.0": {
         "type": "package",
         "dependencies": {
@@ -1083,6 +1089,18 @@
         "type": "package",
         "build": {
           "build/Selenium.WebDriver.ChromeDriver.targets": {}
+        }
+      },
+      "Selenium.WebDriver.IEDriver/3.150.1.2": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.IEDriver.targets": {}
+        }
+      },
+      "Selenium.WebDriver.MSEdgeDriver/87.0.669": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.MSEdgeDriver.targets": {}
         }
       },
       "SSH.NET/2016.1.0": {
@@ -4280,6 +4298,19 @@
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
+    "Selenium.Firefox.WebDriver/0.27.0": {
+      "sha512": "HwCaTaa+snzkLF7ZVaxKSmdttKm+KXT7HOY8c1q8p9E7x05+WHqw5XaZjUGFytVT1+0FkgUoH/u/I+csPLeJAg==",
+      "type": "package",
+      "path": "selenium.firefox.webdriver/0.27.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Selenium.Firefox.WebDriver.targets",
+        "driver/geckodriver.exe",
+        "selenium.firefox.webdriver.0.27.0.nupkg.sha512",
+        "selenium.firefox.webdriver.nuspec"
+      ]
+    },
     "Selenium.Support/3.141.0": {
       "sha512": "F4sxMCXGyqWtbw5qsniJRgza2UsBnslHwFgNA2p7hPxvJhqg73lyXu/ZscJ7FSfRvq3eJrosysv92+4sZ3vWsg==",
       "type": "package",
@@ -4333,6 +4364,37 @@
         "nupkg-icon.png",
         "selenium.webdriver.chromedriver.86.0.4240.2200.nupkg.sha512",
         "selenium.webdriver.chromedriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriver.IEDriver/3.150.1.2": {
+      "sha512": "mesqb+Gxb1YxI/tzkdhrP3zMbPky11ErP+nfJCIexiDS+CoGC85xJl+9/dQsN/5AX/boq0lUydaavjGusPJSnw==",
+      "type": "package",
+      "path": "selenium.webdriver.iedriver/3.150.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/DefinePropertiesIEDriver.targets",
+        "build/Selenium.WebDriver.IEDriver.targets",
+        "driver/IEDriverServer.exe",
+        "nupkg-icon.png",
+        "selenium.webdriver.iedriver.3.150.1.2.nupkg.sha512",
+        "selenium.webdriver.iedriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriver.MSEdgeDriver/87.0.669": {
+      "sha512": "rxasnDGbE/0uKaXxGARflBA01RG6kN830iD5AfDi8eWh1gq1frCH5lAN743y+4QGKf6iMiMHUOCLD2gAu8nfJA==",
+      "type": "package",
+      "path": "selenium.webdriver.msedgedriver/87.0.669",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Selenium.WebDriver.MSEdgeDriver.targets",
+        "driver/mac64/msedgedriver",
+        "driver/win32/msedgedriver.exe",
+        "driver/win64/msedgedriver.exe",
+        "license/license.txt",
+        "selenium.webdriver.msedgedriver.87.0.669.nupkg.sha512",
+        "selenium.webdriver.msedgedriver.nuspec"
       ]
     },
     "SSH.NET/2016.1.0": {
@@ -8881,9 +8943,12 @@
       "NUnit.ConsoleRunner >= 3.11.1",
       "NUnit3TestAdapter >= 3.17.0",
       "Newtonsoft.Json >= 12.0.3",
+      "Selenium.Firefox.WebDriver >= 0.27.0",
       "Selenium.Support >= 3.141.0",
       "Selenium.WebDriver >= 3.141.0",
       "Selenium.WebDriver.ChromeDriver >= 86.0.4240.2200",
+      "Selenium.WebDriver.IEDriver >= 3.150.1.2",
+      "Selenium.WebDriver.MSEdgeDriver >= 87.0.669",
       "System.Data.OleDb >= 4.7.1"
     ]
   },
@@ -8977,6 +9042,10 @@
             "target": "Package",
             "version": "[12.0.3, )"
           },
+          "Selenium.Firefox.WebDriver": {
+            "target": "Package",
+            "version": "[0.27.0, )"
+          },
           "Selenium.Support": {
             "target": "Package",
             "version": "[3.141.0, )"
@@ -8988,6 +9057,14 @@
           "Selenium.WebDriver.ChromeDriver": {
             "target": "Package",
             "version": "[86.0.4240.2200, )"
+          },
+          "Selenium.WebDriver.IEDriver": {
+            "target": "Package",
+            "version": "[3.150.1.2, )"
+          },
+          "Selenium.WebDriver.MSEdgeDriver": {
+            "target": "Package",
+            "version": "[87.0.669, )"
           },
           "System.Data.OleDb": {
             "target": "Package",

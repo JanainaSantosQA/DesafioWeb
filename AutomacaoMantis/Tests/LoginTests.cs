@@ -43,6 +43,26 @@ namespace AutomacaoMantis.Tests
         }
 
         [Test]
+        public void RealizarLoginComSucessoComJavaScript()
+        {
+            #region Parameters
+            string username = BuilderJson.ReturnParameterAppSettings("USER_LOGIN_PADRAO");
+            string password = BuilderJson.ReturnParameterAppSettings("PASSWORD_LOGIN_PADRAO");
+            #endregion
+
+            #region Actions
+            loginPage.PreencherUsuarioComJavaScript(username);
+            loginPage.ClicarEmLoginComJavaScript();
+            loginPage.PreencherSenhaComJavaScript(password);
+            loginPage.ClicarEmLoginComJavaScript();
+            #endregion
+
+            #region Validations
+            Assert.AreEqual(username, myViewPage.RetornarUsernameDasInformacoesDeLogin(), "O usuário retornado não é o esperado.");
+            #endregion
+        }
+
+        [Test]
         public void RealizarLoginUsuarioESenhaInvalidos()
         {
             #region Parameters

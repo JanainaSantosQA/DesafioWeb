@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Extent Framework</title>
+  <link rel="apple-touch-icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link rel="shortcut icon" href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png">
+  <link href="https://cdn.rawgit.com/extent-framework/extent-github-cdn/cd00a5e/spark/css/style.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style> </style>
+</head>
+	<body class="dashboard-view dark">
+		<div class="app header-dark side-nav-folded">
+			<div class="layout">
+				<div class="header navbar">
+    <div class="header-container">
+        <div class="nav-logo">
+          <a href="index.html">
+            <div class="logo logo-dark" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+            <div class="logo logo-white" style="background-image: url('https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png')"></div>
+          </a>
+        </div>
+        <ul class="nav-left">
+          <li>
+            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+          <li class="search-box">
+            <a class="search-toggle" href="javascript:void(0);">
+              <i class="search-icon fa fa-search"></i>
+              <i class="search-icon-close fa fa-close"></i>
+            </a>
+          </li>
+          <li class="search-input">
+            <input id="search-tests" class="form-control" type="text" placeholder="Type to search...">
+          </li>
+        </ul>
+        <ul class="nav-right">
+          <li class="m-r-10">
+            <a href="#">
+              <span class="badge badge-primary">AutomacaoMantis</span>
+            </a>
+          </li>
+            <li class="m-r-10">
+                <a href="#">
+                    <span class="badge badge-primary">21/01/2021 21:51:25</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+				<div class="side-nav side-nav-folded">
+  <div class="side-nav-inner">
+    <ul class="side-nav-menu scrollable">
+      <li class="nav-item dropdown">
+        <a id="nav-test" class="dropdown-toggle" href="index.html">
+          <span class="icon-holder">
+            <i class="fa fa-align-left"></i>
+          </span>
+          <span class="title">Tests</span>
+        </a>
+      </li>
+            <li class="nav-item dropdown">
+        <a id="nav-dashboard" class="dropdown-toggle" href="dashboard.html">
+          <span class="icon-holder">
+            <i class="fa fa-bar-chart"></i>
+          </span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="side-nav-controls">
+    <ul>
+      <li>
+        <a href="#" class="lightsout" style="color:#8a8a8a;">
+          <i class="fa fa-desktop"></i>"</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+				<div class="page-container">
+					<div class="main-content">
+						<div class="container-fluid p-4">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="card">
+										<div class="card-header">
+											<h6 class="card-title">Tests</h6>
+										</div>
+										<div class="card-body">
+	                                        <div class="">
+	                                            <canvas id='parent-analysis' width='115' height='90'></canvas>
+	                                        </div>
+	                                    </div>
+	                                    <div class="card-footer">
+	                                    	<div><small data-tooltip='100%'>
+	                                    		<b>72</b> tests passed
+                                    		</small></div>
+	                                    	<div>
+	                                    		<small data-tooltip='0%'><b>0</b> tests failed, 
+	                                    		<b data-tooltip='0%'>0</b> others
+	                                    		</small>
+                                    		</div>
+	                                    </div>
+									</div>
+								</div>
+															</div>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="card">
+										<div class="card-body box-height-150">
+	                                        <div class="media justify-content-between">
+												<div>
+													<p class="">Tests</p>
+													<h2 class="font-size-28 font-weight-light">72</h2>
+													<span class="text-semibold text-success font-size-15">
+													<i class="ti-arrow-up font-size-11"></i> 
+														<span>100%</span>
+													</span>
+												</div>
+												<div class="align-self-end">
+													<i class="fa fa-align-left font-size-70 opacity-01"></i>
+												</div>
+											</div>
+	                                    </div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="card">
+										<div class="card-body box-height-150">
+	                                        <div class="media justify-content-between">
+												<div>
+													<p class="">Start</p>
+													<h6 class="font-weight-light">21/01/2021 21:51:25</h6>
+													<span class="text-semibold text-success font-size-15">
+												</div>
+												<div class="align-self-end">
+													<i class="fa fa-clock-o font-size-70 text-success opacity-01"></i>
+												</div>
+											</div>
+	                                    </div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="card">
+										<div class="card-body box-height-150">
+	                                        <div class="media justify-content-between">
+												<div>
+													<p class="">End</p>
+													<h6 class="font-weight-light">21/01/2021 22:12:08</h6>
+													<span class="text-semibold text-danger font-size-15">
+												</div>
+												<div class="align-self-end">
+													<i class="fa fa-clock-o font-size-70 text-danger opacity-01"></i>
+												</div>
+											</div>
+	                                    </div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="card">
+										<div class="card-body box-height-150">
+	                                        <div class="media justify-content-between">
+												<div>
+													<p class="">Duration</p>
+													<h6 class="font-weight-light">00:20:43.5707641</h6>
+													<span class="text-semibold font-size-15">
+												</div>
+												<div class="align-self-end">
+													<i class="fa fa-clock-o font-size-70 text-danger opacity-01"></i>
+												</div>
+											</div>
+	                                    </div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="card timeline">
+										<div class="card-header">
+											<h6 class="card-title">Timeline</h6>
+										</div>
+										<div class="card-body">
+	                                        <div class="">
+	                                            <canvas id="timeline" height="120"></canvas>
+	                                        </div>
+	                                    </div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+																															</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var statusGroup = {
+                parentCount: 72,
+				passParent: 72,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+			<script>
+				var timeline = { "CriarNovaContaCaptchaIncorreto":9,8999214,"CriarNovaContaGerarNovoCaptcha":7,099195,"CriarNovaContaSemInformarDados":6,7888893,"RealizarLoginComSucesso":11,173666,"RealizarLoginComSucessoComJavaScript":11,0404332,"RealizarLoginSemInformarSenha":10,2395578,"RealizarLoginSemInformarUsuario":5,7559441,"RealizarLoginUsuarioESenhaInvalidos":10,5376532,"RealizarLogoffComSucesso":12,5989005,"ApagarCampoPersonalizadoComSucesso":15,9263655,"CriarCampoPersonalizadoComSucesso":14,0937275,"CriarCampoPersonalizadoNomeEmBranco":13,6007512,"EditarCampoPersonalizadoNomeEmBranco":14,9255304,"EditarCampoPersonalizadoNomeJaExiste":15,2081943,"EditarNomeCampoPersonalizadoComSucesso":15,4345849,"AdicionarPerfilComSucesso":15,2206772,"ApagarPerfilComSucesso":14,328035,"ClicarNoEnviarSemSelecionarUmaAcao":14,3809545,"EditarPlataformaComSucesso":16,2775576,"EditarSOComSucesso":16,2922161,"EditarVersaoSOComSucesso":15,934274,"EditarCategoriaGlobalComSucesso":15,6822351,"EditarCategoriaNomeEmBranco":15,1311846,"EditarCategoriaNomeJaExiste":15,511249,"AlterarNomeProjetoComSucesso":15,4127599,"AlterarNomeVersaoComSucesso":16,5547842,"AlterarProjetoNomeJaExiste":15,9813239,"AlterarVersaoNomeJaExiste":17,0522857,"AlterarVersaoNomeVazio":17,0383286,"ApagarCategoriaGlobalComSucesso":15,1182838,"ApagarVersaoComSucesso":16,1312448,"CriarCategoriaGlobalComSucesso":14,3763519,"CriarCategoriaNomeJaExiste":15,1643004,"CriarProjetoComSucesso":18,8992162,"CriarProjetoNomeJaExiste":17,987648,"CriarSubProjetoComSucesso":17,8755151,"CriarVersaoDuplicadaProjeto":16,4140792,"CriarVersaoProjetoComSucesso":16,7689005,"DesvincularSubProjetoComSucesso":15,9251392,"ApagarTagComSucesso":15,952823,"CriarTagComSucesso":15,7576708,"EditarTagComSucesso":17,0265343,"EditarTagNomeEmBranco":17,8446498,"EditarTagNomeJaExiste":17,8489285,"AdicionarUsuarioAoProjetoComSucesso":18,5593929,"ApagarUsuarioComSucesso":18,7862875,"CriarUsuarioComSucesso":19,5939831,"CriarUsuarioComSucesso":20,01855,"CriarUsuarioComSucesso":19,1174683,"CriarUsuarioComSucesso":19,8198987,"CriarUsuarioComSucesso":19,8471623,"CriarUsuarioComSucesso":20,3663171,"CriarUsuarioEmailInvalido":18,7275308,"CriarUsuarioEmailInvalido":19,7022652,"CriarUsuarioEmailInvalido":18,8355368,"CriarUsuarioEmailInvalido":19,4492375,"CriarUsuarioEmailInvalido":19,0761305,"CriarUsuarioEmailInvalido":19,0435074,"CriarUsuarioEmailJaExiste":20,8133285,"CriarUsuarioSemInformarUsername":18,8171928,"CriarUsuarioSemInformarUsername":18,3323978,"CriarUsuarioSemInformarUsername":18,4243544,"CriarUsuarioSemInformarUsername":18,4482924,"CriarUsuarioUsernameJaExiste":20,736273,"EditarEmailJaExiste":20,8962224,"EditarRealnameComSucesso":21,6544865,"EditarUsernameComSucesso":22,430946,"EditarUsernameJaExiste":21,073889,"PesquisarUsuarioAtivoComSucesso":18,1425095,"PesquisarUsuarioDesativadoComSucesso":18,36376,"RedefinirSenhaComSucesso":20,2895265,"RemoverProjetoAdicionadoNoUsuario":22,4915068 };
+			</script>
+		<script type='text/javascript'>
+	
+</script>
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/f97b667/spark/js/script.js"></script>
+
+		<script>
+			/* -- [ chart options ] -- */
+			var options = {
+			  responsive: true,
+			  maintainAspectRatio: false,
+			  legend: {
+				  position: "right",
+				  labels: {
+					  boxWidth: 10,
+					  fontSize: 11,
+					  lineHeight: 1,
+					  fontFamily: "Source Sans Pro",
+					  padding: 1
+				  }
+			  },
+			  cutoutPercentage: 65
+			};
+
+			function drawChart(ctx, config) {
+				ctx.width = 100;
+				ctx.height = 80;
+				new Chart(ctx, config);
+			}
+
+			/* -- [ parent chart ] -- */
+			(function drawParentChart() {
+				if (typeof statusGroup !== "undefined") {
+					var config = {
+						type: 'doughnut',
+							data: {
+								datasets: [{
+									borderColor: 'transparent',
+									data: [
+										statusGroup.passParent, statusGroup.failParent, statusGroup.fatalParent, statusGroup.errorParent, statusGroup.warningParent, statusGroup.skipParent
+									],
+									backgroundColor: [
+										"#00af00", "#F7464A", "#8b0000", "#ff6347", "#FDB45C", "#1e90ff"
+									]
+								}],
+								labels: [ "Pass", "Fail", "Fatal", "Error", "Warning", "Skip" ]
+							},
+							options: options
+						};
+
+						var ctx = document.getElementById("parent-analysis").getContext('2d');
+						drawChart(ctx, config);
+				}
+			})();
+
+			/* -- [ children chart ] -- */
+			(function drawChildChart() {
+				if (typeof statusGroup !== "undefined" && statusGroup.childCount > 0) {
+					var config = {
+						type: 'doughnut',
+						data: {
+							datasets: [{
+								borderColor: 'transparent',
+								data: [
+									statusGroup.passChild, statusGroup.failChild, statusGroup.fatalChild, statusGroup.errorChild, statusGroup.warningChild, statusGroup.skipChild,statusGroup.infoChild
+								],
+								backgroundColor: [
+									"#00af00", "#F7464A", "#8b0000", "#ff6347", "#FDB45C", "#1e90ff", "#46BFBD"
+								]
+							}],
+							labels: [ "Pass", "Fail", "Fatal", "Error", "Warning", "Skip", "Info" ]
+						},
+						options: options
+					};
+
+					var ctx = document.getElementById("child-analysis").getContext('2d');
+					drawChart(ctx, config);
+				}
+			})();
+
+			/* -- [ grand-children chart ] -- */
+			(function drawGrandChildChart() {
+				if ($('#grandchild-analysis').length > 0 && typeof statusGroup !== "undefined" && statusGroup.grandChildCount > 0) {
+					var config = {
+						type: 'doughnut',
+						data: {
+							datasets: [{
+								borderColor: 'transparent',
+								data: [
+									statusGroup.passGrandChild, statusGroup.failGrandChild, statusGroup.fatalGrandChild, statusGroup.errorGrandChild, statusGroup.warningGrandChild, statusGroup.skipGrandChild, statusGroup.infoGrandChild
+								],
+								backgroundColor: [
+									"#00af00", "#F7464A", "#8b0000", "#ff6347", "#FDB45C", "#1e90ff", "#46BFBD"
+								]
+							}],
+							labels: [ "Pass", "Fail", "Fatal", "Error", "Warning", "Skip", "Info" ]
+						},
+						options: options
+					};
+
+					var ctx = document.getElementById("grandchild-analysis").getContext('2d');
+					drawChart(ctx, config);
+				}
+			})();
+
+			/* -- [ timeline ] -- */
+			function getRandomColor() {
+				var letters = '0123456789ABCDEF';
+				var color = '#';
+				for (var i = 0; i < 6; i++) {
+				color += letters[Math.floor(Math.random() * 16)];
+				}
+				return color;
+			}
+
+			(function drawTimelineChart() {
+				if (typeof timeline !== "undefined") {
+					var datasets = [];
+					for (var key in timeline) {
+						datasets.push({ label:key, data:[timeline[key]], backgroundColor: getRandomColor(), borderWidth: 1 });
+					}
+					var ctx = document.getElementById('timeline').getContext('2d');
+
+					new Chart(ctx, {
+						type: 'horizontalBar',
+						data: {
+							datasets: datasets
+						},
+						options: {
+							responsive: true,
+							maintainAspectRatio: false,
+							tooltips: {
+								mode: 'point'
+							},
+							scales: {
+								xAxes: [{
+									stacked: true,
+									gridLines: false
+								}],
+								yAxes: [{
+									stacked: true,
+									gridLines: false,
+									barThickness: 25
+								}]
+							},
+							legend: {
+								display: false
+							}
+						}
+					});
+				}
+			})();
+		</script>
+	</body>
+</html>

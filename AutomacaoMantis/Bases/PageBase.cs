@@ -28,9 +28,9 @@ namespace AutomacaoMantis.Bases
 
         #region Custom Actions
         protected IWebElement WaitForElement(By locator)
-        {
-            wait.Until(ExpectedConditions.ElementExists(locator));
-            IWebElement element = driver.FindElement(locator);
+        {            
+            wait.Until(ExpectedConditions.ElementExists(locator));    
+            IWebElement element = driver.FindElement(locator);            
             wait.Until(ExpectedConditions.ElementToBeClickable(element));
             return element;
         }

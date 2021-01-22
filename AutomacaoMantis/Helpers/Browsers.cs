@@ -78,7 +78,10 @@ namespace AutomacaoMantis.Helpers
         #region Internet Explorer
         public static IWebDriver GetLocalInternetExplorer()
         {
-            return new InternetExplorerDriver(GeneralHelpers.GetProjectBinDebugPath());
+            InternetExplorerOptions ieOptions = new InternetExplorerOptions();
+            ieOptions.EnableNativeEvents = true;
+            ieOptions.RequireWindowFocus = true;
+            return new InternetExplorerDriver(GeneralHelpers.GetProjectBinDebugPath(), ieOptions);
         }
 
         public static IWebDriver GetRemoteInternetExplorer()

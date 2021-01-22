@@ -90,6 +90,10 @@
               "target": "Package",
               "version": "[12.0.3, )"
             },
+            "Selenium.Firefox.WebDriver": {
+              "target": "Package",
+              "version": "[0.27.0, )"
+            },
             "Selenium.Support": {
               "target": "Package",
               "version": "[3.141.0, )"
@@ -101,6 +105,14 @@
             "Selenium.WebDriver.ChromeDriver": {
               "target": "Package",
               "version": "[86.0.4240.2200, )"
+            },
+            "Selenium.WebDriver.IEDriver": {
+              "target": "Package",
+              "version": "[3.150.1.2, )"
+            },
+            "Selenium.WebDriver.MSEdgeDriver": {
+              "target": "Package",
+              "version": "[87.0.669, )"
             },
             "System.Data.OleDb": {
               "target": "Package",
