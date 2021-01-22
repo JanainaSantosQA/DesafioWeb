@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\VS2019\\DesafioWeb\\DesafioWeb\\AutomacaoMantis\\AutomacaoMantis.csproj": {}
+    "D:\\Projetos\\VS2019\\DesafioWeb\\AutomacaoMantis\\AutomacaoMantis.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\VS2019\\DesafioWeb\\DesafioWeb\\AutomacaoMantis\\AutomacaoMantis.csproj": {
+    "D:\\Projetos\\VS2019\\DesafioWeb\\AutomacaoMantis\\AutomacaoMantis.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\VS2019\\DesafioWeb\\DesafioWeb\\AutomacaoMantis\\AutomacaoMantis.csproj",
+        "projectUniqueName": "D:\\Projetos\\VS2019\\DesafioWeb\\AutomacaoMantis\\AutomacaoMantis.csproj",
         "projectName": "AutomacaoMantis",
-        "projectPath": "D:\\Projetos\\VS2019\\DesafioWeb\\DesafioWeb\\AutomacaoMantis\\AutomacaoMantis.csproj",
+        "projectPath": "D:\\Projetos\\VS2019\\DesafioWeb\\AutomacaoMantis\\AutomacaoMantis.csproj",
         "packagesPath": "C:\\Users\\Janaina\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\VS2019\\DesafioWeb\\DesafioWeb\\AutomacaoMantis\\obj\\",
+        "outputPath": "D:\\Projetos\\VS2019\\DesafioWeb\\AutomacaoMantis\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

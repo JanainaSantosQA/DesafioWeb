@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LXGOr8rSCwO9JOnLG9/bhMIXzHwZKzr7vGWLTvT6Z9pFa3DC0XlLwfUwXQjXHR7+cOyFh3vFK4x55I9X14NmLQ==",
+  "dgSpecHash": "nfDOyfCCoHnnNcl52MA4lzrGkXHDwLKT+PmyDrxugcA8aVbKZCbzCJc77b1wa17+ahPRZ6zgdSvUlSeRmrZZ/g==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\VS2019\\DesafioWeb\\DesafioWeb\\AutomacaoMantis\\AutomacaoMantis.csproj",
+  "projectFilePath": "D:\\Projetos\\VS2019\\DesafioWeb\\AutomacaoMantis\\AutomacaoMantis.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Janaina\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\Janaina\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
