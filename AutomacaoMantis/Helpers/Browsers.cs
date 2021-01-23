@@ -36,7 +36,7 @@ namespace AutomacaoMantis.Helpers
             chromeOptions.AddArgument("--allow-running-insecure-content");
             chromeOptions.AddArgument("--lang=pt-BR");
 
-            return new RemoteWebDriver(new Uri(seleniumHub), chromeOptions.ToCapabilities()); ;
+            return new RemoteWebDriver(new Uri(seleniumHub), chromeOptions.ToCapabilities());
         }
 
         public static IWebDriver GetLocalChromeHeadless()
@@ -56,7 +56,7 @@ namespace AutomacaoMantis.Helpers
             chromeOptions.AddArgument("--lang=pt-BR");
             chromeOptions.AddArgument("--headless");
 
-            return new RemoteWebDriver(new Uri(seleniumHub), chromeOptions.ToCapabilities()); ;
+            return new RemoteWebDriver(new Uri(seleniumHub), chromeOptions.ToCapabilities());
         }
         #endregion
 
@@ -88,7 +88,7 @@ namespace AutomacaoMantis.Helpers
         {
             InternetExplorerOptions ieOptions = new InternetExplorerOptions();
 
-            return new RemoteWebDriver(new Uri(seleniumHub), ieOptions.ToCapabilities()); ;
+            return new RemoteWebDriver(new Uri(seleniumHub), ieOptions.ToCapabilities());
         }
         #endregion
 

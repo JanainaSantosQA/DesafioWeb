@@ -57,7 +57,7 @@ namespace AutomacaoMantis.Helpers
             }
         }
 
-        //Inserido, pois no caso dos parâmetros usados em métodos existentes na pasta DBSteps não é necessário registrar print.
+        //Inserido para não registrar prints no caso dos parâmetros usados em métodos existentes na pasta DBSteps.
         public static void AddTestInfoDB(int methodLevel, string text)
         {
             TEST.Log(Status.Pass, GeneralHelpers.GetMethodNameByLevel(methodLevel) + " || " + text);
