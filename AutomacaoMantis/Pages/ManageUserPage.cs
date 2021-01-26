@@ -9,7 +9,7 @@ namespace AutomacaoMantis.Pages
         By searchUserField = By.Id("search");
         By createNewAccountButton = By.XPath("//*[@id='manage-user-div']/div[1]/a");
         By ApplyFilterButton = By.XPath("//input[@value='Aplicar Filtro']");
-        By showDisabledCheckbox = By.XPath("//*[@id='manage-user-filter']/fieldset/label[2]/span");     
+        By showDisabledCheckBox = By.XPath("//*[@id='manage-user-filter']/fieldset/label[2]/span");     
         By nameUserInfoTextArea = By.XPath("//*[@class='table-responsive']/table/tbody/tr/td[1]/a");
        #endregion
 
@@ -21,7 +21,7 @@ namespace AutomacaoMantis.Pages
 
         public void ClicarMostrarUsuariosDesativados()
         {
-            Click(showDisabledCheckbox);
+            Click(showDisabledCheckBox);
         }
 
         public void ClicarAplicarFiltro()
@@ -34,7 +34,7 @@ namespace AutomacaoMantis.Pages
             SendKeys(searchUserField, username);
         }        
 
-        public string RetornarUsuarioExibidoResultadoPesquisa()
+        public string RetornaUsuarioExibidoResultadoPesquisa()
         {
             return GetText(nameUserInfoTextArea);
         }

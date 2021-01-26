@@ -14,7 +14,7 @@ namespace AutomacaoMantis.Pages
         By editProfileRadioButton = By.XPath("//input[@id='action-edit']/../span");
         By submitButton = By.XPath("//input[@value='Enviar']");
         By profileSelect = By.Id("select-profile");
-        private By RetornarLocalizadorPerfilSelecao(string profile)
+        private By profileSelectBy(string profile)
         {
             return By.XPath("//select[@id='select-profile']/option[text()='" + profile + "']");
         }
@@ -62,12 +62,12 @@ namespace AutomacaoMantis.Pages
             ComboBoxSelectByVisibleText(profileSelect, profile);
         }
 
-        public bool RetornarSeOPerfilEstaSendoExibidoNaTela(string profile)
+        public bool RetornaSeOPerfilEstaSendoExibidoNaTela(string profile)
         {
-            return IsElementExists(RetornarLocalizadorPerfilSelecao(profile));
+            return IsElementExists(profileSelectBy(profile));
         }
 
-        public string RetornarMensagemDeErro()
+        public string RetornaMensagemDeErro()
         {
             return GetText(messageErrorTextArea);
         }

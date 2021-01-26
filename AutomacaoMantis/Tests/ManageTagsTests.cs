@@ -61,7 +61,7 @@ namespace AutomacaoMantis.Tests
 
             Assert.Multiple(() =>
             {
-                Assert.IsTrue(manageTagsPage.RetornarSeATagCriadaEstaSendoExibidaNaTela(tagName), "A tag criada não está sendo exibida na tela.");
+                Assert.IsTrue(manageTagsPage.RetornaSeATagCriadaEstaSendoExibidaNaTela(tagName), "A tag criada não está sendo exibida na tela.");
                 Assert.AreEqual(tagDescription, consultarTagCriadaDB.TagDescription, "A descrição da tag não está correta.");
             });
             #endregion
@@ -146,7 +146,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            StringAssert.Contains(messageErrorExpected, tagUpdatePage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            StringAssert.Contains(messageErrorExpected, tagUpdatePage.RetornaMensagemDeErro(), "A mensagem retornada não é o esperada.");
             #endregion
 
             tagsDBSteps.DeletarTagDB(tagNameOne);
@@ -178,7 +178,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            StringAssert.Contains(messageErrorExpected, tagUpdatePage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            StringAssert.Contains(messageErrorExpected, tagUpdatePage.RetornaMensagemDeErro(), "A mensagem retornada não é o esperada.");
             #endregion
 
             tagsDBSteps.DeletarTagDB(tagName);

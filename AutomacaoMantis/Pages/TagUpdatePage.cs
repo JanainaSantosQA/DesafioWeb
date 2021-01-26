@@ -22,7 +22,7 @@ namespace AutomacaoMantis.Pages
             Click(updateTagButton);
         }
 
-        public string RetornarMensagemDeErro()
+        public string RetornaMensagemDeErro()
         {
             return GetText(messageErrorTextArea);
         }

@@ -8,7 +8,7 @@ namespace AutomacaoMantis.Pages
         #region Mapping
         By nameCustomField = By.Name("name");
         By newCustomFieldButton = By.XPath("//input[@value='Novo Campo Personalizado']");
-        private By RetornarLocalizadorNomeCampoPersonalizadoLink(string customFieldName)
+        private By NameCustomFieldLinkBy(string customFieldName)
         {
             return By.XPath("//a[text()='" + customFieldName + "']");
 
@@ -30,15 +30,15 @@ namespace AutomacaoMantis.Pages
 
         public void ClicarCampoPersonalizadoLink(string customFieldName)
         {
-            Click(RetornarLocalizadorNomeCampoPersonalizadoLink(customFieldName));
+            Click(NameCustomFieldLinkBy(customFieldName));
         }
 
-        public string RetornarMensagemDeErro()
+        public string RetornaMensagemDeErro()
         {
             return GetText(messageErrorTextArea);
         }
 
-        public string RetornarMensagemDeSucesso()
+        public string RetornaMensagemDeSucesso()
         {
             return GetText(messageSucessTextArea);
         }

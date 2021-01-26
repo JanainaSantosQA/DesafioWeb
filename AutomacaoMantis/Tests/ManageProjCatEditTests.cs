@@ -60,7 +60,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageSucessExpected, manageProjCatEditPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageSucessExpected, manageProjCatEditPage.RetornaMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
 
             var categoriaCriadaDB = projectsDBSteps.ConsultarCategoriaDB(newCategoryName);
             Assert.IsNotNull(categoriaCriadaDB, "O nome da categoria não foi alterado.");
@@ -93,7 +93,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            StringAssert.Contains(messageErrorExpected, manageProjCatEditPage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            StringAssert.Contains(messageErrorExpected, manageProjCatEditPage.RetornaMensagemDeErro(), "A mensagem retornada não é o esperada.");
             #endregion
 
             projectsDBSteps.DeletarCategoriaDB(categoryNameOne);
@@ -121,7 +121,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            StringAssert.Contains(messageErrorExpected, manageProjCatEditPage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            StringAssert.Contains(messageErrorExpected, manageProjCatEditPage.RetornaMensagemDeErro(), "A mensagem retornada não é o esperada.");
             #endregion
 
             projectsDBSteps.DeletarCategoriaDB(categoryName);

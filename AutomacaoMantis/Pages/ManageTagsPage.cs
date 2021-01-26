@@ -7,7 +7,7 @@ namespace AutomacaoMantis.Pages
     {
         #region Mapping
         By createTagButton = By.Name("config_set");
-        private By RetornarLocalizadorNomeMarcadorLink(string tagName)
+        private By TagNameLinkBy(string tagName)
         {
             return By.XPath("//table[@class='table table-striped table-bordered table-condensed table-hover']//a[contains(., '" + tagName + "')]");
         }
@@ -31,14 +31,14 @@ namespace AutomacaoMantis.Pages
             SendKeys(tagDescriptionField, tagDescription);
         }
 
-        public bool RetornarSeATagCriadaEstaSendoExibidaNaTela(string tagName)
+        public bool RetornaSeATagCriadaEstaSendoExibidaNaTela(string tagName)
         {
-            return IsElementExists(RetornarLocalizadorNomeMarcadorLink(tagName));
+            return IsElementExists(TagNameLinkBy(tagName));
         }
 
         public void ClicarNomeMarcador(string tagName)
         {
-            Click(RetornarLocalizadorNomeMarcadorLink(tagName));
+            Click(TagNameLinkBy(tagName));
         }
         #endregion
     }

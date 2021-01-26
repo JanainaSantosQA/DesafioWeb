@@ -65,7 +65,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(username, manageUserPage.RetornarUsuarioExibidoResultadoPesquisa(), "O usuário retornado não é o esperado.");
+            Assert.AreEqual(username, manageUserPage.RetornaUsuarioExibidoResultadoPesquisa(), "O usuário retornado não é o esperado.");
             #endregion
 
             usersDBSteps.DeletarUsuarioDB(usuarioCriadoDB.UserId);
@@ -92,7 +92,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(username, manageUserPage.RetornarUsuarioExibidoResultadoPesquisa(), "O usuário retornado não é o esperado.");
+            Assert.AreEqual(username, manageUserPage.RetornaUsuarioExibidoResultadoPesquisa(), "O usuário retornado não é o esperado.");
             #endregion
 
             usersDBSteps.DeletarUsuarioDB(usuarioCriadoDB.UserId);
@@ -123,7 +123,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            StringAssert.Contains(messageSucessExpected, manageUserCreatePage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada");
+            StringAssert.Contains(messageSucessExpected, manageUserCreatePage.RetornaMensagemDeSucesso(), "A mensagem retornada não é a esperada");
 
             var usuarioCriadoDB = usersDBSteps.ConsultarUsuarioDB(username);
 
@@ -166,7 +166,7 @@ namespace AutomacaoMantis.Tests
 
             Assert.Multiple(() =>
             {
-                Assert.AreEqual(messageErrorExpected, manageUserCreatePage.RetornarMensagemDeErro(), "A mensagem retornada não é a esperada.");
+                Assert.AreEqual(messageErrorExpected, manageUserCreatePage.RetornaMensagemDeErro(), "A mensagem retornada não é a esperada.");
                 Assert.IsNull(usuarioCriadoDB, "O e-mail informado é inválido, porém mesmo assim o usuário foi criado.");
             });
             #endregion
@@ -193,7 +193,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageErrorExpected, manageUserCreatePage.RetornarMensagemDeErro(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageErrorExpected, manageUserCreatePage.RetornaMensagemDeErro(), "A mensagem retornada não é a esperada.");
             #endregion
         }
 
@@ -230,7 +230,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageErrorExpected, manageUserCreatePage.RetornarMensagemDeErro(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageErrorExpected, manageUserCreatePage.RetornaMensagemDeErro(), "A mensagem retornada não é a esperada.");
             #endregion
 
             usersDBSteps.DeletarUsuarioDB(usuarioCriadoDB.UserId);
@@ -269,7 +269,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageErrorExpected, manageUserCreatePage.RetornarMensagemDeErro(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageErrorExpected, manageUserCreatePage.RetornaMensagemDeErro(), "A mensagem retornada não é a esperada.");
             #endregion
 
             usersDBSteps.DeletarUsuarioDB(usuarioCriadoDB.UserId);
@@ -301,7 +301,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageSucessExpected, manageUserEditPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageSucessExpected, manageUserEditPage.RetornaMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
 
             var usuarioCriadoDB = usersDBSteps.ConsultarUsuarioDB(newUsername);
             Assert.IsNotNull(usuarioCriadoDB, "O username não foi atualizado.");
@@ -337,7 +337,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageSucessExpected, manageUserEditPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageSucessExpected, manageUserEditPage.RetornaMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
 
             var usuarioCriadoDB = usersDBSteps.ConsultarUsuarioDB(username);               
             Assert.AreEqual(usuarioCriadoDB.RealName, newRealname, "O realname não foi atualizado.");
@@ -378,7 +378,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageErrorExpected, manageUserEditPage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            Assert.AreEqual(messageErrorExpected, manageUserEditPage.RetornaMensagemDeErro(), "A mensagem retornada não é o esperada.");
             #endregion
 
             usersDBSteps.DeletarUsuarioDB(primeiroUsuarioCriadoDB.UserId);
@@ -416,7 +416,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageErrorExpected, manageUserEditPage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            Assert.AreEqual(messageErrorExpected, manageUserEditPage.RetornaMensagemDeErro(), "A mensagem retornada não é o esperada.");
             #endregion
 
             usersDBSteps.DeletarUsuarioDB(primeiroUsuarioCriadoDB.UserId);
@@ -447,7 +447,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            StringAssert.Contains(messageSucessExpected, manageUserEditPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é o esperada.");
+            StringAssert.Contains(messageSucessExpected, manageUserEditPage.RetornaMensagemDeSucesso(), "A mensagem retornada não é o esperada.");
             #endregion
 
             usersDBSteps.DeletarUsuarioDB(usuarioCriadoDB.UserId);
@@ -479,7 +479,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageSucessExpected, manageUserEditPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é o esperada.");
+            Assert.AreEqual(messageSucessExpected, manageUserEditPage.RetornaMensagemDeSucesso(), "A mensagem retornada não é o esperada.");
             #endregion
         }
 
@@ -551,7 +551,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageSucessExpected, manageUserEditPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é o esperada.");
+            Assert.AreEqual(messageSucessExpected, manageUserEditPage.RetornaMensagemDeSucesso(), "A mensagem retornada não é o esperada.");
 
             var projetoAtribuidoUsuarioDB = projectsDBSteps.ConsultarProjetoAtribuidoAoUsuarioDB(projetoCriadoDB.ProjectId, usuarioCriadoDB.UserId);
             Assert.IsNull(projetoAtribuidoUsuarioDB, "A remoção da atribuição do projeto não foi realizada.");

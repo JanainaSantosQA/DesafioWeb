@@ -28,12 +28,12 @@ namespace AutomacaoMantis.Pages
             Click(updateCategoryButton);
         }
 
-        public string RetornarMensagemDeSucesso()
+        public string RetornaMensagemDeSucesso()
         {
             return GetText(messageSucessTextArea);
         }
 
-        public string RetornarMensagemDeErro()
+        public string RetornaMensagemDeErro()
         {
             return GetText(messageErrorTextArea);
         }

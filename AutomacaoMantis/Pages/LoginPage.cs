@@ -49,12 +49,7 @@ namespace AutomacaoMantis.Pages
             Click(createNewAccountButton);
         }
 
-        public string RetornarURLAtual()
-        {
-            return GetURL();
-        }
-
-        public string RetornarMensagemDeErro()
+        public string RetornaMensagemDeErro()
         {
             return GetText(messageErrorTextArea);
         }

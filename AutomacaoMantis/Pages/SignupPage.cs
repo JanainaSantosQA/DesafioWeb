@@ -46,7 +46,7 @@ namespace AutomacaoMantis.Pages
             Click(createAccountButton);
         }
 
-        public string RetornarMensagemDeErro()
+        public string RetornaMensagemDeErro()
         {
             return GetText(messageErrorTextArea);
         }

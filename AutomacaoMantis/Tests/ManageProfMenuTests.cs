@@ -120,7 +120,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.IsTrue(manageProfMenuPage.RetornarSeOPerfilEstaSendoExibidoNaTela(newPlatform + " " + os + " " + osVersion), "O perfil com a plataforma atualizada não está sendo exibido na tela.");
+            Assert.IsTrue(manageProfMenuPage.RetornaSeOPerfilEstaSendoExibidoNaTela(newPlatform + " " + os + " " + osVersion), "O perfil com a plataforma atualizada não está sendo exibido na tela.");
 
             var perfilCriadoDB = usersDBSteps.ConsultarPerfilUsuarioDB(newPlatform, os, osVersion);
             Assert.IsNotNull(perfilCriadoDB, "A platform não foi alterada.");
@@ -158,7 +158,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.IsTrue(manageProfMenuPage.RetornarSeOPerfilEstaSendoExibidoNaTela(platform + " " + newOs + " " + osVersion), "O perfil com o SO atualizado não está sendo exibido na tela.");
+            Assert.IsTrue(manageProfMenuPage.RetornaSeOPerfilEstaSendoExibidoNaTela(platform + " " + newOs + " " + osVersion), "O perfil com o SO atualizado não está sendo exibido na tela.");
 
             var perfilCriadoDB = usersDBSteps.ConsultarPerfilUsuarioDB(platform, newOs, osVersion);
             Assert.IsNotNull(perfilCriadoDB, "O SO não foi alterado.");
@@ -196,7 +196,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.IsTrue(manageProfMenuPage.RetornarSeOPerfilEstaSendoExibidoNaTela(platform + " " + os + " " + newOSVersion), "O perfil com a versão SO atualizada não está sendo exibido na tela.");
+            Assert.IsTrue(manageProfMenuPage.RetornaSeOPerfilEstaSendoExibidoNaTela(platform + " " + os + " " + newOSVersion), "O perfil com a versão SO atualizada não está sendo exibido na tela.");
 
             var perfilCriadoDB = usersDBSteps.ConsultarPerfilUsuarioDB(platform, os, newOSVersion);
             Assert.IsNotNull(perfilCriadoDB, "A versão SO não foi alterada.");
@@ -231,7 +231,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            StringAssert.Contains(messageErrorExpected, manageProfMenuPage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada."); ;
+            StringAssert.Contains(messageErrorExpected, manageProfMenuPage.RetornaMensagemDeErro(), "A mensagem retornada não é o esperada."); ;
             #endregion
 
             usersDBSteps.DeletarPerfilUsuarioDB(platform, os, osVersion);

@@ -58,7 +58,7 @@ namespace AutomacaoMantis.Pages
             Click(signOutLink);
         }
 
-        public string RetornarUsernameDasInformacoesDeLogin()
+        public string RetornaUsernameDasInformacoesDeLogin()
         {
             return GetText(usernameLoginInfoTextArea);
         }

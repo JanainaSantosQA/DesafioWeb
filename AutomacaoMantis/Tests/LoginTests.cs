@@ -34,11 +34,11 @@ namespace AutomacaoMantis.Tests
             loginPage.PreencherUsuario(username);
             loginPage.ClicarEmLogin();
             loginPage.PreencherSenha(password);
-            loginPage.ClicarEmLogin();
+            loginPage.ClicarEmLogin();            
             #endregion
 
             #region Validations
-            Assert.AreEqual(username, myViewPage.RetornarUsernameDasInformacoesDeLogin(), "O usuário retornado não é o esperado.");
+            Assert.AreEqual(username, myViewPage.RetornaUsernameDasInformacoesDeLogin(), "O usuário retornado não é o esperado.");
             #endregion
         }
 
@@ -58,7 +58,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(username, myViewPage.RetornarUsernameDasInformacoesDeLogin(), "O usuário retornado não é o esperado.");
+            Assert.AreEqual(username, myViewPage.RetornaUsernameDasInformacoesDeLogin(), "O usuário retornado não é o esperado.");
             #endregion
         }
 
@@ -81,7 +81,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageErrorExpected, loginPage.RetornarMensagemDeErro(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageErrorExpected, loginPage.RetornaMensagemDeErro(), "A mensagem retornada não é a esperada.");
             #endregion
         }
 
@@ -98,7 +98,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageErrorExpected, loginPage.RetornarMensagemDeErro(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageErrorExpected, loginPage.RetornaMensagemDeErro(), "A mensagem retornada não é a esperada.");
             #endregion
         }
 
@@ -119,7 +119,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageErrorExpected, loginPage.RetornarMensagemDeErro(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageErrorExpected, loginPage.RetornaMensagemDeErro(), "A mensagem retornada não é a esperada.");
             #endregion
         }
 
@@ -144,7 +144,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            StringAssert.Contains(urlExpected, loginPage.RetornarURLAtual(), "A página atual não é a esperada.");
+            StringAssert.Contains(urlExpected, loginPage.GetURL(), "A página atual não é a esperada.");
             #endregion
         }
 
@@ -162,7 +162,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageErrorExpected, signupPage.RetornarMensagemDeErro(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageErrorExpected, signupPage.RetornaMensagemDeErro(), "A mensagem retornada não é a esperada.");
             #endregion
         }
 
@@ -187,7 +187,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageErrorExpected, signupPage.RetornarMensagemDeErro(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageErrorExpected, signupPage.RetornaMensagemDeErro(), "A mensagem retornada não é a esperada.");
             #endregion
         }
 

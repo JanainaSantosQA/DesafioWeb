@@ -10,7 +10,7 @@ namespace AutomacaoMantis.Pages
         By usernameField = By.Id("edit-username");
         By realnameField = By.Id("edit-realname");
         By emailField = By.Id("email-field");
-        private By RetornarLocalizadorNomeProjetoSelect(string projectName)
+        private By ProjectNameSelect(string projectName)
         {
             return By.XPath("//select[@id='add-user-project-id']/option[text()='" + projectName + "']");
         }
@@ -20,7 +20,7 @@ namespace AutomacaoMantis.Pages
         By deleteUserButton = By.XPath("//input[@value='Apagar Usuário']");
         By deleteAccountButton = By.XPath("//input[@value='Apagar Conta']");
         By removeUserButton = By.XPath("//input[@value='Remover Usuário']");
-        private By RetornarLocalizadorRemoverProjetoAtribuidoButton(int projectId)
+        private By RemoveProjectAssignedButtonBy(int projectId)
         {
             return By.XPath("//input[@name='project_id' and @value='" + projectId + "']/..//input[@value='Remover']");
         }
@@ -66,12 +66,12 @@ namespace AutomacaoMantis.Pages
 
         public void ClicarNomeProjeto(string projectName)
         {
-            Click(RetornarLocalizadorNomeProjetoSelect(projectName));
+            Click(ProjectNameSelect(projectName));
         }
 
         public void ClicarRemoverProjetoAtribuido(int projectId)
         {
-            Click(RetornarLocalizadorRemoverProjetoAtribuidoButton(projectId));
+            Click(RemoveProjectAssignedButtonBy(projectId));
         }
 
         public void ClicarRedefinirSenha()
@@ -96,12 +96,12 @@ namespace AutomacaoMantis.Pages
             Click(removeUserButton);
         }
 
-        public string RetornarMensagemDeSucesso()
+        public string RetornaMensagemDeSucesso()
         {
             return GetText(messageSucessTextArea);
         }
 
-        public string RetornarMensagemDeErro()
+        public string RetornaMensagemDeErro()
         {
             return GetText(messageErrorTextArea);
         }

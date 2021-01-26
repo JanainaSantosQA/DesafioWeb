@@ -11,17 +11,17 @@ namespace AutomacaoMantis.Pages
         By versionNameField = By.Name("version");
         By updateProjectButton = By.XPath("//input[@value='Atualizar Projeto']");
         By addVersionButton = By.Name("add_version");
-        private By RetornarLocalicadorAlterarVersaoButton(string versionName)
+        private By AlterVersionButtonBy(string versionName)
         {
             return By.XPath("//*[text()='" + versionName + "']//..//button[text()='Alterar']");
         }
-        private By RetornarLocalizadorApagarVersaoButton(string versionName)
+        private By DeleteVersionButtonBy(string versionName)
         {
             return By.XPath("//*[text()='" + versionName + "']//..//button[text()='Apagar']");
         }
         By deleteVersionConfirmationButton = By.XPath("//input[@value='Apagar Versão']");
         By addSubProjectButton = By.XPath("//input[@value='Adicionar como Subprojeto']");
-        private By RetornarLocalizadorSubProjetoLink(string projectName)
+        private By SubProjetoLinkBy(string projectName)
         {
             return By.XPath("//*[@id='manage-project-update-subprojects-form']//a[contains(., '" + projectName + "')]");
         }
@@ -53,12 +53,12 @@ namespace AutomacaoMantis.Pages
 
         public void ClicarAlterarVersao(string versionName)
         {
-            Click(RetornarLocalicadorAlterarVersaoButton(versionName));
+            Click(AlterVersionButtonBy(versionName));
         }
 
         public void ClicarApagarVersao(string versionName)
         {
-            Click(RetornarLocalizadorApagarVersaoButton(versionName));
+            Click(DeleteVersionButtonBy(versionName));
         }
 
         public void ClicarApagarVersaoConfirmacao(string versionName)
@@ -67,9 +67,9 @@ namespace AutomacaoMantis.Pages
             Click(deleteVersionConfirmationButton);
         }
 
-        public bool RetornarSeOSubProjetoEstaSendoExibidoNaTela(string projectName)
+        public bool RetornaSeOSubProjetoEstaSendoExibidoNaTela(string projectName)
         {
-            return IsElementExists(RetornarLocalizadorSubProjetoLink(projectName));
+            return IsElementExists(SubProjetoLinkBy(projectName));
         }
 
         public void ClicarDesvincular(int childId, int parentId)
@@ -87,12 +87,12 @@ namespace AutomacaoMantis.Pages
             SendKeys(versionNameField, versionName);
         }
 
-        public string RetornarMensagemDeSucesso()
+        public string RetornaMensagemDeSucesso()
         {
             return GetText(messageSucessTextArea);
         }
 
-        public string RetornarMensagemDeErro()
+        public string RetornaMensagemDeErro()
         {
             return GetText(messageErrorTextArea);
         }

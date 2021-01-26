@@ -10,22 +10,22 @@ namespace AutomacaoMantis.Pages
         By createNewProjectButton = By.XPath("//button[@type='submit']");
         By addCategoryButton = By.XPath("//input[@value='Adicionar Categoria']");
         By deleteCategoryConfirmationButton = By.XPath("//input[@value='Apagar Categoria']");
-        private By RetornarLocalizadorAlterarCategoriaButton(string categoryName)
+        private By AlterCategoryButtonBy(string categoryName)
         {
             return By.XPath("//*[text()='" + categoryName + "']//..//button[text()='Alterar']");
 
         }
-        private By RetornarLocalizadorApagarCategoriaButton(string categoryName)
+        private By DeleteCategoryButtonBy(string categoryName)
         {
             return By.XPath("//*[text()='" + categoryName + "']//..//button[text()='Apagar']");
 
         }
-        private By RetornarLocalizadorNomeProjetoLink(string projectName)
+        private By ProjectNameLinkBy(string projectName)
         {
             return By.XPath("//table[@class='table table-striped table-bordered table-condensed table-hover']//a[contains(text(),'" + projectName + "')]");
 
         }
-        private By RetornarLocalizadorNomeCategoriaText(string categoryName)
+        private By CategoryNameTextBy(string categoryName)
         {
             return By.XPath("//h4[contains(., 'Categorias Globais')]/../../*[contains(.,'" + categoryName + "')]");
 
@@ -53,7 +53,7 @@ namespace AutomacaoMantis.Pages
 
         public void ClicarApagarCategoria(string categoryName)
         {
-            Click(RetornarLocalizadorApagarCategoriaButton(categoryName));
+            Click(DeleteCategoryButtonBy(categoryName));
         }
 
         public void ClicarApagarCategoriaConfirmacao(string categoryName)
@@ -64,7 +64,7 @@ namespace AutomacaoMantis.Pages
 
         public void ClicarAlterarCategoria(string categoryName)
         {
-            Click(RetornarLocalizadorAlterarCategoriaButton(categoryName));
+            Click(AlterCategoryButtonBy(categoryName));
         }
 
         public void ClicarNomeProjeto(string projectName)
@@ -72,22 +72,22 @@ namespace AutomacaoMantis.Pages
             Click(By.LinkText(projectName));
         }
 
-        public bool RetornarSeONomeDoProjetoEstaSendoExibidoNaTela(string projectName)
+        public bool RetornaSeONomeDoProjetoEstaSendoExibidoNaTela(string projectName)
         {
-            return IsElementExists(RetornarLocalizadorNomeProjetoLink(projectName));
+            return IsElementExists(ProjectNameLinkBy(projectName));
         }
 
-        public bool RetornarSeONomeDaCategoriaEstaSendoExibidoNaTela(string categoryName)
+        public bool RetornaSeONomeDaCategoriaEstaSendoExibidoNaTela(string categoryName)
         {
-            return IsElementExists(RetornarLocalizadorNomeCategoriaText(categoryName));
+            return IsElementExists(CategoryNameTextBy(categoryName));
         }
 
-        public string RetornarMensagemDeSucesso()
+        public string RetornaMensagemDeSucesso()
         {
             return GetText(messageSucessTextArea);
         }
 
-        public string RetornarMensagemDeErro()
+        public string RetornaMensagemDeErro()
         {
             return GetText(messageErrorTextArea);
         }

@@ -69,13 +69,13 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageSucessExpected, manageProjCreatePage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageSucessExpected, manageProjCreatePage.RetornaMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
 
             var projetoCriadoDB = projectsDBSteps.ConsultarProjetoDB(projectName);
 
             Assert.Multiple(() =>
             {
-                Assert.IsTrue(manageProjPage.RetornarSeONomeDoProjetoEstaSendoExibidoNaTela(projectName), "O projeto não está sendo exibido na tela.");
+                Assert.IsTrue(manageProjPage.RetornaSeONomeDoProjetoEstaSendoExibidoNaTela(projectName), "O projeto não está sendo exibido na tela.");
                 Assert.AreEqual(projetoCriadoDB.ProjectName, projectName, projectName, "O nome do projeto não é o esperado.");
                 Assert.AreEqual(projetoCriadoDB.ProjectStatusId, statusExpected, "O status não é o esperado.");
                 Assert.AreEqual(projetoCriadoDB.ViewState, viewStateExpected, "A visualização do estado não é a esperada.");
@@ -114,7 +114,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageErrorExpected, manageProjCreatePage.RetornarMensagemDeErro(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageErrorExpected, manageProjCreatePage.RetornaMensagemDeErro(), "A mensagem retornada não é a esperada.");
             #endregion
 
             projectsDBSteps.DeletarProjetoDB(projetoCriadoDB.ProjectId);
@@ -145,7 +145,7 @@ namespace AutomacaoMantis.Tests
             Assert.Multiple(() =>
             {
                 Assert.IsNotNull(projetoCriadoDB, "O nome do projeto não foi alterado.");
-                Assert.IsTrue(manageProjPage.RetornarSeONomeDoProjetoEstaSendoExibidoNaTela(newProjectName), "O projeto não está sendo exibido na tela.");
+                Assert.IsTrue(manageProjPage.RetornaSeONomeDoProjetoEstaSendoExibidoNaTela(newProjectName), "O projeto não está sendo exibido na tela.");
             });
             #endregion
 
@@ -175,7 +175,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            StringAssert.Contains(messageErrorExpected, manageProjEditPage.RetornarMensagemDeErro(), "A mensagem retornada não é a esperada.");
+            StringAssert.Contains(messageErrorExpected, manageProjEditPage.RetornaMensagemDeErro(), "A mensagem retornada não é a esperada.");
             #endregion
 
             projectsDBSteps.DeletarProjetoDB(projetoCriadoOneDB.ProjectId);
@@ -205,13 +205,13 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageSucessExpected, manageProjEditPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageSucessExpected, manageProjEditPage.RetornaMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
 
             var subProjetoCriadoDB = projectsDBSteps.ConsultarSubProjetoDB(projetoCriadoTwoDB.ProjectId, projetoCriadoOneDB.ProjectId);
 
             Assert.Multiple(() =>
             {
-                Assert.IsTrue(manageProjEditPage.RetornarSeOSubProjetoEstaSendoExibidoNaTela(projectNameTwo), "O subprojeto criado não está sendo exibido na tela.");
+                Assert.IsTrue(manageProjEditPage.RetornaSeOSubProjetoEstaSendoExibidoNaTela(projectNameTwo), "O subprojeto criado não está sendo exibido na tela.");
                 Assert.IsNotNull(subProjetoCriadoDB, "O subprojeto não foi adicionado.");
             });
             #endregion
@@ -245,7 +245,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageSucessExpected, manageProjEditPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageSucessExpected, manageProjEditPage.RetornaMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
 
             var subProjetoCriadoDB = projectsDBSteps.ConsultarSubProjetoDB(projetoCriadoTwoDB.ProjectId, projetoCriadoOneDB.ProjectId);
             Assert.IsNull(subProjetoCriadoDB, "O subprojeto não foi desvinculado.");
@@ -273,7 +273,7 @@ namespace AutomacaoMantis.Tests
 
             Assert.Multiple(() =>
             {
-                Assert.IsTrue(manageProjPage.RetornarSeONomeDaCategoriaEstaSendoExibidoNaTela(categoryName), "A categoria não está sendo exibida na tela.");
+                Assert.IsTrue(manageProjPage.RetornaSeONomeDaCategoriaEstaSendoExibidoNaTela(categoryName), "A categoria não está sendo exibida na tela.");
                 Assert.IsNotNull(categoriaCriadaDB, "A nova categoria não foi registrada.");
             });
             #endregion
@@ -301,7 +301,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageErrorExpected, manageProjPage.RetornarMensagemDeErro(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageErrorExpected, manageProjPage.RetornaMensagemDeErro(), "A mensagem retornada não é a esperada.");
             #endregion
 
             projectsDBSteps.DeletarCategoriaDB(categoryName);
@@ -327,7 +327,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageSucessExpected, manageProjPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageSucessExpected, manageProjPage.RetornaMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
 
             var categoriaCriadaDB = projectsDBSteps.ConsultarCategoriaDB(categoryName);
             Assert.IsNull(categoriaCriadaDB, "A categoria não foi apagada.");
@@ -356,7 +356,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageSucessExpected, manageProjEditPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageSucessExpected, manageProjEditPage.RetornaMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
 
             var versaoProjetoCriadaDB = projectsDBSteps.ConsultarVersaoProjetoDB(versionName);
             Assert.IsNotNull(versaoProjetoCriadaDB, "A nova versão do projeto não foi criada.");
@@ -391,7 +391,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageErrorExpected, manageProjEditPage.RetornarMensagemDeErro(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageErrorExpected, manageProjEditPage.RetornaMensagemDeErro(), "A mensagem retornada não é a esperada.");
             #endregion
 
             projectsDBSteps.DeletarVersaoProjetoDB(versionName);
@@ -426,7 +426,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageSucessExpected, manageProjVerEditPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageSucessExpected, manageProjVerEditPage.RetornaMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
             #endregion
 
             projectsDBSteps.DeletarVersaoProjetoDB(newVersionName);
@@ -461,7 +461,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            StringAssert.Contains(messageErrorExpected, manageProjVerEditPage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            StringAssert.Contains(messageErrorExpected, manageProjVerEditPage.RetornaMensagemDeErro(), "A mensagem retornada não é o esperada.");
             #endregion
 
             projectsDBSteps.DeletarVersaoProjetoDB(versionName);
@@ -497,7 +497,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageErrorExpected, manageProjVerEditPage.RetornarMensagemDeErro(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageErrorExpected, manageProjVerEditPage.RetornaMensagemDeErro(), "A mensagem retornada não é a esperada.");
             #endregion
 
             projectsDBSteps.DeletarVersaoProjetoDB(versionNameOne);
@@ -530,7 +530,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageSucessExpected, manageProjEditPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageSucessExpected, manageProjEditPage.RetornaMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
 
             var versaoProjetoCriadaDB = projectsDBSteps.ConsultarVersaoProjetoDB(versionName);
             Assert.IsNull(versaoProjetoCriadaDB, "A versão não foi excluída.");

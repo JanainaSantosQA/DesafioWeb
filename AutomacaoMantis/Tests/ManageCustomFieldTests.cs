@@ -54,7 +54,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageSucessExpected, manageCustomFieldPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageSucessExpected, manageCustomFieldPage.RetornaMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
            
             var campoCriadoDB = customFieldDBSteps.ConsultarCampoDB(customFieldName);
             Assert.IsNotNull(campoCriadoDB, "O campo não foi criado.");
@@ -77,7 +77,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            StringAssert.Contains(messageErrorExpected, manageCustomFieldPage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            StringAssert.Contains(messageErrorExpected, manageCustomFieldPage.RetornaMensagemDeErro(), "A mensagem retornada não é o esperada.");
             #endregion
         }
 
@@ -102,7 +102,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageSucessExpected, manageCustomFieldPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageSucessExpected, manageCustomFieldPage.RetornaMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
             
             var campoCriadoDB = customFieldDBSteps.ConsultarCampoDB(customFieldName);
             Assert.IsNull(campoCriadoDB, "O campo não foi excluído.");
@@ -132,7 +132,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            Assert.AreEqual(messageSucessExpected, manageCustomFieldPage.RetornarMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
+            Assert.AreEqual(messageSucessExpected, manageCustomFieldPage.RetornaMensagemDeSucesso(), "A mensagem retornada não é a esperada.");
 
             var campoCriadoDB = customFieldDBSteps.ConsultarCampoDB(newCustomFieldName);
             Assert.IsNotNull(campoCriadoDB, "O nome do campo não foi alterado.");
@@ -165,7 +165,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            StringAssert.Contains(messageErrorExpected, manageCustomFieldPage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            StringAssert.Contains(messageErrorExpected, manageCustomFieldPage.RetornaMensagemDeErro(), "A mensagem retornada não é o esperada.");
             #endregion
 
             customFieldDBSteps.DeletarCampoDB(customFieldNameOne);
@@ -194,7 +194,7 @@ namespace AutomacaoMantis.Tests
             #endregion
 
             #region Validations
-            StringAssert.Contains(messageErrorExpected, manageCustomFieldPage.RetornarMensagemDeErro(), "A mensagem retornada não é o esperada.");
+            StringAssert.Contains(messageErrorExpected, manageCustomFieldPage.RetornaMensagemDeErro(), "A mensagem retornada não é o esperada.");
             #endregion
 
             customFieldDBSteps.DeletarCampoDB(customFieldName);
