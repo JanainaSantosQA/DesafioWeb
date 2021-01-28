@@ -136,7 +136,7 @@ namespace AutomacaoMantis.DBSteps.Projects
 
         public List<string> ConsultarProjetoAtribuidoAoUsuarioDB(int projectId, string userId)
         {
-            string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/consultaProjetoAtribUser.sql", Encoding.UTF8);
+            string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/consultaProjetoAtribuidoAoUsuario.sql", Encoding.UTF8);
             query = query.Replace("$projectId", projectId.ToString())
                          .Replace("$userId", userId);
 
@@ -147,7 +147,7 @@ namespace AutomacaoMantis.DBSteps.Projects
 
         public void DeletarProjetoAtribuidoAoUsuarioDB(int projectId, string userId)
         {
-            string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/deletaProjetoAtribUser.sql", Encoding.UTF8);
+            string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/deletaProjetoAtribuidoAoUsuario.sql", Encoding.UTF8);
             query = query.Replace("$projectId", projectId.ToString())
                          .Replace("$userId", userId);
 
@@ -158,7 +158,7 @@ namespace AutomacaoMantis.DBSteps.Projects
 
         public void InserirProjetoAtribuidoAoUsuarioDB(int projectId, string userId, string accessLevel)
         {
-            string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/inseriProjetoAtribUser.sql", Encoding.UTF8);
+            string query = File.ReadAllText(GeneralHelpers.GetProjectPath() + "Queries/Projects/inseriProjetoAtribuidoAoUsuario.sql", Encoding.UTF8);
             query = query.Replace("$projectId", projectId.ToString())
                          .Replace("$userId", userId)
                          .Replace("$accessLevel", accessLevel);

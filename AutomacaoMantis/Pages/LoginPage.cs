@@ -14,24 +14,24 @@ namespace AutomacaoMantis.Pages
         #endregion
 
         #region Actions
-        public void PreencherUsuario(string usuario)
+        public void PreencherUsuario(string username)
         {
-            SendKeys(usernameField, usuario);  
+            SendKeys(usernameField, username);  
         }
 
-        public void PreencherUsuarioComJavaScript(string usuario)
+        public void PreencherUsuarioComJavaScript(string username)
         {
-            SendKeysJavaScript(usernameField, usuario);
+            SendKeysJavaScript(usernameField, username);
         }
 
-        public void PreencherSenha(string senha)
+        public void PreencherSenha(string password)
         {
-            SendKeys(passwordField, senha);
+            SendKeys(passwordField, password);
         }
 
-        public void PreencherSenhaComJavaScript(string senha)
+        public void PreencherSenhaComJavaScript(string password)
         {
-            SendKeysJavaScript(passwordField, senha);
+            SendKeysJavaScript(passwordField, password);
         }
 
         public void ClicarEmLogin()
